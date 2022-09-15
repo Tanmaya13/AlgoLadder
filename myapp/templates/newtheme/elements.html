@@ -1,0 +1,1213 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/fav.png" />
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib" />
+	<!-- Meta Description -->
+	<meta name="description" content="" />
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="" />
+	<!-- meta character set -->
+	<meta charset="UTF-8" />
+	<!-- Site Title -->
+	<title>Elements</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+		rel="stylesheet" />
+	<!--
+      CSS
+      =============================================
+    -->
+	<link rel="stylesheet" href="css/linearicons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/hexagons.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+		href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+		crossorigin="anonymous"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<style>
+		.mobile-nav-toggle {
+			color: #fff;
+			font-size: 28px;
+			cursor: pointer;
+			display: none;
+			line-height: 0;
+			transition: 1s;
+
+		}
+
+		.mobile-nav-toggle.bi-x {
+			color: #fff;
+		}
+
+		@media (max-width: 1000px) {
+			.mobile-nav-toggle {
+				display: block;
+			}
+
+			.navbar ul {
+
+				display: none;
+			}
+
+		}
+
+		.navbar-mobile {
+			position: fixed;
+			overflow: hidden;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			background: rgba(40, 58, 90, 0.9);
+			transition: 0.3s;
+			z-index: 999;
+		}
+
+		.navbar-mobile .mobile-nav-toggle {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+
+		.navbar-mobile ul {
+			display: block;
+			position: absolute;
+			top: 55px;
+			right: 15px;
+			bottom: 15px;
+			left: 15px;
+			padding: 10px 0;
+			border-radius: 10px;
+			background-color: #fff;
+			overflow-y: auto;
+			transition: 0.3s;
+		}
+
+		.navbar-mobile a {
+			padding: 10px 20px;
+			font-size: 15px;
+			color: #37517e;
+		}
+
+		.navbar-mobile a:hover,
+		.navbar-mobile .active,
+		.navbar-mobile li:hover>a {
+			color: #47b2e4;
+		}
+
+		.navbar-mobile .getstarted {
+			margin: 15px;
+			color: #37517e;
+		}
+
+		.navbar-mobile .dropdown ul {
+			position: static;
+			display: none;
+			margin: 10px 20px;
+			padding: 10px 0;
+			z-index: 99;
+			opacity: 1;
+			visibility: visible;
+			background: #fff;
+			box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+		}
+
+		.navbar-mobile .dropdown ul li {
+			min-width: 200px;
+		}
+
+		.navbar-mobile .dropdown ul a {
+			padding: 10px 20px;
+		}
+
+		.navbar-mobile .dropdown ul a i {
+			font-size: 12px;
+		}
+
+		.navbar-mobile .dropdown ul a:hover,
+		.navbar-mobile .dropdown ul .active:hover,
+		.navbar-mobile .dropdown ul li:hover>a {
+			color: #47b2e4;
+		}
+
+		.navbar-mobile .dropdown>.dropdown-active {
+			display: block;
+		}
+
+		body {
+			max-width: 100%;
+			overflow-x: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- ================ Start Header Area ================= -->
+	<header id="new_header" class="fixed-top ">
+		<div class="container d-flex align-items-center">
+			<!-- <div style="background:white;"> -->
+
+			<h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+					style="width: 200px;" alt="">
+			</h1>
+
+
+			<!-- </div> -->
+			<nav id="navbar" class="navbar">
+
+				<ul>
+					<li><a class="nav-link scrollto active" href="/">Home</a></li>
+					<li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Quick Coding
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="/ide">IDE</a>
+							<a class="dropdown-item" href="/blogs">Blog</a>
+							<a class="dropdown-item" href="/interview_experiences">Interviews</a>
+							<a class="dropdown-item" href="/problem_list">Practice</a>
+						</div>
+					</li>
+					<li><a class="nav-link scrollto" href="/courses">Courses</a></li>
+					<li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+					{% if account_type == "ambassador" %}
+					<li><a href="/ambassdordashboard"
+							style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+					</li>
+					{% endif %}
+					<!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+					<!-- Dropdown -->
+					{% if user.is_authenticated %}
+					<li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							{{ request.user.username }}
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							{% if account_type == "ambassador" %}
+							{% else %}
+ 
+							<a class="dropdown-item" href="/profile#cop">Profile</a>
+							<a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+							{% endif %}
+							<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+						</div>
+					</li>
+					{% else %}
+					<li>
+						<a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+							style="background-color:purple; color:white">
+							Sign up</a>
+					</li>
+					<li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+							style="background-color:purple; color:white">Login</a>
+					</li>
+					{% endif %}
+				</ul>
+				<svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28"
+					onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+					<path fill-rule="evenodd"
+						d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+				</svg>
+			</nav>
+		</div>
+	</header>
+	<br><br>
+	<!-- ================ End Header Area ================= -->
+
+	<!-- ================ start banner Area ================= -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12 banner-right">
+					<h1 class="text-white">
+						Elements
+					</h1>
+					<p class="mx-auto text-white  mt-20 mb-40">
+						In the history of modern astronomy, there is probably no one greater leap forward than the
+						building.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="elements.html">Elements</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ End banner Area ================= -->
+
+	<!-- Start Sample Area -->
+	<section class="sample-text-area">
+		<div class="container">
+			<h3 class="text-heading">Text Sample</h3>
+			<p class="sample-text">
+				Every avid independent filmmaker has <b>Bold</b> about making that <i>Italic</i> interest documentary,
+				or short
+				film
+				to show off their creative prowess. Many have great ideas and want to “wow” the<sup>Superscript</sup>
+				scene, or
+				video
+				renters with their big project. But once you have the<sub>Subscript</sub> “in the can” (no easy feat),
+				how do you
+				move
+				from a <del>Strike</del> through of master DVDs with the <u>“Underline”</u> marked hand-written title
+				inside a
+				secondhand
+				CD case, to a pile of cardboard boxes full of shiny new, retail-ready DVDs, with UPC barcodes and
+				polywrap sitting
+				on
+				your doorstep? You need to create eye-popping artwork and have your project replicated. Using a
+				reputable full
+				service
+				DVD Replication company like PacificDisc, Inc. to partner with is certainly a helpful option to ensure a
+				professional
+				end result, but to help with your DVD replication project, here are 4 easy steps to follow for good DVD
+				replication
+				results:
+
+			</p>
+		</div>
+	</section>
+	<!-- End Sample Area -->
+
+	<!-- Start Button -->
+	<section class="button-area">
+		<div class="container border-top-generic">
+			<h3 class="text-heading">Sample Buttons</h3>
+			<div class="button-group-area">
+				<a href="#" class="genric-btn default">Default</a>
+				<a href="#" class="genric-btn primary">Primary</a>
+				<a href="#" class="genric-btn success">Success</a>
+				<a href="#" class="genric-btn info">Info</a>
+				<a href="#" class="genric-btn warning">Warning</a>
+				<a href="#" class="genric-btn danger">Danger</a>
+				<a href="#" class="genric-btn link">Link</a>
+				<a href="#" class="genric-btn disable">Disable</a>
+			</div>
+			<div class="button-group-area mt-10">
+				<a href="#" class="genric-btn default-border">Default</a>
+				<a href="#" class="genric-btn primary-border">Primary</a>
+				<a href="#" class="genric-btn success-border">Success</a>
+				<a href="#" class="genric-btn info-border">Info</a>
+				<a href="#" class="genric-btn warning-border">Warning</a>
+				<a href="#" class="genric-btn danger-border">Danger</a>
+				<a href="#" class="genric-btn link-border">Link</a>
+				<a href="#" class="genric-btn disable">Disable</a>
+			</div>
+			<div class="button-group-area mt-40">
+				<a href="#" class="genric-btn default radius">Default</a>
+				<a href="#" class="genric-btn primary radius">Primary</a>
+				<a href="#" class="genric-btn success radius">Success</a>
+				<a href="#" class="genric-btn info radius">Info</a>
+				<a href="#" class="genric-btn warning radius">Warning</a>
+				<a href="#" class="genric-btn danger radius">Danger</a>
+				<a href="#" class="genric-btn link radius">Link</a>
+				<a href="#" class="genric-btn disable radius">Disable</a>
+			</div>
+			<div class="button-group-area mt-10">
+				<a href="#" class="genric-btn default-border radius">Default</a>
+				<a href="#" class="genric-btn primary-border radius">Primary</a>
+				<a href="#" class="genric-btn success-border radius">Success</a>
+				<a href="#" class="genric-btn info-border radius">Info</a>
+				<a href="#" class="genric-btn warning-border radius">Warning</a>
+				<a href="#" class="genric-btn danger-border radius">Danger</a>
+				<a href="#" class="genric-btn link-border radius">Link</a>
+				<a href="#" class="genric-btn disable radius">Disable</a>
+			</div>
+			<div class="button-group-area mt-40">
+				<a href="#" class="genric-btn default circle">Default</a>
+				<a href="#" class="genric-btn primary circle">Primary</a>
+				<a href="#" class="genric-btn success circle">Success</a>
+				<a href="#" class="genric-btn info circle">Info</a>
+				<a href="#" class="genric-btn warning circle">Warning</a>
+				<a href="#" class="genric-btn danger circle">Danger</a>
+				<a href="#" class="genric-btn link circle">Link</a>
+				<a href="#" class="genric-btn disable circle">Disable</a>
+			</div>
+			<div class="button-group-area mt-10">
+				<a href="#" class="genric-btn default-border circle">Default</a>
+				<a href="#" class="genric-btn primary-border circle">Primary</a>
+				<a href="#" class="genric-btn success-border circle">Success</a>
+				<a href="#" class="genric-btn info-border circle">Info</a>
+				<a href="#" class="genric-btn warning-border circle">Warning</a>
+				<a href="#" class="genric-btn danger-border circle">Danger</a>
+				<a href="#" class="genric-btn link-border circle">Link</a>
+				<a href="#" class="genric-btn disable circle">Disable</a>
+			</div>
+			<div class="button-group-area mt-40">
+				<a href="#" class="genric-btn default circle arrow">Default<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn primary circle arrow">Primary<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn success circle arrow">Success<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn info circle arrow">Info<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn warning circle arrow">Warning<span class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn danger circle arrow">Danger<span class="lnr lnr-arrow-right"></span></a>
+			</div>
+			<div class="button-group-area mt-10">
+				<a href="#" class="genric-btn default-border circle arrow">Default<span
+						class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn primary-border circle arrow">Primary<span
+						class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn success-border circle arrow">Success<span
+						class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn info-border circle arrow">Info<span
+						class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn warning-border circle arrow">Warning<span
+						class="lnr lnr-arrow-right"></span></a>
+				<a href="#" class="genric-btn danger-border circle arrow">Danger<span
+						class="lnr lnr-arrow-right"></span></a>
+			</div>
+			<div class="button-group-area mt-40">
+				<a href="#" class="genric-btn primary e-large">Extra Large</a>
+				<a href="#" class="genric-btn success large">Large</a>
+				<a href="#" class="genric-btn primary">Default</a>
+				<a href="#" class="genric-btn success medium">Medium</a>
+				<a href="#" class="genric-btn primary small">Small</a>
+			</div>
+			<div class="button-group-area mt-10">
+				<a href="#" class="genric-btn primary-border e-large">Extra Large</a>
+				<a href="#" class="genric-btn success-border large">Large</a>
+				<a href="#" class="genric-btn primary-border">Default</a>
+				<a href="#" class="genric-btn success-border medium">Medium</a>
+				<a href="#" class="genric-btn primary-border small">Small</a>
+			</div>
+		</div>
+	</section>
+	<!-- End Button -->
+
+	<!-- Start Align Area -->
+	<div class="whole-wrap">
+		<div class="container">
+			<div class="section-top-border">
+				<h3 class="mb-30">Left Aligned</h3>
+				<div class="row">
+					<div class="col-md-3">
+						<img src="img/elements/d.jpg" alt="" class="img-fluid">
+					</div>
+					<div class="col-md-9 mt-sm-20">
+						<p>Recently, the US Federal government banned online casinos from operating in America by making
+							it illegal to
+							transfer
+							money to them through any US bank or payment system. As a result of this law, most of the
+							popular online casino
+							networks
+							such as Party Gaming and PlayTech left the United States. Overnight, online casino players
+							found themselves
+							being
+							chased by the Federal government. But, after a fortnight, the online casino industry came up
+							with a solution and
+							new
+							online casinos started taking root. These began to operate under a different business
+							umbrella, and by doing
+							that,
+							rendered the transfer of money to and from them legal. A major part of this was enlisting
+							electronic banking
+							systems
+							that would accept this new clarification and start doing business with me. Listed in this
+							article are the
+							electronic
+							banking systems that accept players from the United States that wish to play in online
+							casinos.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border text-right">
+				<h3 class="mb-30">Right Aligned</h3>
+				<div class="row">
+					<div class="col-md-9">
+						<p class="text-right">Over time, even the most sophisticated, memory packed computer can begin
+							to run slow if we
+							don’t
+							do something to prevent it. The reason why has less to do with how computers are made and
+							how they age and more
+							to
+							do with the way we use them. You see, all of the daily tasks that we do on our PC from
+							running programs to
+							downloading
+							and deleting software can make our computer sluggish. To keep this from happening, you need
+							to understand the
+							reasons
+							why your PC is getting slower and do something to keep your PC running at its best. You can
+							do this through
+							regular
+							maintenance and PC performance optimization programs</p>
+						<p class="text-right">Before we discuss all of the things that could be affecting your PC’s
+							performance, let’s
+							talk
+							a little about what symptoms</p>
+					</div>
+					<div class="col-md-3">
+						<img src="img/elements/d.jpg" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3 class="mb-30">Definition</h3>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Definition 01</h4>
+							<p>Recently, the US Federal government banned online casinos from operating in America by
+								making it illegal to
+								transfer
+								money to them through any US bank or payment system. As a result of this law, most of
+								the popular online casino
+								networks</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Definition 02</h4>
+							<p>Recently, the US Federal government banned online casinos from operating in America by
+								making it illegal to
+								transfer
+								money to them through any US bank or payment system. As a result of this law, most of
+								the popular online casino
+								networks</p>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="single-defination">
+							<h4 class="mb-20">Definition 03</h4>
+							<p>Recently, the US Federal government banned online casinos from operating in America by
+								making it illegal to
+								transfer
+								money to them through any US bank or payment system. As a result of this law, most of
+								the popular online casino
+								networks</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3 class="mb-30">Block Quotes</h3>
+				<div class="row">
+					<div class="col-lg-12">
+						<blockquote class="generic-blockquote">
+							“Recently, the US Federal government banned online casinos from operating in America by
+							making it illegal to
+							transfer money
+							to them through any US bank or payment system. As a result of this law, most of the popular
+							online casino
+							networks
+							such as Party Gaming and PlayTech left the United States. Overnight, online casino players
+							found themselves
+							being
+							chased by the Federal government. But, after a fortnight, the online casino industry came up
+							with a solution and
+							new
+							online casinos started taking root. These began to operate under a different business
+							umbrella, and by doing
+							that,
+							rendered the transfer of money to and from them legal. A major part of this was enlisting
+							electronic banking
+							systems
+							that would accept this new clarification and start doing business with me. Listed in this
+							article are the
+							electronic
+							banking”
+						</blockquote>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3 class="mb-30">Table</h3>
+				<div class="progress-table-wrap">
+					<div class="progress-table">
+						<div class="table-head">
+							<div class="serial">#</div>
+							<div class="country">Countries</div>
+							<div class="visit">Visits</div>
+							<div class="percentage">Percentages</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">01</div>
+							<div class="country"> <img src="img/elements/f1.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-1" role="progressbar" style="width: 80%"
+										aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">02</div>
+							<div class="country"> <img src="img/elements/f2.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-2" role="progressbar" style="width: 30%"
+										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">03</div>
+							<div class="country"> <img src="img/elements/f3.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-3" role="progressbar" style="width: 55%"
+										aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">04</div>
+							<div class="country"> <img src="img/elements/f4.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-4" role="progressbar" style="width: 60%"
+										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">05</div>
+							<div class="country"> <img src="img/elements/f5.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-5" role="progressbar" style="width: 40%"
+										aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">06</div>
+							<div class="country"> <img src="img/elements/f6.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-6" role="progressbar" style="width: 70%"
+										aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">07</div>
+							<div class="country"> <img src="img/elements/f7.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-7" role="progressbar" style="width: 30%"
+										aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="table-row">
+							<div class="serial">08</div>
+							<div class="country"> <img src="img/elements/f8.jpg" alt="flag">Canada</div>
+							<div class="visit">645032</div>
+							<div class="percentage">
+								<div class="progress">
+									<div class="progress-bar color-8" role="progressbar" style="width: 60%"
+										aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<h3>Image Gallery</h3>
+				<div class="row gallery-item">
+					<div class="col-md-4">
+						<a href="img/elements/g1.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g1.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g2.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g2.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g3.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g3.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="img/elements/g4.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g4.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-6">
+						<a href="img/elements/g5.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g5.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g6.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g6.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g7.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g7.jpg);"></div>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="img/elements/g8.jpg" class="img-pop-up">
+							<div class="single-gallery-image" style="background: url(img/elements/g8.jpg);"></div>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-md-4">
+						<h3 class="mb-20">Image Gallery</h3>
+						<div class="typography">
+							<h1>This is header 01</h1>
+							<h2>This is header 02</h2>
+							<h3>This is header 03</h3>
+							<h4>This is header 04</h4>
+							<h5>This is header 05</h5>
+							<h6>This is header 06</h6>
+						</div>
+					</div>
+					<div class="col-md-4 mt-sm-30">
+						<h3 class="mb-20">Unordered List</h3>
+						<div class="">
+							<ul class="unordered-list">
+								<li>Fta Keys</li>
+								<li>For Women Only Your Computer Usage</li>
+								<li>Facts Why Inkjet Printing Is Very Appealing
+									<ul>
+										<li>Addiction When Gambling Becomes
+											<ul>
+												<li>Protective Preventative Maintenance</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>Dealing With Technical Support 10 Useful Tips</li>
+								<li>Make Myspace Your Best Designed Space</li>
+								<li>Cleaning And Organizing Your Computer</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-4 mt-sm-30">
+						<h3 class="mb-20">Ordered List</h3>
+						<div class="">
+							<ol class="ordered-list">
+								<li><span>Fta Keys</span></li>
+								<li><span>For Women Only Your Computer Usage</span></li>
+								<li><span>Facts Why Inkjet Printing Is Very Appealing</span>
+									<ol class="ordered-list-alpha">
+										<li><span>Addiction When Gambling Becomes</span>
+											<ol class="ordered-list-roman">
+												<li><span>Protective Preventative Maintenance</span></li>
+											</ol>
+										</li>
+									</ol>
+								</li>
+								<li><span>Dealing With Technical Support 10 Useful Tips</span></li>
+								<li><span>Make Myspace Your Best Designed Space</span></li>
+								<li><span>Cleaning And Organizing Your Computer</span></li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-top-border">
+				<div class="row">
+					<div class="col-lg-8 col-md-8">
+						<h3 class="mb-30">Form Element</h3>
+						<form action="#">
+							<div class="mt-10">
+								<input type="text" name="first_name" placeholder="First Name"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'First Name'" required
+									class="single-input">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="last_name" placeholder="Last Name"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
+									class="single-input">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="last_name" placeholder="Last Name"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Last Name'" required
+									class="single-input">
+							</div>
+							<div class="mt-10">
+								<input type="email" name="EMAIL" placeholder="Email address"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required
+									class="single-input">
+							</div>
+							<div class="input-group-icon mt-10">
+								<div class="icon"><i class="fa fa-thumb-tack" aria-hidden="true"></i></div>
+								<input type="text" name="address" placeholder="Address" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Address'" required class="single-input">
+							</div>
+							<div class="input-group-icon mt-10">
+								<div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+								<div class="form-select" id="default-select" ">
+											<select>
+												<option value=" 1 ">City</option>
+												<option value=" 1 ">Dhaka</option>
+												<option value=" 1 ">Dilli</option>
+												<option value=" 1 ">Newyork</option>
+												<option value=" 1 ">Islamabad</option>
+											</select>
+										</div>
+									</div>
+									<div class=" input-group-icon mt-10 ">
+										<div class=" icon "><i class=" fa fa-globe " aria-hidden=" true "></i></div>
+										<div class=" form-select " id=" default-select ">
+									<select>
+										<option value=" 1">Country</option>
+									<option value="1">Bangladesh</option>
+									<option value="1">India</option>
+									<option value="1">England</option>
+									<option value="1">Srilanka</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="mt-10">
+								<textarea class="single-textarea" placeholder="Message" onfocus="this.placeholder = ''"
+									onblur="this.placeholder = 'Message'" required></textarea>
+							</div>
+							<!-- For Gradient Border Use -->
+							<!-- <div class="mt-10">
+										<div class="primary-input">
+											<input id="primary-input" type="text" name="first_name" placeholder="Primary color" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'">
+											<label for="primary-input"></label>
+										</div>
+									</div> -->
+							<div class="mt-10">
+								<input type="text" name="first_name" placeholder="Primary color"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Primary color'" required
+									class="single-input-primary">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="first_name" placeholder="Accent color"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Accent color'" required
+									class="single-input-accent">
+							</div>
+							<div class="mt-10">
+								<input type="text" name="first_name" placeholder="Secondary color"
+									onfocus="this.placeholder = ''" onblur="this.placeholder = 'Secondary color'"
+									required class="single-input-secondary">
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-3 col-md-4 mt-sm-30">
+						<div class="single-element-widget">
+							<h3 class="mb-30">Switches</h3>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>01. Sample Switch</p>
+								<div class="primary-switch">
+									<input type="checkbox" id="default-switch">
+									<label for="default-switch"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>02. Primary Color Switch</p>
+								<div class="primary-switch">
+									<input type="checkbox" id="primary-switch" checked>
+									<label for="primary-switch"></label>
+								</div>
+							</div>
+							<div class="switch-wrap d-flex justify-content-between">
+								<p>03. Confirm Color Switch</p>
+								<div class="confirm-switch">
+									<input type="checkbox" id="confirm-switch" checked>
+									<label for="confirm-switch"></label>
+								</div>
+							</div>
+						</div>
+						<div class="single-element-widget mt-30">
+							<h3 class="mb-30">Selectboxes</h3>
+							<div class="default-select" id="default-select">
+								<select>
+									<option value=" 1
+							 ">English</option>
+									<option value=" 1 ">Spanish</option>
+									<option value=" 1
+							 ">Arabic</option>
+									<option value=" 1 ">Portuguise</option>
+									<option value=" 1
+							 ">Bengali</option>
+								</select>
+							</div>
+						</div>
+						<div class="
+							 single-element-widget mt-30 ">
+							<h3 class=" mb-30 ">Checkboxes</h3>
+							<div class=" switch-wrap
+							 d-flex justify-content-between ">
+								<p>01. Sample Checkbox</p>
+								<div class=" primary-checkbox
+							 ">
+									<input type=" checkbox " id=" default-checkbox ">
+									<label for=" default-checkbox
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>02. Primary Color Checkbox</p>
+								<div class=" primary-checkbox
+							 ">
+									<input type=" checkbox " id=" primary-checkbox " checked>
+									<label for="
+							 primary-checkbox "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex
+							 justify-content-between ">
+								<p>03. Confirm Color Checkbox</p>
+								<div class=" confirm-checkbox
+							 ">
+									<input type=" checkbox " id=" confirm-checkbox ">
+									<label for=" confirm-checkbox
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>04. Disabled Checkbox</p>
+								<div class=" disabled-checkbox ">
+									<input type="
+							 checkbox " id=" disabled-checkbox " disabled>
+									<label for=" disabled-checkbox
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>05. Disabled Checkbox active</p>
+								<div class=" disabled-checkbox
+							 ">
+									<input type=" checkbox " id=" disabled-checkbox-active
+							 " checked disabled>
+									<label for=" disabled-checkbox-active
+							 "></label>
+								</div>
+							</div>
+						</div>
+						<div class=" single-element-widget mt-30
+							 ">
+							<h3 class=" mb-30 ">Radios</h3>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>01. Sample radio</p>
+								<div class=" primary-radio ">
+									<input type=" checkbox
+							 " id=" default-radio ">
+									<label for=" default-radio
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>02. Primary Color radio</p>
+								<div class=" primary-radio ">
+									<input type="
+							 checkbox " id=" primary-radio " checked>
+									<label for=" primary-radio
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>03. Confirm Color radio</p>
+								<div class=" confirm-radio ">
+									<input type="
+							 checkbox " id=" confirm-radio " checked>
+									<label for=" confirm-radio
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>04. Disabled radio</p>
+								<div class=" disabled-radio ">
+									<input type="
+							 checkbox " id=" disabled-radio " disabled>
+									<label for=" disabled-radio
+							 "></label>
+								</div>
+							</div>
+							<div class=" switch-wrap d-flex justify-content-between
+							 ">
+								<p>05. Disabled radio active</p>
+								<div class=" disabled-radio ">
+									<input type="
+							 checkbox " id=" disabled-radio-active " checked disabled>
+									<label for=" disabled-radio-active
+							 "></label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End Align Area -->
+
+	<!-- ================ start footer Area ================= -->
+	<div class="new_footer1" style="margin-top:12vh">
+		<div id="dk-new_footer" class="dk-new_footer">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 col-lg-4">
+				<div class="dk-new_footer-box-info">
+				  <a href="index.html" class="new_footer-logo">
+					<img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+				  </a>
+				  <p class="footer-info-text">
+					Coding Through One to One Mentorship By Expert Competitive Programmers..
+				  </p>
+				  <div class="new_footer-social-link">
+					<h3>Follow us</h3>
+					<ul>
+					  <li>
+						<a href="https://www.facebook.com/algoladder">
+						  <i class="fa fa-facebook"></i>
+						</a>
+					  </li>
+					  <li>
+						<a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+						  <i class="fa fa-youtube"></i>
+						</a>
+					  </li>
+					  
+					  <li>
+						<a href="https://www.linkedin.com/company/algoladder/">
+						  <i class="fa fa-linkedin"></i>
+						</a>
+					  </li>
+					  <li>
+						<a href="https://www.instagram.com/algoladder/?hl=en">
+						  <i class="fa fa-instagram"></i>
+						</a>
+					  </li>
+					</ul>
+				  </div>
+				  <!-- End Social link -->
+				</div>
+				<!-- End new_footer info -->
+				<div class="new_footer-awarad">
+				  <img src="images/icon/best.png" alt="">
+				  <p></p>
+				</div>
+			  </div>
+			  <!-- End Col -->
+			  <div class="col-md-12 col-lg-8">
+				<div class="row">
+				  <div class="col-md-6">
+					<div class="contact-us">
+					  <div class="contact-icon">
+						<i class="fa fa-map-o" aria-hidden="true"></i>
+					  </div>
+					  <!-- End contact Icon -->
+					  <div class="contact-info">
+						<h3>Delhi NCR</h3>
+						<p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+					  </div>
+					  <!-- End Contact Info -->
+					</div>
+					<!-- End Contact Us -->
+				  </div>
+				  <!-- End Col -->
+				  <div class="col-md-6">
+					<div class="contact-us contact-us-last">
+					  <div class="contact-icon">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					  </div>
+					  <!-- End contact Icon -->
+					  <div class="contact-info">
+						<p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+						
+					  </div>
+					  <!-- End Contact Info -->
+					</div>
+					<!-- End Contact Us -->
+				  </div>
+				  <!-- End Col -->
+				</div>
+				<!-- End Contact Row -->
+				<div class="row">
+				  <div class="col-md-12 col-lg-6">
+					<div class="new_footer-widget new_footer-left-widget">
+					  <div class="section-heading">
+						<h3>Useful Links</h3>
+						<span class="animate-border border-black"></span>
+					  </div>
+					  <ul>
+						<li>
+						  <a href="/ide">IDE</a>
+						</li>
+						<li>
+						  <a href="/problem_list">Practice</a>
+						</li>
+					  </ul>
+					  <ul>
+						<li>
+						  <a href="/contest/all_contest">Contests</a>
+						</li>
+						<li><a href="/ambassador">Programming Ambassador</a></li>
+						<li><a href="/interview_experiences">Interview Experiences</a></li>
+					  </ul>
+					</div>
+					<!-- End new_footer Widget -->
+				  </div>
+				  <!-- End col -->
+				  <div class="col-md-12 col-lg-6">
+					<div class="new_footer-widget">
+					  <div class="section-heading">
+						<h3>Subscribe</h3>
+						<span class="animate-border border-black"></span>
+					  </div>
+					  <p>
+						<!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+						Subscribe For Coding Tips</p>
+					  <form action="#">
+						<div class="form-row">
+						  <div class="col dk-new_footer-form">
+							<input type="email" class="form-control" placeholder="Email Address">
+							<button type="submit">
+							  <i class="fa fa-send"></i>
+							</button>
+						  </div>
+						</div>
+					  </form>
+					  <!-- End form -->
+					</div>
+					<!-- End new_footer widget -->
+				  </div>
+				  <!-- End Col -->
+				</div>
+				<!-- End Row -->
+			  </div>
+			  <!-- End Col -->
+			</div>
+			<!-- End Widget Row -->
+		  </div>
+		  <!-- End Contact Container -->
+  
+  
+		  <div class="copyright">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-6">
+				  <span>Copyright © 2021, All Right Algoladder</span>
+				</div>
+				<!-- End Col -->
+				<div class="col-md-6">
+				  <div class="copyright-menu">
+					<ul>
+					  <li>
+						<!-- <a href="#">Home</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Terms</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Privacy Policy</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Contact</a> -->
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				<!-- End col -->
+			  </div>
+			  <!-- End Row -->
+			</div>
+			<!-- End Copyright Container -->
+		  </div>
+		  <!-- End Copyright -->
+		  <!-- Back to top -->
+		  <div id="back-to-top" class="back-to-top">
+			<button class="btn btn-dark" title="Back to Top" style="display: block;">
+			  <i class="fa fa-angle-up"></i>
+			</button>
+		  </div>
+		  <!-- End Back to top -->
+		</div>
+	  </div>
+	<script type="text/javascript" src="{% static 'newtheme/js/index.js' %}"></script>
+	<script>
+		function myfuntion() {
+			console.log("aman1");
+			if(document.getElementById("navbar").className == "navbar") {
+				document.getElementById("navbar").classList.remove("navbar");
+				document.getElementById("navbar").classList.add("navbar-mobile");
+			}
+			else {
+				document.getElementById("navbar").classList.remove("navbar-mobile");
+				document.getElementById("navbar").classList.add("navbar");
+			}
+		}
+	</script>
+	<!-- ================ End footer Area ================= -->
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+		integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+		crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/hexagons.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

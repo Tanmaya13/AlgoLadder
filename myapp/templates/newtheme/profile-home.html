@@ -1,0 +1,1169 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder-Profile</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+        rel="stylesheet" />
+    <!--
+      CSS
+      =============================================
+    -->
+
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <style>
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 1s;
+
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 1000px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+
+                display: none;
+            }
+
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(40, 58, 90, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .getstarted {
+            margin: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+    <style>
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+        /* -----------------------------------profile css --------------------------------- */
+
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:700,600,300");
+
+        .frame {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 800px;
+            height: 400px;
+            margin-top: -200px;
+            margin-left: -200px;
+            border-radius: 2px;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            background: -webkit-gradient(linear, right top, left bottom, from(purple), to(rgb(235, 70, 235)));
+            background: linear-gradient(to bottom left, purple, rgb(235, 70, 235));
+            background-size: 125% 125%;
+            color: purple;
+            font-family: "Open Sans", Helvetica, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .card {
+            margin-top: -300px;
+            margin-left: 100px;
+            width: 850px;
+            height: 450px;
+            background: white;
+            box-shadow: 4px 8px 16px 0 #1b3b14;
+        }
+
+        .card .left {
+            position: absolute;
+            left: 0;
+            width: 320px;
+            height: 450px;
+            overflow: hidden;
+        }
+
+        .card .left .avatar {
+            position: absolute;
+            left: 110px;
+            top: 20px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            cursor: pointer;
+            background: rgb(235, 70, 235);
+        }
+
+        .card .left .avatar .circle {
+            box-sizing: border-box;
+            position: absolute;
+            border-radius: 50%;
+            -webkit-transition: all 1.5s ease-in-out;
+            transition: all 1.5s ease-in-out;
+            border: 1px solid;
+        }
+
+        .card .left .avatar .circle:first-child {
+            left: -3px;
+            top: -3px;
+            width: 146px;
+            height: 146px;
+            border-color: purple purple purple transparent;
+        }
+
+        .card .left .avatar .circle:nth-child(2) {
+            left: -6px;
+            top: -6px;
+            width: 152px;
+            height: 152px;
+            border-color: purple transparent purple purple;
+        }
+
+        .card .left .avatar:hover .circle:first-child {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+        .card .left .avatar:hover .circle:nth-child(2) {
+            -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+        }
+
+        .card .left .avatar img {
+            width: inherit;
+            height: inherit;
+            display: block;
+            border-radius: inherit;
+        }
+
+        .card .left .info {
+            position: absolute;
+            text-align: center;
+            top: 172px;
+            left: 20px;
+            width: 100%;
+        }
+
+        .card .left .info span {
+            display: block;
+        }
+
+        .card .left .info span.small {
+            top: 22px;
+        }
+
+        .card .left .buttons {
+            position: absolute;
+            text-align: center;
+            bottom: 32px;
+            width: 100%;
+            height: 80px;
+        }
+
+        .card .left .buttons button {
+            padding-top: 2px;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: purple;
+            width: 120px;
+            height: 26px;
+            margin: 8px 0;
+            background: white;
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 0 0 1px purple;
+            cursor: pointer;
+        }
+
+        .card .left .buttons button:hover {
+            background: purple;
+            color: white;
+        }
+
+        .card .left .stats {
+            position: relative;
+            height: 200px;
+            width: 200px;
+            margin-top: 150px;
+            background: rgb(236, 230, 236);
+            box-shadow: 0 -1px white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .card .left .stats:first-child {
+            box-shadow: none;
+        }
+
+        /* .card .left .stats:hover {
+  background: rgb(235, 70, 235);
+} */
+
+        .card .left .stats span.big {
+            top: 30px;
+        }
+
+        .card .left .stats span.small {
+            top: 50px;
+        }
+
+        .card .right {
+            position: absolute;
+            right: 0;
+            width: 500px;
+            height: 450px;
+        }
+
+        .card .right .stats {
+            position: relative;
+            height: 150px;
+            background: #cfecc7;
+            box-shadow: 0 -1px white;
+        }
+
+        .card .right .stats:first-child {
+            box-shadow: none;
+        }
+
+        /* .card .right .stats:hover {
+  background: rgb(235, 70, 235);
+} */
+
+        .card .right .stats span.big {
+            top: 30px;
+        }
+
+        .card .right .stats span.small {
+            top: 50px;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        span.big {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        span.small {
+            font-size: 12px;
+            font-weight: 300;
+        }
+
+        #rcorners2 {
+            border-radius: 25px;
+            border: 2px solid purple;
+            padding: 20px;
+            width: 300px;
+            height: 150px;
+            margin-left: 19px;
+            margin-top: 220px;
+        }
+
+        .myButton {
+            background-color: purple;
+            border: none;
+            border-radius: 12px;
+            color: white;
+            padding: 20px;
+            text-align: start;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            padding-bottom: 26px;
+            height: 15%;
+            margin-top: -10px;
+            margin-left: 100px;
+        }
+
+        .image1 {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            height: auto;
+            transition: .5s ease;
+            backface-visibility: hidden;
+        }
+
+        .middle {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            height: 5%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .image1:hover {
+            opacity: 0.3;
+        }
+
+        .middle:hover {
+            opacity: 1;
+        }
+
+        .text {
+            background-color: grey;
+            color: white;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        /* -----------------------------------profile css end ----------------------------- */
+
+
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+
+        .dot {
+            height: 7px;
+            width: 7px;
+            background-color: purple;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- ================ Start Header Area ================= -->
+    <header id="new_header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+            <!-- <div style="background:white;"> -->
+
+            <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+                    style="width: 200px;" alt="">
+            </h1>
+
+
+            <!-- </div> -->
+            <nav id="navbar" class="navbar">
+
+                <ul>
+                    <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Quick Coding
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/ide">IDE</a>
+                            <a class="dropdown-item" href="/blogs">Blog</a>
+                            <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+                            <a class="dropdown-item" href="/problem_list">Practice</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link scrollto" href="/courses">Courses</a></li>
+                    <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+                    {% ifequal account_type "ambassador" %}
+                    <li><a href="/ambassdordashboard"
+                            style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+                    </li>
+                    {% endifequal %}
+                    <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+                    <!-- Dropdown -->
+                    {% if user.is_authenticated %}
+                    <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ request.user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% ifequal account_type "ambassador" %}
+                            {% else %}
+ 
+                            <a class="dropdown-item" href="/profile#cop">Profile</a>
+                            <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+                            {% endifequal %}
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white">
+                            Sign up</a>
+                    </li>
+                    <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28"
+                    onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </nav>
+        </div>
+    </header>
+    <br><br>
+    <!-- ================ End Header Area ================= -->
+
+    <br><br>
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+                    <h1 class="text-white">
+                        Your Profile
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                        <a style="color:white" id="cop">{{ fullname }}</a>
+                    </p>
+                    <!-- <div class="link-nav">
+                        <span >
+                            <a href="/">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="#">Profile </a>
+                        </span>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+
+    <!--================ Start Course Details Area =================-->
+    <section class="course-details-area section-gap" style="padding:250px">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="frame"> -->
+                <div class="center">
+                    <div class="card">
+                        <div class="left">
+                            <div class="avatar">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <img src="/files/{{ img }}" alt="{{ img }}" class="image" style="width:100%">
+                                <div class="middle">
+                                    <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal"
+                                        data-target="#modalSubscriptionForm"
+                                        style="color: white;border-color: white;height: 40px;  cursor: pointer;">Update
+                                        Picture</a>
+                                </div>
+                                <!-- <div class="text-center">
+                              <a href="{% url 'update_profile' %}" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalSubscriptionForm">Launch
+                                Modal Subscription Form</a>
+                            </div>
+                             -->
+                            </div>
+                            <div class="info">
+                                <span class="big">{{ fullname }}</span>
+                            </div>
+
+                            <p id="rcorners2"><b>Username : </b>{{ name }}
+                                <br><br>
+                                <b>Email : </b>{{ email }}
+                                <br><br>
+                                <b>Phone : </b>{{ phone }}
+                            </p>
+                            <a href="" class="myButton" data-toggle="modal" data-target="#modalSubscriptionForm2">Update
+                                Profile</a>
+                            <!-- <p id="rcorners2">Email : {{ email }}</p>
+                          <p id="rcorners2">Phone : {{ phone }}</p> -->
+                            <!-- <div class="stats" ><
+                            <span >Username : {{ name }}</span><br>
+                            <span >Email : {{ email }}</span><br>
+                            <span >Phone : {{ phone }}</span>
+                          </div> -->
+                            <!-- <div class="buttons">
+                            <button class="flw">follow</button><button class="msg">message</button>
+                          </div> -->
+
+                        </div>
+                        <div class="right">
+                            <div class="stats posts">
+                                <span class="big">Enrolled In</span><span class="small">{% for items in enroll_list %}
+                                    {{ items }}<br> {% endfor %}</span>
+                            </div>
+                            <div class="stats likes">
+                                <span class="big">Course Start Date</span><span class="small">{{ uni_strt }}</span>
+                            </div>
+                            <div class="stats flwrs">
+                                <span class="big">Course End Date</span><span class="small">{{ uni_end }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </div>
+        </div>
+        <!-- *************************modal*************************************** -->
+
+        <div class="modal fade" id="modalSubscriptionForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Modify Profile Picture</h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button> -->
+                    </div>
+
+                    <form class="form-login" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="modal-body mx-3">
+                            {% for field in p_form %} {{ field.label_tag }} {{ field }}
+                            <br> {% endfor %}
+
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button class="myButton" type="submit"
+                                style="width:30%;padding: 15px;padding-left:45px;padding-right:25px;margin-right: 100px;  cursor: pointer;">Update</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal fade" id="modalSubscriptionForm2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold">Modify Profile Details</h4>
+                        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button> -->
+                    </div>
+
+                    <form class="form-login" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="modal-body mx-3">
+                            {% for field in u_form %} {{ field.label_tag }} {{ field }}
+                            <br> {% endfor %} {% for field in phoneform %} {{ field.label_tag }} {{ field }}
+                            <br> {% endfor %}
+                        </div>
+                        <div class="modal-footer d-flex justify-content-center">
+                            <button class="myButton" type="submit"
+                                style="width:30%;padding: 15px;padding-left:45px;padding-right:25px;margin-right: 100px;  cursor: pointer;">Update</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- *************************modal end ********************************** -->
+    </section>
+    <!--================ End Course Details Area =================-->
+
+    <!-- ================ start footer Area ================= -->
+    <div class="new_footer1" style="margin-top:12vh">
+        <div id="dk-new_footer" class="dk-new_footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg-4">
+                <div class="dk-new_footer-box-info">
+                  <a href="index.html" class="new_footer-logo">
+                    <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+                  </a>
+                  <p class="footer-info-text">
+                    Coding Through One to One Mentorship By Expert Competitive Programmers..
+                  </p>
+                  <div class="new_footer-social-link">
+                    <h3>Follow us</h3>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/algoladder">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+                          <i class="fa fa-youtube"></i>
+                        </a>
+                      </li>
+                      
+                      <li>
+                        <a href="https://www.linkedin.com/company/algoladder/">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/algoladder/?hl=en">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End Social link -->
+                </div>
+                <!-- End new_footer info -->
+                <div class="new_footer-awarad">
+                  <img src="images/icon/best.png" alt="">
+                  <p></p>
+                </div>
+              </div>
+              <!-- End Col -->
+              <div class="col-md-12 col-lg-8">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="contact-us">
+                      <div class="contact-icon">
+                        <i class="fa fa-map-o" aria-hidden="true"></i>
+                      </div>
+                      <!-- End contact Icon -->
+                      <div class="contact-info">
+                        <h3>Delhi NCR</h3>
+                        <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                      </div>
+                      <!-- End Contact Info -->
+                    </div>
+                    <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                  <div class="col-md-6">
+                    <div class="contact-us contact-us-last">
+                      <div class="contact-icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                      </div>
+                      <!-- End contact Icon -->
+                      <div class="contact-info">
+                        <p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+                        
+                      </div>
+                      <!-- End Contact Info -->
+                    </div>
+                    <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Contact Row -->
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="new_footer-widget new_footer-left-widget">
+                      <div class="section-heading">
+                        <h3>Useful Links</h3>
+                        <span class="animate-border border-black"></span>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="/ide">IDE</a>
+                        </li>
+                        <li>
+                          <a href="/problem_list">Practice</a>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <a href="/contest/all_contest">Contests</a>
+                        </li>
+                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                      </ul>
+                    </div>
+                    <!-- End new_footer Widget -->
+                  </div>
+                  <!-- End col -->
+                  <div class="col-md-12 col-lg-6">
+                    <div class="new_footer-widget">
+                      <div class="section-heading">
+                        <h3>Subscribe</h3>
+                        <span class="animate-border border-black"></span>
+                      </div>
+                      <p>
+                        <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                        Subscribe For Coding Tips</p>
+                      <form action="#">
+                        <div class="form-row">
+                          <div class="col dk-new_footer-form">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                            <button type="submit">
+                              <i class="fa fa-send"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                      <!-- End form -->
+                    </div>
+                    <!-- End new_footer widget -->
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Widget Row -->
+          </div>
+          <!-- End Contact Container -->
+  
+  
+          <div class="copyright">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <span>Copyright © 2021, All Right Algoladder</span>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                  <div class="copyright-menu">
+                    <ul>
+                      <li>
+                        <!-- <a href="#">Home</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Terms</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Privacy Policy</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Contact</a> -->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End col -->
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+          </div>
+          <!-- End Copyright -->
+          <!-- Back to top -->
+          <div id="back-to-top" class="back-to-top">
+            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+              <i class="fa fa-angle-up"></i>
+            </button>
+          </div>
+          <!-- End Back to top -->
+        </div>
+      </div>
+    <script type="text/javascript" src="{% static 'newtheme/js/index.js' %}"></script>
+    <script>
+        function myfuntion() {
+            console.log("aman1");
+            if(document.getElementById("navbar").className == "navbar") {
+                document.getElementById("navbar").classList.remove("navbar");
+                document.getElementById("navbar").classList.add("navbar-mobile");
+            }
+            else {
+                document.getElementById("navbar").classList.remove("navbar-mobile");
+                document.getElementById("navbar").classList.add("navbar");
+            }
+        }
+    </script>
+    <!-- ================ End footer Area ================= -->
+
+
+    <script src="{% static 'newtheme/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'newtheme/js/vendor/bootstrap.min.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'newtheme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/parallax.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'newtheme/js/hexagons.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script>
+        function myPopup() {
+            var val = document.getElementById("mce-EMAIL").value
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val)) {
+                swal({
+                    title: "Successfully Subscribed",
+                    text: "<small>Great You Will Get Coding Tips From AlgoLadder</small>",
+                    type: "success",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } else {
+                swal({
+                    title: "Failed To Subscribed",
+                    text: "<small>Please Enter Valid Email Address</small>",
+                    type: "error",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            }
+
+
+
+            // Set our logout isClicked2 to true and count2 to 1
+
+        }
+    </script>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f7051ecf0e7167d00141e08/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

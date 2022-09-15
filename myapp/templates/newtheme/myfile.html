@@ -1,0 +1,1334 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+  <title>AlgoLadder-Course</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Vendor CSS Files -->
+  <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="{% static 'latestTheme/css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/admission.css' %}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" href="{% static 'latestTheme/css/meanmenu.min.css' %}">
+  <link rel="stylesheet" href=" {% static 'latestTheme/css/menu.css' %}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/menu-vertical.css'%}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/style1.css' %} ">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/reponsive.css' %} ">
+  
+  
+  <!-- morrisjs JS
+  ============================================ -->
+
+  <!-- morrisjs JS
+  ============================================ -->
+
+  <!-- calendar JS
+  ============================================ -->
+   
+  <!-- plugins JS
+  ============================================ -->
+  
+  <style>
+    .active{
+      background-color: red;
+      color:white;
+    }
+    .active a{
+      color:white;
+    }
+    .active ul{
+      background-color:rgb(204, 166, 204);
+    }
+    @media (max-width:1200px) {
+      #line {
+        display: none;
+      }
+
+      #footer_new {
+        margin-top: 80vh;
+      }
+    }
+
+    @media (max-width:900px) {
+      #line {
+        display: none;
+      }
+
+      #footer_new {
+        margin-top: 80vh;
+      }
+       
+    }
+
+    @media (max-width:600px) {
+      #card_new {
+        margin-top: 20vh;
+      }
+
+      #footer_new {
+        margin-top: 130vh;
+      }
+    }
+
+    @media (min-width:600px) {
+      #card_new {
+        width: 80%;
+      }
+    }
+
+    .mobile-nav-toggle {
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 1s;
+
+    }
+
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+
+    @media (max-width: 1000px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+
+        display: none;
+      }
+
+    }
+
+    .navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(40, 58, 90, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .navbar-mobile .mobile-nav-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .navbar-mobile ul {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px 0;
+      border-radius: 10px;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+
+    .navbar-mobile a {
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #37517e;
+    }
+
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover>a {
+      color: #47b2e4;
+    }
+
+    .navbar-mobile .getstarted {
+      margin: 15px;
+      color: #37517e;
+    }
+
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 20px;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    .navbar-mobile .dropdown ul li {
+      min-width: 200px;
+    }
+
+    .navbar-mobile .dropdown ul a {
+      padding: 10px 20px;
+    }
+
+    .navbar-mobile .dropdown ul a i {
+      font-size: 12px;
+    }
+
+    .navbar-mobile .dropdown ul a:hover,
+    .navbar-mobile .dropdown ul .active:hover,
+    .navbar-mobile .dropdown ul li:hover>a {
+      color: #47b2e4;
+    }
+
+    .navbar-mobile .dropdown>.dropdown-active {
+      display: block;
+    }
+
+    
+label {
+  color: #333
+}
+
+.btn-send {
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  width: 80%;
+  margin-left: 3px
+}
+
+.help-block.with-errors {
+  color: #ff5050;
+  margin-top: 5px
+}
+
+.card2 {
+  margin-left: 10px;
+  margin-right: 10px
+}
+.new{
+   padding-left:17vw;
+}
+
+@media (min-width:990px) and (max-width:1200) {
+  .new {
+         padding-left: 5vw;
+         padding-right: 0px;
+ }
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.razorpay-payment-button {
+  background-color: purple;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: -10%;
+  margin-left: 1%;
+  cursor: pointer;
+  width: 100%;
+}
+  </style>
+</head>
+
+<body style="overflow:auto; overflow: initial;" onload="popup()">
+  <!-- Start Header -->
+  <!--Important link source from https://bootsnipp.com/snippets/ooa9M-->
+  <header id="new_header" class="fixed-top" style="border-bottom: 1px solid black;height: 60px;">
+    <div class="container d-flex align-items-center">
+      <!-- <div style="background:white;"> -->
+
+      <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+          style="width: 200px;" alt="">
+      </h1>
+
+
+      <!-- </div> -->
+      <nav id="navbar" class="navbar">
+
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto " href="/algoedge">AlgoEdge</a></li>
+          <li id="wtf" class="nav-item dropdown" onclick="myfuntion3()">
+            <a  class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false" >
+              Quick Coding
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/ide">IDE</a>
+              <a class="dropdown-item" href="/blogs">Blog</a>
+              <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+              <a class="dropdown-item" href="/problem_list">Practice</a>
+            </div>
+          </li>
+          <li>
+            
+          </li>
+          <li><a class="nav-link scrollto active" href="/courses">Courses</a></li>
+          <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+          {% ifequal account_type "ambassador" %}
+          <li><a href="/ambassdordashboard"
+              style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+          </li>
+          {% endifequal %}
+          <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+          <!-- Dropdown -->
+          {% if user.is_authenticated %}
+          <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+          <li id="wtf1" class="nav-item dropdown" onclick="myfuntion4()">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{ request.user.username }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% ifequal account_type "ambassador" %}
+              {% else %}
+ 
+              <a class="dropdown-item" href="/profile#cop">Profile</a>
+              <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+              {% endifequal %}
+              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+          </li>
+          {% else %}
+          <li>
+            <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+              style="background-color:purple; color:white; height:30px;border-radius: 50px;">
+              Sign up</a>
+          </li>
+          <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+              style="background-color:purple; color:white;height:30px;border-radius: 50px;">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28" onclick="myfuntion()"
+          fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+ <!-- New Section -->
+  <br>
+  <br>
+  <br>
+ <div class="left-sidebar-pro" style="overflow-x: auto;overflow-y: auto; ">
+  <nav id="sidebar" class="" style="overflow-x:auto;">
+      
+      <div class="left-custom-menu-adp-wrap ">
+          <nav class="sidebar-nav left-sidebar-menu-pro">
+              <ul class="metismenu" id="menu1">
+                  {% ifequal label "Array" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                      <a class="has-arrow" href=""><span class="mini-click-non" >Array</span></a>
+                      <ul class="submenu-angle" aria-expanded="true">
+                          <li id="Introduction"><a title="Dashboard v.1" href="{% url 'single_note' label='Array' note_name='Introduction to Array' course_id=course_id %}" ><span class="mini-sub-pro">Introduction</span></a></li>
+                          <li><a href="{% url 'single_note' label='Array' note_name='Pointers in Arrays' course_id=course_id %}"> Pointers</a>
+ 
+ 
+                          </li>
+                          <li><a title="Dashboard v.3" href="{% url 'single_note' label='Array' note_name='Arrray Operations' course_id=course_id %}"><span class="mini-sub-pro"> Array Operations</span></a></li>
+                          <li><a title="Analytics" href="{% url 'single_note' label='Array' note_name='Multi-Dimension Array' course_id=course_id %}"><span class="mini-sub-pro">Multi-Dimension Array</span></a></li>
+                          <li><a title="Widgets" href="{% url 'single_note' label='Array' note_name='Arrays and Functions' course_id=course_id %}"><span class="mini-sub-pro">Array and Funtions</span></a></li>
+                      </ul>
+                  </li>
+
+                  {% ifequal label "Linked List" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                   
+                      
+                        <a class="has-arrow" href="" aria-expanded="false" >  <span class="mini-click-non">Linked List</span></a>
+                      <ul class="submenu-angle" aria-expanded="false">
+                        <li><a title="All Professors" href="{% url 'single_note' label='Linked List' note_name='Introduction to Linked List' course_id=course_id %}"><span class="mini-sub-pro" >Introduction</span></a></li>
+                        <li><a title="Add Professor" href="{% url 'single_note' label='Linked List' note_name='Types of Linked Lists' course_id=course_id %}"><span class="mini-sub-pro">Types</span></a></li>
+                        <li><a title="Edit Professor" href="{% url 'single_note' label='Linked List' note_name='Linked List Operations' course_id=course_id %}"><span class="mini-sub-pro">Linked List Operations</span></a></li>
+                        <li><a title="Professor Profile" href="{% url 'single_note' label='Linked List' note_name='Comparison with other data structures' course_id=course_id %}"><span class="mini-sub-pro">Comparison</span></a></li>
+                      </ul>
+ 
+ 
+                  </li>
+                  {% ifequal label "Stack" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+
+                      {% if showit %}
+                      <a class="has-arrow" href="" aria-expanded="false"> <span class="mini-click-non">Stack</span></a>
+                      <ul class="submenu-angle" aria-expanded="false">
+                          <li><a title="All Students" href="{% url 'single_note' label='Stack' note_name='Introduction to Stack' course_id=course_id %}"><span class="mini-sub-pro">Introduction</span></a></li>
+                          <li><a title="Add Students" href="{% url 'single_note' label='Stack' note_name='Implementation of Stack' course_id=course_id %}"><span class="mini-sub-pro">Implementation</span></a></li>
+                          <li><a title="Edit Students" href="{% url 'single_note' label='Stack' note_name='Expression Notifications using Stack' course_id=course_id %}"><span class="mini-sub-pro">Problems</span></a></li>
+ 
+                      </ul>
+                      {% else %}
+                      <a  href="#" aria-expanded="false" onclick="myfuntion1()"> <span >Stack<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                     
+                      {% endif %}
+
+                  </li>
+                  {% ifequal label "Queue" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                      <a class="has-arrow" href=" " aria-expanded="false"> <span class="mini-click-non">Queue</span></a>
+                      <ul class="submenu-angle" aria-expanded="false">
+                        <li><a title="All Students" href="{% url 'single_note' label='Queue' note_name='Introduction to Queue' course_id=course_id %}"><span class="mini-sub-pro"> Introduction</span></a></li>
+                          <li><a title="Add Courses" href="{% url 'single_note' label='Queue' note_name='Operations on Queue' course_id=course_id %}"><span class="mini-sub-pro">Operations on Queue</span></a></li>
+                          <li><a title="Edit Courses" href="{% url 'single_note' label='Queue' note_name='Queue Implementation' course_id=course_id %}"><span class="mini-sub-pro">Queue Implementation</span></a></li>
+                      </ul>
+                      {% else %}
+                      <a   href="#" aria-expanded="false" onclick="myfuntion1()"> <span class="mini-click-non">Queue<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                      {% endif %}
+                  </li>
+                  {% ifequal label "Binary Tree" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                      <a class="has-arrow" href=" " aria-expanded="false"> <span class="mini-click-non">Tree</span></a>
+                      <ul class="submenu-angle" aria-expanded="false">
+                        <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Introduction to Binary Tree' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Binary Tree</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Binary Tree and its Types' course_id=course_id %}"><span class="mini-sub-pro">Types of Binary Tree</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Tree Traversal' course_id=course_id %}"><span class="mini-sub-pro"> Tree Traversal</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Implementation of Binary Tree' course_id=course_id %}"><span class="mini-sub-pro">Implementation of Binary Tree</span></a></li> 
+                        <li><a title="All Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Introduction to Binary Search Tree' course_id=course_id %}"><span class="mini-sub-pro"> Introduction to Binary Search Tree </span></a></li>
+                          <li><a title="Add Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Binary Search Tree Operations' course_id=course_id %}"><span class="mini-sub-pro"> Binary Search Tree Operations</span></a></li>
+                          <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Identify whether BST' course_id=course_id %}"><span class="mini-sub-pro"> Identify whether BST</span></a></li>
+                          <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Min Max of BST' course_id=course_id %}"><span class="mini-sub-pro"> Min Max of BST</span></a></li>
+                          <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Height of BST' course_id=course_id %}"><span class="mini-sub-pro">Height of BST</span></a></li>
+                          
+                        </ul>
+                        {% else %}
+                          <a   href="#" aria-expanded="false" onclick="myfuntion1()"> <span class="mini-click-non">Tree<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                          {% endif %}
+                  </li>
+                  {% ifequal label "Strings" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                      <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Strings</span></a>
+                      <ul class="submenu-angle" aria-expanded="false">
+                        <li><a title="All Students" href="{% url 'single_note' label='Strings' note_name='Introduction to Strings' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Strings</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Strings' note_name='String Manipulation Functions' course_id=course_id %}"><span class="mini-sub-pro">String Manipulation Functions</span></a></li>
+                       
+                      </ul>
+                      {% else %}
+                      <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Strings<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                      {% endif %}
+                  </li>
+                  {% ifequal label "Graph" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                    <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Graph</span></a>
+                    <ul class="submenu-angle" aria-expanded="false">
+                      <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='Introduction to Graph' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Graph</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='Types of Graphs' course_id=course_id %}"><span class="mini-sub-pro">Types of Graphs</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='BFS & DFS' course_id=course_id %}"><span class="mini-sub-pro">BFS & DFS</span></a></li>
+                    </ul>
+                    {% else %}
+                    <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Graph<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                    {% endif %}
+                  </li>
+                  {% ifequal label "Hashing" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                  {% if showit %}
+                  <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Hash Table</span></a>
+                  <ul class="submenu-angle" aria-expanded="false">
+                    <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Introduction to Hash Table' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Hash Table</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Collision and Chaining' course_id=course_id %}"><span class="mini-sub-pro">Collision and Chaining</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Open Addressing' course_id=course_id %}"><span class="mini-sub-pro">Open Addressing</span></a></li>
+                  </ul>
+                  {% else %}
+                  <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Hash Table<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                  {% endif %}
+                  </li>
+                  {% ifequal label "STL" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                {% if showit %}
+                <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Standard Template Library</span></a>
+                <ul class="submenu-angle" aria-expanded="false">
+                  <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Vectors' course_id=course_id %}"><span class="mini-sub-pro">Vectors</span></a></li>
+                  <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Maps' course_id=course_id %}"><span class="mini-sub-pro">Maps</span></a></li>
+                  <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Pairs' course_id=course_id %}"><span class="mini-sub-pro">Pairs</span></a></li>
+                  <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Sets' course_id=course_id %}"><span class="mini-sub-pro">Sets</span></a></li>
+                </ul>
+                {% else %}
+                <a  href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Standard Template Library<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                {% endif %}
+                  </li>
+                  {% ifequal label "Searching" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+              {% if showit %}
+              <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Searching</span></a>
+              <ul class="submenu-angle" aria-expanded="false">
+                <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Introduction to Searching' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Searching</span></a></li>
+                <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Linear Search' course_id=course_id %}"><span class="mini-sub-pro">Linear Search</span></a></li>
+                <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Binary Search' course_id=course_id %}"><span class="mini-sub-pro">Binary Search</span></a></li>
+                <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Jump Search' course_id=course_id %}"><span class="mini-sub-pro">Jump Search</span></a></li>
+              </ul>
+              {% else %}
+              <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Searching<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+              {% endif %}
+                  </li>
+                  {% ifequal label "Sorting" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+            {% if showit %}
+            <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Sorting</span></a>
+            <ul class="submenu-angle" aria-expanded="false">
+              
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Introduction to Sorting' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Sorting</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Bubble Sort' course_id=course_id %}"><span class="mini-sub-pro">Bubble Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Selection Sort' course_id=course_id %}"><span class="mini-sub-pro">Selection Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Insertion Sort' course_id=course_id %}"><span class="mini-sub-pro">Insertion Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Merge Sort' course_id=course_id %}"><span class="mini-sub-pro">Merge Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Quick Sort' course_id=course_id %}"><span class="mini-sub-pro">Quick Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Counting Sort' course_id=course_id %}"><span class="mini-sub-pro">Counting Sort</span></a></li>
+              <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Wave Sort' course_id=course_id %}"><span class="mini-sub-pro">Wave Sort</span></a></li>
+            </ul>
+            {% else %}
+              <a  href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Sorting<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+              {% endif %}
+                  </li>
+                  {% ifequal label "Mathematical" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+          {% if showit %}
+          <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Mathmatical Logics</span></a>
+          <ul class="submenu-angle" aria-expanded="false">
+            
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Introduction to Mathematical Logics' course_id=course_id %}"><span class="mini-sub-pro"> Introduction to Mathematical Logics</span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Euler Totient Function' course_id=course_id %}"><span class="mini-sub-pro">Euler Totient Function </span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Fermat Little Theorem' course_id=course_id %}"><span class="mini-sub-pro">Fermat Little Theorem</span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Sieve of Eratosthenes' course_id=course_id %}"><span class="mini-sub-pro"> Sieve of Eratosthenes</span></a></li>
+            
+          </ul>
+          {% else %}
+          <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Mathmatical Logics<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+          {% endif %}
+                  </li>
+
+                  {% ifequal label "Greedy" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+          {% if showit %}
+          <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Greedy Algorithms</span></a>
+          <ul class="submenu-angle" aria-expanded="false">
+            
+            <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Introduction to Greedy Approach' course_id=course_id %}"><span class="mini-sub-pro"> Introduction to Greedy Approach</span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Activity Selection Problem' course_id=course_id %}"><span class="mini-sub-pro">Activity Selection Problem</span></a></li> 
+          <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Fractional Knapsack' course_id=course_id %}"><span class="mini-sub-pro">Fractional Knapsack</span></a></li> 
+          <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Bin Packing' course_id=course_id %}"><span class="mini-sub-pro">Bin Packing</span></a></li> 
+            
+          </ul>
+          {% else %}
+          <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Greedy Algorithms<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+          {% endif %}
+                  </li>
+     
+                  {% ifequal label "Dynamic Programming" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+        {% if showit %}
+        <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Dynamic Programming</span></a>
+        <ul class="submenu-angle" aria-expanded="false">
+          
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Introduction to Dynamic Programming' course_id=course_id %}"><span class="mini-sub-pro"> Introduction to Dynamic Programming</span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='Longest Increasing Subsequence' course_id=course_id %}"><span class="mini-sub-pro">Longest Increasing Subsequence </span></a></li>
+            <li><a title="All Students" href="{% url 'single_note' label='Mathematical' note_name='House Robber' course_id=course_id %}"><span class="mini-sub-pro">House Robber</span></a></li>
+         
+        </ul>
+        {% else %}
+          <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Dynamic Programming<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+          {% endif %}
+                  </li>
+                  {% ifequal label "Divide And Conquer" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+      {% if showit %}
+      <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Divide and Conquer</span></a>
+      <ul class="submenu-angle" aria-expanded="false">
+        <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Introduction to Divide and Conquer' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Divide and Conquer</span></a></li>
+        <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Square Root' course_id=course_id %}"><span class="mini-sub-pro">Square Root</span></a></li> 
+        <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Search element in a rotated sorted array' course_id=course_id %}"><span class="mini-sub-pro">Search element in a rotated sorted array</span></a></li> 
+        <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Tiling Problem' course_id=course_id %}"><span class="mini-sub-pro">Tiling Problem</span></a></li> 
+ 
+      </ul>
+      {% else %}
+      <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Divide and Conquer<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+      {% endif %}
+                  </li>
+ 
+                  {% ifequal label "back Tracking" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                    <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">BackTracking</span></a>
+                    <ul class="submenu-angle" aria-expanded="false">
+                      <li><a title="All Students" href="{% url 'single_note' label='back Tracking' note_name='Introduction to Backtracking' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Backtracking</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='back Tracking' note_name='N QUEEN Problem' course_id=course_id %}"><span class="mini-sub-pro">N QUEEN Problem</span></a></li> 
+                    
+                      
+                    </ul>
+                    {% else %}
+                    <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">BackTracking<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                    {% endif %}
+                  </li>
+                  {% ifequal label "Graph Algorithms" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                    <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Graph Algorithms</span></a>
+                    <ul class="submenu-angle" aria-expanded="false">
+                      <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Introduction to Graph Algorithms' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Graph Algorithms</span></a></li>
+                      <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Floyd Warshall' course_id=course_id %}" ><span class="mini-sub-pro">Floyd Warshall</span></a></li> 
+                      <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Dijkstra’s Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">Dijkstra’s Algorithm</span></a></li>
+                    </ul>
+                    {% else %}
+                    <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Graph Algorithms<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                    {% endif %}
+                  </li>
+                  {% ifequal label "Pattern Matching" %}
+                  <li class="active"> 
+                  {% else %}
+                  <li > 
+                  {% endifequal %}
+                    {% if showit %}
+                    <a class="has-arrow" href=" " aria-expanded="false"> </span> <span class="mini-click-non">Pattern Matching</span></a>
+                    <ul class="submenu-angle" aria-expanded="false">
+                      <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='Introduction to Pattern Matching' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Pattern Matching</span></a></li>
+                      <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='KMP Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">KMP Algorithm</span></a></li> 
+                      <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='Rabin Karp Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">Rabin Karp Algorithm</span></a></li>
+                    </ul>
+                    {% else %}
+                    <a   href="#" aria-expanded="false" onclick="myfuntion1()"> </span> <span class="mini-click-non">Pattern Matching<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"></span></a>
+                    {% endif %}
+                  </li>
+    
+              </ul>
+          </nav>
+      </div>
+  </nav>
+</div>
+<!-- Mobile Nav View-->
+<div class="mobile-menu-area">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="mobile-menu">
+                  <nav id="dropdown">
+                      <ul class="mobile-menu-nav">
+
+                          <li>
+                            
+                            <a data-toggle="collapse" data-target="#Charts" href="{% url 'single_note' label='Array' note_name='Introduction to Array' course_id=course_id %}">Array <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul class="collapse dropdown-header-top">
+                                  <li><a href="{% url 'single_note' label='Array' note_name='Introduction to Array' course_id=course_id %}">Introduction to Array</a></li>
+                                  <li><a href="{% url 'single_note' label='Array' note_name='Arrray Operations' course_id=course_id %} ">Arrray Operations</a></li>
+                                  <li><a href="{% url 'single_note' label='Array' note_name='Multi-Dimension Array' course_id=course_id %}">Multi-Dimension Array</a></li>
+                                  <li><a href="{% url 'single_note' label='Array' note_name='Arrays and Functions' course_id=course_id %}">Array and Functions</a></li>
+                              </ul>
+ 
+                          </li>
+
+                          <li>
+ 
+                            <a data-toggle="collapse" data-target="#demoevent" href="#">Linked List<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul id="demoevent" class="collapse dropdown-header-top">
+                                  <li><a href="{% url 'single_note' label='Linked List' note_name='Introduction to Linked List' course_id=course_id %} ">Introduction to Linked List</a>
+                                  </li>
+                                  <li><a href="{% url 'single_note' label='Linked List' note_name='Types of Linked Lists' course_id=course_id %}">Types of Linked Lists</a>
+                                  </li>
+                                  <li><a href="{% url 'single_note' label='Linked List' note_name='Linked List Operations' course_id=course_id %}">Linked List Operations</a>
+                                  </li>
+                                  <li><a href="{% url 'single_note' label='Linked List' note_name='Comparison with other data structures' course_id=course_id %} ">Comparison with other data structures</a>
+                                  </li>
+                              </ul>
+ 
+                          </li>
+                          <li>
+                            {% if showit %}
+                            <a data-toggle="collapse" data-target="#demopro" href="#">Stack <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul id="demopro" class="collapse dropdown-header-top">
+                                  <li><a href="{% url 'single_note' label='Stack' note_name='Introduction to Stack' course_id=course_id %}"> Introduction to Stack</a>
+                                  </li>
+                                  <li><a title="Add Students" href="{% url 'single_note' label='Stack' note_name='Implementation of Stack' course_id=course_id %}"><span class="mini-sub-pro">Implementation</span></a></li>
+                                  <li><a title="Edit Students" href="{% url 'single_note' label='Stack' note_name='Expression Notifications using Stack' course_id=course_id %}"><span class="mini-sub-pro">Problems</span></a></li>
+                              </ul>
+                              {% else %}
+                              <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Stack<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              {% endif %}
+                          </li>
+                          <li>
+                            {% if showit %}
+                            <a data-toggle="collapse" data-target="#democrou" href="#">Queue <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul id="democrou" class="collapse dropdown-header-top">
+                                <li><a title="All Students" href="{% url 'single_note' label='Queue' note_name='Introduction to Queue' course_id=course_id %}"><span class="mini-sub-pro"> Introduction</span></a></li>
+                                <li><a title="Add Courses" href="{% url 'single_note' label='Queue' note_name='Operations on Queue' course_id=course_id %}"><span class="mini-sub-pro">Operations on Queue</span></a></li>
+                                <li><a title="Edit Courses" href="#"><span class="mini-sub-pro">Queue Implementation</span></a></li>
+                              </ul>
+                              {% else %}
+                              <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Queue<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              {% endif %}
+                          </li>
+                          <li>
+                            {% if showit %}
+                            <a data-toggle="collapse" data-target="#demolibra" href="#">Tree<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul id="demolibra" class="collapse dropdown-header-top">
+                                <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Introduction to Binary Tree' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Binary Tree</span></a></li>
+                                <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Binary Tree and its Types' course_id=course_id %}"><span class="mini-sub-pro">Types of Binary Tree</span></a></li>
+                                <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Tree Traversal' course_id=course_id %}"><span class="mini-sub-pro"> Tree Traversal</span></a></li>
+                                <li><a title="All Students" href="{% url 'single_note' label='Binary Tree' note_name='Implementation of Binary Tree' course_id=course_id %}"><span class="mini-sub-pro">Implementation of Binary Tree</span></a></li> 
+                                <li><a title="All Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Introduction to Binary Search Tree' course_id=course_id %}"><span class="mini-sub-pro"> Introduction to Binary Search Tree </span></a></li>
+                                  <li><a title="Add Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Binary Search Tree Operations' course_id=course_id %}"><span class="mini-sub-pro"> Binary Search Tree Operations</span></a></li>
+                                  <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Identify whether BST' course_id=course_id %}"><span class="mini-sub-pro"> Identify whether BST</span></a></li>
+                                  <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Min Max of BST' course_id=course_id %}"><span class="mini-sub-pro"> Min Max of BST</span></a></li>
+                                  <li><a title="Edit Library" href="{% url 'single_note' label='Binary Search Tree' note_name='Height of BST' course_id=course_id %}"><span class="mini-sub-pro">Height of BST</span></a></li>
+         
+                              </ul>
+                              {% else %}
+                              <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Tree<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              {% endif %}
+                          </li>
+                          <li>
+                            {% if showit %}
+                            <a data-toggle="collapse" data-target="#demodepart" href="#">String <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              <ul id="demodepart" class="collapse dropdown-header-top">
+                                <li><a title="All Students" href="{% url 'single_note' label='Strings' note_name='Introduction to Strings' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Strings</span></a></li>
+                                <li><a title="All Students" href="{% url 'single_note' label='Strings' note_name='String Manipulation Functions' course_id=course_id %}"><span class="mini-sub-pro">String Manipulation Functions</span></a></li>
+                              </ul>
+                              {% else %}
+                              <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">String<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                              {% endif %}
+                          </li>
+                          <li>
+                            {% if showit %}
+                            <a data-toggle="collapse" data-target="#demodepart" href="#">Graph <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                            <ul id="demodepart" class="collapse dropdown-header-top">
+                              <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='Introduction to Graph' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Graph</span></a></li>
+                              <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='Types of Graphs' course_id=course_id %}"><span class="mini-sub-pro">Types of Graphs</span></a></li>
+                              <li><a title="All Students" href="{% url 'single_note' label='Graph' note_name='BFS & DFS' course_id=course_id %}"><span class="mini-sub-pro">BFS & DFS</span></a></li>
+                            </ul>
+                            {% else %}
+                            <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Graph<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                            {% endif %}
+                        </li>
+                        <li>
+                          {% if showit %}
+                          <a data-toggle="collapse" data-target="#demodepart" href="#">Hash Table<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                          <ul id="demodepart" class="collapse dropdown-header-top">
+                            <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Introduction to Hash Table' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Hash Table</span></a></li>
+                            <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Collision and Chaining' course_id=course_id %}"><span class="mini-sub-pro">Collision and Chaining</span></a></li>
+                            <li><a title="All Students" href="{% url 'single_note' label='Hashing' note_name='Open Addressing' course_id=course_id %}"><span class="mini-sub-pro">Open Addressing</span></a></li>
+                          </ul>
+                          {% else %}
+                          <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Hash Table<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                          {% endif %}
+                      </li>
+                      <li>
+                        {% if showit %}
+                        <a data-toggle="collapse" data-target="#demodepart" href="#">Standard Template Library<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                        <ul id="demodepart" class="collapse dropdown-header-top">
+                          <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Vectors' course_id=course_id %}"><span class="mini-sub-pro"> Vectors</span></a></li>
+                          <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Pairs' course_id=course_id %}"><span class="mini-sub-pro"> Pairs</span></a></li>
+                          <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Maps' course_id=course_id %}"><span class="mini-sub-pro"> Maps</span></a></li>
+                          <li><a title="All Students" href="{% url 'single_note' label='STL' note_name='Sets' course_id=course_id %}"><span class="mini-sub-pro"> Sets</span></a></li>
+                        </ul>
+                        {% else %}
+                        <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Standard Template Library<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                        {% endif %}
+                    </li>
+                    <li>
+                      {% if showit %}
+                      <a data-toggle="collapse" data-target="#demodepart" href="#">Searching<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                      <ul id="demodepart" class="collapse dropdown-header-top">
+                        <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Introduction to Searching' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Searching</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Linear Search' course_id=course_id %}"><span class="mini-sub-pro">Linear Search</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Binary Search' course_id=course_id %}"><span class="mini-sub-pro">Binary Search</span></a></li>
+                        <li><a title="All Students" href="{% url 'single_note' label='Searching' note_name='Jump Search' course_id=course_id %}"><span class="mini-sub-pro">Jump Search</span></a></li>
+                      </ul>
+                      {% else %}
+                      <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Searching<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                      {% endif %}
+                  </li>
+                  <li>
+                    {% if showit %}
+                    <a data-toggle="collapse" data-target="#demodepart" href="#">Sorting<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                    <ul id="demodepart" class="collapse dropdown-header-top">
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Introduction to Sorting' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Sorting</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Bubble Sort' course_id=course_id %}"><span class="mini-sub-pro">Bubble Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Selection Sort' course_id=course_id %}"><span class="mini-sub-pro">Selection Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Insertion Sort' course_id=course_id %}"><span class="mini-sub-pro">Insertion Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Merge Sort' course_id=course_id %}"><span class="mini-sub-pro">Merge Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Quick Sort' course_id=course_id %}"><span class="mini-sub-pro">Quick Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Counting Sort' course_id=course_id %}"><span class="mini-sub-pro">Counting Sort</span></a></li>
+                      <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Wave Sort' course_id=course_id %}"><span class="mini-sub-pro">Wave Sort</span></a></li>
+                    </ul>
+                    {% else %}
+                    <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Sorting<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                    {% endif %}
+                </li>
+                <li>
+                  {% if showit %}
+                  <a data-toggle="collapse" data-target="#demodepart" href="#">Mathmatical Logics<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                  <ul id="demodepart" class="collapse dropdown-header-top">
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Introduction to Sorting' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Sorting</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Bubble Sort' course_id=course_id %}"><span class="mini-sub-pro">Bubble Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Selection Sort' course_id=course_id %}"><span class="mini-sub-pro">Selection Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Insertion Sort' course_id=course_id %}"><span class="mini-sub-pro">Insertion Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Merge Sort' course_id=course_id %}"><span class="mini-sub-pro">Merge Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Quick Sort' course_id=course_id %}"><span class="mini-sub-pro">Quick Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Counting Sort' course_id=course_id %}"><span class="mini-sub-pro">Counting Sort</span></a></li>
+                    <li><a title="All Students" href="{% url 'single_note' label='Sorting' note_name='Wave Sort' course_id=course_id %}"><span class="mini-sub-pro">Wave Sort</span></a></li>
+                  </ul>
+                  {% else %}
+                  <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Mathmatical Logics<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                  {% endif %}
+              </li>
+              <li>
+                {% if showit %}
+                <a data-toggle="collapse" data-target="#demodepart" href="#">Dynamic Programming<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                <ul id="demodepart" class="collapse dropdown-header-top">
+                  <li><a title="All Students" href="{% url 'single_note' label='Dynamic Programming' note_name='Introduction to Dynamic Programming' course_id=course_id %}><span class="mini-sub-pro">Introduction to Dynamic Programming</span></a></li>
+                  <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Activity Selection Problem' course_id=course_id %}"><span class="mini-sub-pro">Activity Selection Problem</span></a></li> 
+                  <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Fractional Knapsack' course_id=course_id %}"><span class="mini-sub-pro">Fractional Knapsack</span></a></li> 
+                  <li><a title="All Students" href="{% url 'single_note' label='Greedy' note_name='Bin Packing' course_id=course_id %}"><span class="mini-sub-pro">Bin Packing</span></a></li> 
+                  
+                </ul>
+                {% else %}
+                <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Dynamic Programming<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                {% endif %}
+            </li>
+            <li>
+              {% if showit %}
+              <a data-toggle="collapse" data-target="#demodepart" href="#">Divide and Conquer<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+              <ul id="demodepart" class="collapse dropdown-header-top">
+                <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Introduction to Divide and Conquer' course_id=course_id %}"><span class="mini-sub-pro">Introduction to Divide and Conquer</span></a></li>
+                <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Square Root' course_id=course_id %}"><span class="mini-sub-pro">Square Root</span></a></li> 
+                <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Search element in a rotated sorted array' course_id=course_id %}"><span class="mini-sub-pro">Search element in a rotated sorted array</span></a></li> 
+                <li><a title="All Students" href="{% url 'single_note' label='Divide And Conquer' note_name='Tiling Problem' course_id=course_id %}"><span class="mini-sub-pro">Tiling Problem</span></a></li> 
+         
+              </ul>
+              {% else %}
+              <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Divide Conquer<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+              {% endif %}
+              </li>
+              <li>
+                {% if showit %}
+                <a data-toggle="collapse" data-target="#demodepart" href="#">BackTracking<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                <ul id="demodepart" class="collapse dropdown-header-top">
+                  <li><a title="All Students" href="{% url 'single_note' label='back Tracking' note_name='Introduction to Backtracking' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Backtracking</span></a></li>
+                  <li><a title="All Students" href="{% url 'single_note' label='back Tracking' note_name='N QUEEN Problem' course_id=course_id %}"><span class="mini-sub-pro">N QUEEN Problem</span></a></li> 
+                 
+                </ul>
+                {% else %}
+                <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()"> BackTracking<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+                {% endif %}
+          </li>
+          <li>
+            {% if showit %}
+            <a data-toggle="collapse" data-target="#demodepart" href="#">Graph Algorithms<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+            <ul id="demodepart" class="collapse dropdown-header-top">
+              <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Introduction to Graph Algorithms' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Graph Algorithms</span></a></li>
+              <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Floyd Warshall' course_id=course_id %}" ><span class="mini-sub-pro">Floyd Warshall</span></a></li> 
+              <li><a title="All Students"   href="{% url 'single_note' label='Graph Algorithms' note_name='Dijkstra’s Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">Dijkstra’s Algorithm</span></a></li>
+            </ul>
+            {% else %}
+            <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Graph Algorithms<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+            {% endif %}
+      </li>
+      <li>
+        {% if showit %}
+        <a data-toggle="collapse" data-target="#demodepart" href="#">Pattern Matching<span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+        <ul id="demodepart" class="collapse dropdown-header-top">
+          <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='Introduction to Pattern Matching' course_id=course_id %}" ><span class="mini-sub-pro">Introduction to Pattern Matching</span></a></li>
+          <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='KMP Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">KMP Algorithm</span></a></li> 
+          <li><a title="All Students"   href="{% url 'single_note' label='Pattern Matching' note_name='Rabin Karp Algorithm' course_id=course_id %}" ><span class="mini-sub-pro">Rabin Karp Algorithm</span></a></li>
+        </ul>
+        {% else %}
+        <a data-toggle="collapse" data-target="#Charts" href="#" onclick="myfuntion1()">Pattern Matching<img src="{% static 'newtheme/img/padlock.png' %}" alt="Girl in a jacket" width="20" height="20" style="float: right;"> <span class="admin-project-icon edu-icon edu-down-arrow"></span></a>
+        {% endif %}
+  </li>
+  
+                      </ul>
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Mobile View end -->
+ <br><br>
+<!-- ================ End banner Area ================= -->
+
+<div class="new"   >
+  <h1>{{name}}</h1>
+</div>
+
+<!-- Start top-category-widget Area -->
+<div class="new">
+<div class="top-category-widget-area pt-90 pb-90 " id="note" style="align-items: center;">
+  <div class="container">
+    {% if len > 1 %}
+    <div class="section-top-border">
+
+      <h3 class="mb-30"></h3>
+      <div class="row">
+        <div class="col-lg-12">
+          <blockquote class="generic-blockquote">
+            {{ content|safe }}
+          </blockquote>
+        </div>
+      </div>
+    </div>
+ 
+    {% endif %}
+  </div>
+</div>
+</div>
+ <!-- End New Section -->
+ <!-- Modal section -->
+ <div class="bg-modal" style="height:100%;">
+  
+          <div id="modal" class="container" style="width: 30vw; height:45vh;align-items:center;background:white;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;padding-top:20px">
+              <img src="{% static 'newtheme/img/error.png' %}" style="width:100px;height:100px">
+              <br>
+              <br>
+              <h3>You are not Enrolled</h3>
+              <br>
+              <br>
+              <br>
+              <br>
+              <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                <!-- <div class="box1">
+                    <select name="cars" id="cars" required>
+                        <option disabled="disabled" value="">Select start date
+                        </option>
+                        {% for mykey,myvalue in gdates.items %}
+                        {% if myvalue %}
+                        {% if forloop.first %}
+                        <option selected="selected" value="{{ mykey }}">
+                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                            left </option>
+                        {% else %}
+                        <option value="{{ mykey }}">
+                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                            left </option>
+                        {% endif %}
+                        {% else %}
+                        <option disabled="disabled" value="">{{ mykey }}&emsp;&emsp;No&nbsp;Seats
+                            Available</option>
+
+                        {% endif %}
+
+                        {% endfor %}
+
+                    </select>
+                </div> -->
+                <br><br>
+                <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                    data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                    data-amount={{ gprice_inPaise }} data-name="CapsuleCourse"
+                    data-buttontext="Enroll Now" data-description={{ name_trim }}
+                    data-image="{% static 'newtheme/img/popular-course/111.png' %}"
+                    data-netbanking="true" data-prefill.name={{ user_name }}
+                    data-prefill.email={{ email }} data-prefill.contact="{{ phone }}"
+                    data-notes.shopping_order_id="21">
+                        document.getElementById("myscript").setAttribute("data-amount",2000);
+                    </script>
+                <input type="hidden" name="shopping_order_id" value="21">
+                <input type="hidden" name="course_id" value={{ course_id }}>
+                <input type="hidden" name="finalval" value={{ gprice_inPaise }}>
+                <input type="hidden" name="coupon_applied" value={{ coupon }}>
+                <input type="hidden" name="method_type" id="method_type1">
+            </form>
+          </div>
+ 
+</div>
+<!-- End Model SEction -->
+  <!-- footer -->
+ 
+  <div class="new_footer1 new" id="footer_new" style="position:sticky;" >
+    <div id="dk-new_footer" class="dk-new_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <div class="dk-new_footer-box-info">
+              <a href="index.html" class="new_footer-logo">
+                <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+              </a>
+              <p class="footer-info-text">
+                Coding Through One to One Mentorship By Expert Competitive Programmers..
+              </p>
+              <div class="new_footer-social-link">
+                <h3>Follow us</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/algoladder">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://algoladder.com/">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/algoladder/">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/algoladder/?hl=en">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Social link -->
+            </div>
+            <!-- End new_footer info -->
+            <div class="new_footer-awarad">
+              <img src="images/icon/best.png" alt="">
+              <p></p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-12 col-lg-8">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-us">
+                  <div class="contact-icon">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                  </div>
+                  <!-- End contact Icon -->
+                  <div class="contact-info">
+                    <h3>Delhi</h3>
+                    <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                  </div>
+                  <!-- End Contact Info -->
+                </div>
+                <!-- End Contact Us -->
+              </div>
+              <!-- End Col -->
+              <div class="col-md-6">
+                <div class="contact-us contact-us-last">
+                  <div class="contact-icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </div>
+                  <!-- End contact Icon -->
+                  <div class="contact-info">
+                    <p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+                    
+                  </div>
+                  <!-- End Contact Info -->
+                </div>
+                <!-- End Contact Us -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Contact Row -->
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="new_footer-widget new_footer-left-widget">
+                  <div class="section-heading">
+                    <h3>Useful Links</h3>
+                    <span class="animate-border border-black"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="/about">About us</a>
+                    </li>
+                    <li>
+                      <a href="/about">Our Team</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="/blogs">Blog</a>
+                    </li>
+                    <li><a href="/ambassador">Programming Ambassador</a></li>
+                    <li><a href="/interview_experiences">Interview Experiences</a></li>
+                  </ul>
+                </div>
+                <!-- End new_footer Widget -->
+              </div>
+              <!-- End col -->
+              <div class="col-md-12 col-lg-6">
+                <div class="new_footer-widget">
+                  <div class="section-heading">
+                    <h3>Subscribe</h3>
+                    <span class="animate-border border-black"></span>
+                  </div>
+                  <p>
+                    <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                    Subscribe For Coding Tips
+                  </p>
+                  <form action="#">
+                    <div class="form-row">
+                      <div class="col dk-new_footer-form">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button type="submit">
+                          <i class="fa fa-send"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- End form -->
+                </div>
+                <!-- End new_footer widget -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Widget Row -->
+      </div>
+      <!-- End Contact Container -->
+
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <span>Copyright © 2021, All Right Algoladder</span>
+            </div>
+            <!-- End Col -->
+            <div class="col-md-6">
+              <div class="copyright-menu">
+                <ul>
+                  <li>
+                    <!-- <a href="#">Home</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Terms</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Privacy Policy</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Contact</a> -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End col -->
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+      </div>
+      <!-- End Copyright -->
+      <!-- Back to top -->
+      <div id="back-to-top" class="back-to-top">
+        <button class="btn btn-dark" title="Back to Top" style="display: block;">
+          <i class="fa fa-angle-up"></i>
+        </button>
+      </div>
+      <!-- End Back to top -->
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script type="text/javascript" src="{% static 'latestTheme/js/index.js' %}"></script>
+  <script src="{% static 'latestTheme/js/jquery.js' %}"></script>
+  <!-- bootstrap JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/bootstrap.js' %} "></script>
+  <!-- wow JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/wow.js' %}"></script>
+  <!-- price-slider JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/jslider.js' %}"></script>
+  <!-- meanmenu JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/jmeanmenu.js' %}"></script>
+  <!-- owl.carousel JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/owl.js' %}"></script>
+  <!-- sticky JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/stiky.js' %}"></script>
+  <!-- scrollUp JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/scrollup.js' %}"></script>
+  <!-- counterup JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/counterup.js' %}"></script>
+  <script src="{% static 'latestTheme/js/waypoints.js' %}"></script>
+  <script src="{% static 'latestTheme/js/active.js' %}"></script>
+  <!-- mCustomScrollbar JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/Custumscrollbar.js' %}"></script>
+  <script src="{% static 'latestTheme/js/Custom-active.js' %}"></script>
+  <!-- metisMenu JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/menu.js' %}"></script>
+  <script src="{% static 'latestTheme/js/menu-active.js' %}"></script>
+  <script src="{% static 'latestTheme/js/plugins.js' %}"></script>
+  <!-- main JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/main.js' %} "></script>
+  <!-- tawk chat JS
+  ============================================ -->
+  <script src="{% static 'latestTheme/js/tawk.js' %}"></script>
+  <script>
+    function myfuntion() {
+      console.log("aman");
+      if(document.getElementById("navbar").className == "navbar") {
+        document.getElementById("navbar").classList.remove("navbar");
+        document.getElementById("navbar").classList.add("navbar-mobile");
+      }
+      else {
+        document.getElementById("navbar").classList.remove("navbar-mobile");
+        document.getElementById("navbar").classList.add("navbar");
+      }
+    }
+  </script>
+  <script>
+    function myfuntion1() {
+       
+      document.querySelector(".bg-modal").style.display='flex';
+    }
+  </script>
+  <script>
+    document.querySelector('.close').addEventListener('click',function(){
+      ///console.log("kuch");
+      document.querySelector('.bg-modal').style.display='none';
+    });
+  </script>
+ <script>
+   function myfuntion3()
+   {
+      let a=document.getElementById("wtf");
+      if(a.classList.contains("open"))
+      {
+           a.classList.remove("open");
+      }
+      else
+      a.classList.add("open");
+   }
+ </script>
+ <script>
+  function myfuntion4()
+  {
+     let a=document.getElementById("wtf1");
+     if(a.classList.contains("open"))
+     {
+          a.classList.remove("open");
+     }
+     else
+     a.classList.add("open");
+  }
+</script>
+<script>
+function popup(){
+  var listItems = $("#menu1 li");
+listItems.each(function(idx, li) {
+    var product = $(li);
+    console.log("product", product)
+    // and the rest of your code
+});
+}
+</script>
+ 
+  <!-- End footer -->
+</body>
+
+</html>

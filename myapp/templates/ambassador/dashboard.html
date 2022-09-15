@@ -1,0 +1,1295 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="AlgoLadder" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder-ambassador</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+        rel="stylesheet" />
+    <!--
+      CSS
+      =============================================
+    -->
+    <!-- <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            /* border: 1px solid #ddd; */
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+        .fa-twitter {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-linkedin {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: purple;
+            color: white;
+        }
+
+        .fa-facebook {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #3B5998;
+            color: white;
+        }
+
+
+
+        .container1 {
+            position: relative;
+            z-index: 1;
+            max-width: 300px;
+            margin: 0 auto;
+        }
+
+        .container1:before,
+        .container1:after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        .container1 .info {
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .container1 .info h1 {
+            margin: 0 0 15px;
+            padding: 0;
+            font-size: 36px;
+            font-weight: 300;
+            color: #1a1a1a;
+        }
+
+        .container1 .info span {
+            color: #4d4d4d;
+            font-size: 12px;
+        }
+
+        .container1 .info span a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .container1 .info span .fa {
+            color: #EF3B3A;
+        }
+
+        body {
+            font-family: "Roboto", sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+
+
+        .heading {
+            opacity: 0;
+            margin-top: -250px;
+            transition: 1s;
+        }
+
+        .heading2 {
+            opacity: 0;
+            margin-top: 200px;
+            transition: 1s;
+        }
+
+        .myButton {
+            background-color: purple;
+            border: none;
+            color: white !important;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 40%;
+            border-radius: 50px;
+            border-color: purple;
+
+
+        }
+
+        .myButton:hover {
+            color: white !important;
+            transform: scale(1.1);
+
+        }
+
+        .myButton2 {
+            background-color: white;
+            border: 4px solid purple;
+            color: purple !important;
+            ;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 40%;
+            border-radius: 50px;
+
+        }
+
+        .myButton2:hover {
+            color: purple !important;
+            transform: scale(1.1);
+
+
+        }
+
+
+        @media(min-width: 700px) {
+            .get_class {
+                opacity: 0;
+                margin-left: 200px;
+                transition: 1s;
+            }
+
+            .myButton2 {
+                margin-left: -200px;
+                transition: 1s;
+                opacity: 0;
+
+            }
+
+            .myButton {
+                margin-left: -200px;
+                transition: 1s;
+                opacity: 0;
+
+            }
+
+
+
+            .start_class {
+                opacity: 0;
+                margin-left: -50px;
+                transition: 1s;
+            }
+        }
+
+        @media(max-width: 700px) {
+
+            .heading {
+                opacity: 1;
+                margin-top: 0px;
+
+            }
+
+            .heading2 {
+                opacity: 1;
+                margin-top: 0px;
+
+            }
+
+            .myButton {
+                margin-left: 0px;
+            }
+
+            .myButton2 {
+                margin-left: 0px;
+            }
+
+            .get_class {
+                opacity: 1;
+            }
+
+
+
+            .start_class {
+                opacity: 1;
+            }
+
+
+        }
+
+
+        a[data-scroll="in"] {
+
+            margin-left: 10px;
+            opacity: 1;
+
+        }
+
+        button[data-scroll="in"] {
+
+            margin-left: 0px;
+            opacity: 1;
+
+        }
+
+        p[data-scroll="in"] {
+            margin-top: 0px;
+            opacity: 1;
+
+        }
+
+        h1[data-scroll="in"] {
+            margin-top: 0px;
+            opacity: 1;
+
+        }
+
+        img[data-scroll="in"] {
+            margin-left: 0px;
+            opacity: 1;
+        }
+
+        .counter-value {
+            font-size: 10vw;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        .counter-value2 {
+            font-size: 8vw;
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+
+</head>
+
+<body style="overflow-x: hidden;">
+    <!-- ================ Start Header Area ================= -->
+    <header class="default-header"
+        style="background-color:white;box-shadow: 0px 1px 1px grey; width:100%; height: 55px;">
+        <div class="custom-nav">
+            <nav class="navbar navbar-expand-lg  navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt=" "
+                            style="height: 25px;width: 100px; margin-top:-25px;" />
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="lnr lnr-menu"></span>
+      </button> -->
+
+                    <div class="collapse navbar-collapse justify-content-end align-items-center"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav" style="margin-top: -3.2ex;">
+                            <li><a href="/"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Home</a>
+                            </li>
+                            <li><a href="/interview_experiences"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Interviews</a>
+                            </li>
+                            <li><a href="/ide"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">IDE</a>
+                            </li>
+                            <li><a href="/blogs"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Blog</a>
+                            </li>
+                            <li><a href="/problem_list"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Practice</a>
+                            </li>
+                            <li><a href="/courses"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Courses</a>
+                            </li>
+                            <li><a href="/contest/all_contest"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Contests&nbsp;&nbsp;</a>
+                            </li>
+                            <li><a href="/ambassdordashboard"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+                            </li>
+                            <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+                            <!-- Dropdown -->
+                            {% if user.is_authenticated %}
+                            <li class="dropdown" style="padding-right:1px;">
+                                <a class="dropbtn"
+                                    style="text-transform: uppercase;height:30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;; border-radius:5px ;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"
+                                    href="#" data-toggle="dropdown" style="color: purple">
+                                    {{ request.user.username }}
+                                    <i class="fa fa-angle-down" style="font-size:12px;"></i>
+                                </a>
+                                <div class="dropdown-content" style="padding-right:30px;">
+
+                                    <a href="{% url 'logout' %}"
+                                        style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Logout</a>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li style="padding-right:15px;">
+                                <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+                                    style="height:30px;width:75px ;padding:3px;background-color:purple;color:white;border: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ; "></i>
+                                    Sign up</a>
+                            </li>
+                            <li style="padding-right:15px;"><a href="{% url 'login' %}" class="btn btn-primary"
+                                    id="buton"
+                                    style="height:30px;width:75px ;padding:3px;background-color:purple;color:white;border: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Login</a>
+                            </li>
+                            {% endif %}
+                            <!-- <li><p style="color: purple">(+91-reach@algoladder.com)</p></li> -->
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="custom-nav2">
+            <div class="container">
+                <span style=" position: absolute;margin-top: -45px;margin-left: 85%;font-size:30px;cursor:pointer"
+                    onclick="openNav()">&#9776; </span> {% if user.is_authenticated %}
+                <li class="dropdown" style="padding-right:15px;position:absolute;margin-left:60%;margin-top:-45px;">
+                    <a class="dropbtn"
+                        style="text-transform: uppercase;height:30px; border-radius:5px ;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"
+                        href="#" data-toggle="dropdown" style="color: purple">
+                        {{ request.user.username }}
+                        <i class="fa fa-angle-down" style="font-size:12px;"></i>
+                    </a>
+                    <div class="dropdown-content" style="padding-right:30px;text-transform: uppercase;">
+                        <a href="/mylearning#cop" style="color: purple">My Learning</a>
+
+                        <a href="/profile#cop" style="color: purple">Profile</a>
+                        <a href="/myreferral#cop" style="color: purple">Referral</a> <a href="{% url 'logout' %}"
+                            style="color: purple">Logout</a>
+                    </div>
+                </li>
+                {% else %}
+                <a href="{% url 'signup' %}" class="btn btn-primary"
+                    style="position:absolute;margin-left:46%;margin-top:-50px; height:30px;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"></i>
+                    Sign up</a>
+                <a href="{% url 'login' %}" class="btn btn-primary"
+                    style="position:absolute;margin-left:65%;margin-top:-50px; height:30px;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;">Login</a>
+                {% endif %}
+
+
+                <a href="/">
+                    <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt=" "
+                        style="height: 25px;width: 100px;margin-top:-100px ;" />
+                </a>
+                <div id="myNav" class="overlay1">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay1-content" style="text-transform: uppercase;">
+                        <a href="/">Homes</a>
+                        <a href="/interview_experiences">Interviews</a>
+                        <a href="/ide">IDE</a>
+                        <a href="/blogs">Blog</a>
+                        <a href="/problem_list">Practice</a>
+                        <a href="/courses">Courses</a>
+                        <a href="/contest/all_contest">Contests</a>
+                        <!-- <a href="/about">About-Us</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ================ End Header Area ================= -->
+
+    <!-- ================ start banner Area ================= -->
+    <section>
+        <div class="container">
+            <div class="row justify-content-center align-items-center" style="height: 180px;">
+
+            </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-3 ">
+
+                </div>
+                <div class="col-lg-6 ">
+                    <div class="row justify-content-center align-items-center">
+                        <center>
+                            <h1 style="color: black;font-size: 60px;font-family: sans-serif;" class="heading">
+                                Welcome {{ ambassador.fullname }}
+                            </h1>
+                        </center>
+                    </div>
+                    <div class="row justify-content-center align-items-center" style="margin-top:5%;">
+                        <div class="col-lg-0.5">
+
+                        </div>
+                        <div class="col-lg-10 ">
+                            <center>
+                                <p class="heading2" style="color: black; font-size:17px; margin-top:2%;">
+                                    You are a precious member of our AlogLadder family.
+                                </p>
+                            </center>
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <a href="#track" class="myButton">Track</a>
+                        <a href="#code" class="myButton2">Code</a>
+                    </div>
+
+
+                </div>
+                <div class="col-lg-3">
+                    <!-- <img class="image_class" src="{% static 'newtheme/img/intro_image.png' %}" width="100%"
+                        height="auto"> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section style="background-color: purple;margin-top:25%;" id="code">
+        <div class="container">
+            <div class="row justify-content-center section-title">
+                <div class="col-lg-12">
+                    <center>
+                        <h2 style="color:white;margin-top:5%;">
+                            Your Referral Code Is
+                        </h2>
+                    </center>
+
+                </div>
+            </div>
+            <div class="row justify-content-center section-title">
+                <div id="counter">
+                    <div class="counter-value" data-count="{{ ambassador.code }}">{{ ambassador.code }}</div>
+
+                </div>
+                <!-- <div class="col-lg-3">
+                    <div class="other-feature-item" style="background-color:rgb(226, 209, 226)">
+
+                        <i><img class="start_class" src="{% static 'newtheme/img/submit.png' %}" width="50px"
+                                height="50px"></img></i>
+                        <h4>Apply Online</h4>
+                        <div>
+                            <a href="#trial" class="myButton" style="margin-top: -30px;">Apply Now</a>
+                            <p style="color: black;">
+                                Fill the ambassador form below for joining the programm.
+                            </p>
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact-page-area section-gap">
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-5" style="border: 3px solid purple;">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <h2 style="font-size: 35px;">
+                                Responsiblities Of Ambassador
+                            </h2>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px; margin-top:10%;">
+                                1. You will be allotted certain tasks on timely basis.
+                                You have to submit completion
+                                report.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="get_class" src="{% static 'newtheme/img/res1.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+                        <div class="col-lg-5">
+                            <img class="start_class" src="{% static 'newtheme/img/res2.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                        <div class="col-lg-7">
+                            <p style="font-size:  18px;margin-top:10%;">
+                                2. You will organize webinars, events, and sessions of AlgoLadder in your campus.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px;margin-top:10%;">
+                                3. Spread word about AlgoLadder through social media platforms in your social group.
+                                Spread information about AlgoLadder courses which are designed by experts.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="get_class" src="{% static 'newtheme/img/res3.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+                        <div class="col-lg-5">
+                            <img class="start_class" src="{% static 'newtheme/img/res4.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px;margin-top:10%;">
+                                4. Referrals will help you get lot of incentives & cash rewards.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-1">
+
+                </div>
+                <div class="col-lg-5" style="border: 3px solid purple;">
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <h2 style="font-size: 35px;">
+                                Rewards Of Ambassador
+                            </h2>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px; margin-top:10%;">
+                                1. You will get cash rewards on the bases of your total credit points.<br> (1 Credit
+                                Point =
+                                1 Rs.)
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="get_class" src="{% static 'newtheme/img/wallet.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+                        <div class="col-lg-5">
+                            <img class="start_class" src="{% static 'newtheme/img/certificate1.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                        <div class="col-lg-7">
+                            <p style="font-size:  18px;margin-top:10%;">
+                                2. After completion you will get a certificate of ambassador programm by AlgoLadder
+                                which can be a great addition to your resume..
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px;margin-top:10%;">
+                                3. You can also win gadgets, goodies, accessories and other rewards based on your
+                                monthly events and regular activities.
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <img class="get_class" src="{% static 'newtheme/img/gadget.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top:5%;">
+                        <div class="col-lg-5">
+                            <img class="start_class" src="{% static 'newtheme/img/businessman.png' %}" width="100vh"
+                                height="auto">
+                        </div>
+                        <div class="col-lg-7">
+                            <p style="font-size: 18px;margin-top:10%;">
+                                4. Get a chance of getting PPI(Pre Placement Interview) for internship at AlgoLadder and
+                                many more chances for career growth.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container" id="track">
+    </div>
+    <section style="background-color: purple;margin-top:5%;">
+        <div class="container">
+            <div class="row justify-content-center section-title">
+                <table>
+                    <tr>
+                        <th>
+                            <h2 style="color:white;margin-top:5%;">
+                                Total Points
+                            </h2>
+                        </th>
+                        <th>
+                            <h2 style="color:white;margin-top:5%;">
+                                Total Referrals
+                            </h2>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="counter1">
+                                <div class="counter-value2" id="point" data-count="{{ ambassador.code }}">0</div>
+
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <div class="counter-value2" id="referral" data-count="{{ ambassador.code }}">0</div>
+
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+
+        </div>
+    </section>
+    <section style="margin-top:5%;">
+
+
+        <center>
+            <h2>
+                Know More information
+            </h2>
+            <br>
+            <p>
+                Download the PDF to know more about the ambassador and AlgoLadder
+            </p>
+            <br>
+            <a href="/files/AmbassadorProgramm.pdf" download="AmbassadorProgramm.pdf" style="width: 15rem;"
+                class="myButton">DOWNLOAD PDF</a>
+
+        </center>
+
+
+    </section>
+
+
+
+
+
+
+
+    <!-- <div class=" container">
+                <div class="row">
+
+
+                    <iframe class="col-lg-12 banner-center" style="padding-left:0px"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSde938kX0CpWzQDmhLZeo7QuQYuIOVXNAmVKc-LyrjJyEy7zQ/viewform?embedded=true"
+                        width="1023" height="1023" frameborder="0" marginheight="0" marginwidth="0">Loadingâ€¦</iframe>
+                    </center>
+
+
+                </div>
+            </div> -->
+    </section>
+    <!-- ================ start footer Area ================= -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Algoladder</h4>
+					<ul>
+						<li><a href="#">Managed Website</a></li>
+						<li><a href="#">Manage Reputation</a></li>
+						<li><a href="#">Power Tools</a></li>
+						<li><a href="#">Marketing Service</a></li>
+					</ul>
+				</div> -->
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>AlgoLadder</h4>
+                    <ul>
+                        <li><a href="/mentor_form">Mentor</a></li>
+                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                        <li><a href="/blogs">Blog</a></li>
+                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                        <!-- <li><a href="#">Terms of Service</a></li> -->
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Features</h4>
+					<ul>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Brand Assets</a></li>
+						<li><a href="#">Investor Relations</a></li>
+						<li><a href="#">Terms of Service</a></li>
+					</ul>
+				</div> -->
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i style="font-size:24px" class="fa">&#xf095;</i> +91- reach@algoladder.com</li>
+                        <li><i style="font-size:24px" class="fa">&#xf095;</i> +91- 7906334045</li>
+                        <li><i style="font-size:24px" class="fa">&#xf0e0;</i> admin@algoladder.com</li>
+                        <!-- <li><a href="#">Agencies</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker" style="font-size:24px; color: rgb(136,143,189)"></i><a
+                                href="https://www.google.com/maps/place/AlgoLadder/@28.6468613,77.3707298,15z/data=!4m5!3m4!1s0x0:0x5a6aee324cb0fcd4!8m2!3d28.6468613!4d77.3707298">
+                                50, Lower Ground Floor, D Mall, Shakti Khand-2, Indirapuram Ghaziabad ,UP - 201014</a>
+                        </li>
+
+                        <!-- <li><a href="#">Agencies</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <!-- <h4>Newsletter</h4>
+					<p>You can trust us. we only send promo offers,</p> -->
+                    <!-- <div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+						 method="get" class="form-inline">
+							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '"
+							 required="" type="email">
+							<button class="click-btn btn btn-default text-uppercase">subscribe</button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+          </div> -->
+                    <!-- <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt="" style="height: 25px;width: 100px;" /> -->
+                    <h4>Follow Us</h4>
+                    <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw/" class="fa fa-youtube">
+                        <!--  							<a href="https://www.facebook.com/algoLadder/" class="fa fa-facebook"></a>
+ -->
+                        <a href="https://www.instagram.com/algoladder/" class="fa fa-instagram"></a>
+                        <a href="https://www.facebook.com/algoLadder/" class="fa fa-facebook"
+                            style="margin-left: -1px;"></a>
+                        <!-- Begin Mailchimp Signup Form -->
+                        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet"
+                            type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup {
+                                background: transparent;
+                                clear: left;
+                                font: 14px Helvetica, Arial, sans-serif;
+                                width: 250px;
+                            }
+
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+      We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup" style="height: 5px;">
+                            <form
+                                action="https://algoladder.us2.list-manage.com/subscribe/post?u=398c1f297c6932eb89d8266ec&amp;id=fa0be269d0"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <label for="mce-EMAIL" style="color: white;">Subscribe For Coding Tips</label>
+                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                        placeholder="email address" required>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                            type="text" name="b_398c1f297c6932eb89d8266ec_fa0be269d0" tabindex="-1"
+                                            value=""></div>
+                                    <div class="clear"><input type="submit" onclick="myPopup()" value="Subscribe"
+                                            name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--End mc_embed_signup-->
+
+
+                </div>
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+
+                    Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> AlgoLadder | All rights reserved
+
+                    <!-- <div class="col-lg-4 col-md-12 footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>
+				</div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- ================ End footer Area ================= -->
+
+    <script src="{% static 'newtheme/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'newtheme/js/vendor/bootstrap.min.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'newtheme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/scroll-out.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/parallax.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'newtheme/js/hexagons.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script>
+        ScrollOut({
+            targets: 'a,img,p,h2,h1,button'
+        })
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script>
+        function myPopup() {
+            var val = document.getElementById("mce-EMAIL").value
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val)) {
+                swal({
+                    title: "Successfully Subscribed",
+                    text: "<small>Great You Will Get Coding Tips From AlgoLadder</small>",
+                    type: "success",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } else {
+                swal({
+                    title: "Failed To Subscribed",
+                    text: "<small>Please Enter Valid Email Address</small>",
+                    type: "error",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            }
+
+
+
+            // Set our logout isClicked2 to true and count2 to 1
+
+        }
+    </script>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f7051ecf0e7167d00141e08/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+
+        function scroll() {
+            document.getElementById('trial').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+
+
+            // document.getElementById('trial').scrollIntoView({
+            //     block: 'start',
+            //     behavior: 'smooth'
+            // });
+        }
+    </script>
+    <script>
+        $(".message a").click(function() {
+            $("form").animate({
+                height: "toggle",
+                opacity: "toggle"
+            },"slow");
+        });
+        if(document.getElementById('show').value == "0") {
+            swal({
+                title: "Successfully Submitted",
+                text: "<small>AlgoLadder executive will contact you soon</small>",
+                type: "success",
+                html: true,
+                closeOnClickOutside: false
+            });
+        } else if(document.getElementById('show').value == "1") {
+            swal({
+                title: "Failed To Submit",
+                text: "<small>Email Address is already registered</small>",
+                type: "error",
+                html: true,
+                closeOnClickOutside: false
+            });
+
+        } else if(document.getElementById('show').value == "2") {
+            swal({
+                title: "Failed To Submit",
+                text: "<small>Phone Number is already registered</small>",
+                type: "error",
+                html: true,
+                closeOnClickOutside: false
+            });
+        }
+    </script>
+    <script>
+        var a = 0;
+        var b = 0;
+        $(window).scroll(function() {
+
+
+            var bTop = $('#counter1').offset().top - window.innerHeight;
+            var oTop = $('#counter').offset().top - window.innerHeight;
+            if(b == 0 && $(window).scrollTop() > bTop) {
+
+                var $this = $('#point'),$ref = $('#referral')
+                countTo = "{{ ambassador.studentCount }}";
+                pointTo = parseInt("{{ ambassador.studentCount }}") * 500;
+                console.log($('.counter-value2'))
+
+                $({
+                    countNum: $this.text(),
+                    countNum2: $ref.text()
+                }).animate({
+                    countNum: pointTo,
+                    countNum2: countTo
+                },
+
+                    {
+
+                        duration: 1000,
+                        easing: 'swing',
+                        step: function() {
+                            var vl = parseInt($this.text()) + 1;
+                            var rl = parseInt($ref.text()) + 1;
+                            $this.text(vl);
+                            $ref.text(rl);
+                        },
+                        complete: function() {
+                            $this.text(parseInt("{{ ambassador.studentCount }}") * 500);
+                            $ref.text("{{ ambassador.studentCount }}");
+                            //alert('finished');
+                        }
+
+                    });
+
+                b = 1;
+            }
+
+
+
+            if(a == 0 && $(window).scrollTop() > oTop) {
+                $('.counter-value').each(function() {
+                    var $this = $(this),
+                        countTo = "{{ ambassador.code }}";
+
+                    $({
+                        countNum: $this.text()
+                    }).animate({
+                        countNum: countTo
+                    },
+
+                        {
+
+                            duration: 500,
+                            easing: 'swing',
+                            step: function() {
+                                $this.text(Math.random().toString(36).substring(7));
+                            },
+                            complete: function() {
+                                $this.text("{{ ambassador.code }}");
+                                //alert('finished');
+                            }
+
+                        });
+                });
+                a = 1;
+            }
+
+        });
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

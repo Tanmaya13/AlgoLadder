@@ -1,0 +1,2474 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder-Practice</title>
+
+    <!-- <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" /> -->
+    <!--
+      CSS
+      =============================================
+    -->
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+
+
+    <!-- ********************************************IDE STYLE**************************************** -->
+
+    <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/goldenlayout.min.js"
+        integrity="sha256-NhJAZDfGgv4PiB+GVlSrPdh3uc75XXYSM4su8hgTchI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/css/goldenlayout-base.css"
+        integrity="sha256-oIDR18yKFZtfjCJfDsJYpTBv1S9QmxYopeqw2dO96xM=" crossorigin="anonymous" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/golden-layout/1.5.9/css/goldenlayout-dark-theme.css"
+        integrity="sha256-ygw8PvSDJJUGLf6Q9KIQsYR3mOmiQNlDaxMLDOx9xL0=" crossorigin="anonymous" />
+
+    <script>
+        var require = {
+            paths: {
+                "vs": "https://unpkg.com/monaco-editor/min/vs",
+                "monaco-vim": "https://unpkg.com/monaco-vim/dist/monaco-vim",
+                "monaco-emacs": "https://unpkg.com/monaco-emacs/dist/monaco-emacs"
+            }
+        };
+    </script>
+    <script src="https://unpkg.com/monaco-editor/min/vs/loader.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.18.1/min/vs/editor/editor.main.nls.js"></script>
+    <script src="https://unpkg.com/monaco-editor@0.18.1/min/vs/editor/editor.main.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+
+    <script type="text/javascript" src="{% static 'newtheme/js/download.js' %}"></script>
+
+    <link type="text/css" rel="stylesheet" href="{% static 'newtheme/css/ide.css' %}">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83802640-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js',new Date());
+        gtag('config','UA-83802640-2');
+    </script>
+
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha256-9mbkOfVho3ZPXfM7W8sV2SndrGDuh7wuyLjtsWeTI1Q=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"
+        integrity="sha256-t8GepnyPmw9t+foMh3mKNvcorqNHamSKtKRxxpUEgFI=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+    <!-- ********************************************IDE STYLE END**************************************** -->
+
+    <style>
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .disabled {
+            pointer-events: none;
+            cursor: default;
+        }
+
+        /* The Modal (background) */
+
+        .amodal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+
+        .amodal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+        /* Add Animation */
+
+        @-webkit-keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatetop {
+            from {
+                top: -300px;
+                opacity: 0
+            }
+
+            to {
+                top: 0;
+                opacity: 1
+            }
+        }
+
+        /* The Close Button */
+
+        .aclose {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .aclose:hover,
+        .aclose:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .amodal-header {
+            padding: 2px 16px;
+            background-color: purple;
+            color: white;
+        }
+
+        .amodal-body {
+            padding: 2px 16px;
+        }
+
+        .amodal-footer {
+            padding: 2px 16px;
+            background-color: purple;
+            color: white;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+
+
+        #creditsPane {
+            opacity: 0;
+        }
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 1s;
+
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 1000px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+
+                display: none;
+            }
+
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(40, 58, 90, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .getstarted {
+            margin: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+
+        select {
+            color: black;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body onload="scroll()">
+
+
+    <!-- ================ Start Header Area ================= -->
+    <header id="new_header" class="fixed-top " style="border-bottom: 1px solid black;height: 60px;">
+        <div class="container d-flex align-items-center">
+            <!-- <div style="background:white;"> -->
+
+            <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+                    style="width: 200px;" alt="">
+            </h1>
+
+
+            <!-- </div> -->
+            <nav id="navbar" class="navbar">
+
+                <ul>
+                    <li><a class="nav-link scrollto " href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+                    <li class="nav-item dropdown" style="background-color: purple;">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:white;">
+                            Quick Coding
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/ide">IDE</a>
+                            <a class="dropdown-item" href="/blogs">Blog</a>
+                            <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+                            <a class="dropdown-item" href="/problem_list">Practice</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link scrollto" href="/courses">Courses</a></li>
+                    <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+                    {% ifequal account_type "ambassador" %}
+                    <li><a href="/ambassdordashboard"
+                            style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+                    </li>
+                    {% endifequal %}
+                    <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+                    <!-- Dropdown -->
+                    {% if user.is_authenticated %}
+                    <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ request.user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% ifequal account_type "ambassador" %}
+                            {% else %}
+
+                            <a class="dropdown-item" href="/profile#cop">Profile</a>
+                            <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+                            {% endifequal %}
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white; height:30px;border-radius: 50px;">
+                            Sign up</a>
+                    </li>
+                    <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white;height:30px;border-radius: 50px;">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28"
+                    onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </nav>
+        </div>
+    </header>
+    <!-- ================End Header Area   ===================-->
+    <section class="banner-area" style="margin-top:-5%;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right" style="margin-top:20%;">
+                    <h1 class="text-white">
+                        {{ name }}
+                    </h1>
+
+                    <br>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="/">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="/problem_list">Practice</a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="#">{{ name }}</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End Header Area ================= -->
+    <div id="myModal" class="modal" style=" display: none; 
+      position: fixed; 
+      z-index: 1; 
+      padding-top: 100px; 
+      left: 0;
+      top: 0;
+      width: 100%; 
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0,0,0);
+      background-color: rgba(0,0,0,0.4);">
+
+        <!-- Modal content -->
+        <div class="modal-content" style="background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;">
+            <span class="close" style="color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;">&times;</span>
+            <p id="hv">Sorry Wrong Solution ! Give it another try.</p>
+        </div>
+
+    </div>
+    <section class="top-category-widget-area pt-90 pb-90 " id="practice">
+        <div class="container">
+            <div class="section-top-border">
+                <h3 class="mb-30">{{ name }}</h3>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <blockquote class="generic-blockquote">
+                            {{ content|safe}}
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <br><br>
+    <div id="site-navigation" style="margin-left: 30px;margin-right: 30px;" class="ui small inverted menu">
+
+        <div class="left menu">
+            <div class="ui dropdown item site-links on-hover">
+                File <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a class="item" target="_blank" href="/ide"><i class="file code icon"></i> New File</a>
+                    <div class="item" onclick="save()"><i class="save icon"></i> Save (Ctrl + S)</div>
+                    <div class="item" onclick="downloadSource()"><i class="download icon"></i> Download</div>
+                    <!-- <div class="item"><i class="share icon"></i> Share</div> -->
+                    <div id="insert-template-btn" class="item"><i class="file code outline icon"></i> Insert template
+                        for current language</div>
+                </div>
+            </div>
+            <div class="item borderless">
+                <select id="select-language" class="dropdown">
+                    <option value="45" mode="UNKNOWN">Assembly (NASM 2.14.02)</option>
+                    <!-- Unknown mode. Help needed. -->
+                    <option value="46" mode="shell">Bash (5.0.0)</option>
+                    <option value="47" mode="UNKNOWN">Basic (FBC 1.07.1)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="1011" mode="UNKNOWN">Bosque (latest)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="75" mode="c">C (Clang 7.0.1)</option>
+                    <option value="1013" mode="c">C (Clang 9.0.1)</option>
+                    <option value="1001" mode="c">C (Clang 10.0.1)</option>
+                    <option value="48" mode="c">C (GCC 7.4.0)</option>
+                    <option value="49" mode="c">C (GCC 8.3.0)</option>
+                    <option value="50" mode="c">C (GCC 9.2.0)</option>
+                    <option value="51" mode="csharp">C# (Mono 6.6.0.161)</option>
+                    <option value="1017" mode="csharp">C# (Mono 6.10.0.104)</option>
+                    <option value="1016" mode="csharp">C# (.NET Core SDK 3.1.302)</option>
+                    <option value="1018" mode="csharp">C# Test (.NET Core SDK 3.1.302, NUnit 3.12.0)</option>
+                    <option value="76" mode="cpp">C++ (Clang 7.0.1)</option>
+                    <option value="1014" mode="cpp">C++ (Clang 9.0.1)</option>
+                    <option value="1002" mode="cpp">C++ (Clang 10.0.1)</option>
+                    <option value="52" mode="cpp">C++ (GCC 7.4.0)</option>
+                    <option value="53" mode="cpp">C++ (GCC 8.3.0)</option>
+                    <option value="54" mode="cpp">C++ (GCC 9.2.0)</option>
+                    <option value="1015" mode="cpp">C++ Test (Clang 10.0.1, Google Test 1.8.1)</option>
+                    <option value="1012" mode="cpp">C++ Test (GCC 8.4.0, Google Test 1.8.1)</option>
+                    <option value="1003" mode="c">C3 (latest)</option> <!-- Replacement mode. Help needed. -->
+                    <option value="86" mode="clojure">Clojure (1.10.1)</option>
+                    <option value="77" mode="UNKNOWN">COBOL (GnuCOBOL 2.2)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="55" mode="UNKNOWN">Common Lisp (SBCL 2.0.0)</option>
+                    <!-- Unknown mode. Help needed. -->
+                    <option value="56" mode="UNKNOWN">D (DMD 2.089.1)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="57" mode="UNKNOWN">Elixir (1.9.4)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="58" mode="UNKNOWN">Erlang (OTP 22.2)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="44" mode="plaintext">Executable</option>
+                    <option value="87" mode="fsharp">F# (.NET Core SDK 3.1.202)</option>
+                    <option value="1019" mode="fsharp">F# (.NET Core SDK 3.1.302)</option>
+                    <option value="59" mode="UNKNOWN">Fortran (GFortran 9.2.0)</option>
+                    <!-- Unknown mode. Help needed. -->
+                    <option value="60" mode="go">Go (1.13.5)</option>
+                    <option value="88" mode="UNKNOWN">Groovy (3.0.3)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="61" mode="UNKNOWN">Haskell (GHC 8.8.1)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="62" mode="java">Java (OpenJDK 13.0.1)</option>
+                    <option value="1004" mode="java">Java (OpenJDK 14.0.1)</option>
+                    <option value="1005" mode="java">Java Test (OpenJDK 14.0.1, JUnit Platform Console Standalone 1.6.2)
+                    </option>
+                    <option value="63" mode="javascript">JavaScript (Node.js 12.14.0)</option>
+                    <option value="78" mode="kotlin">Kotlin (1.3.70)</option>
+                    <option value="64" mode="lua">Lua (5.3.5)</option>
+                    <option value="1006" mode="c">MPI (OpenRTE 3.1.3) with C (GCC 8.3.0)</option>
+                    <option value="1007" mode="cpp">MPI (OpenRTE 3.1.3) with C++ (GCC 8.3.0)</option>
+                    <option value="1008" mode="python">MPI (OpenRTE 3.1.3) with Python (3.7.3)</option>
+                    <option value="1009" mode="python">Nim (stable)</option> <!-- Replacement mode. Help needed. -->
+                    <option value="79" mode="objective-c">Objective-C (Clang 7.0.1)</option>
+                    <option value="65" mode="UNKNOWN">OCaml (4.09.0)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="66" mode="UNKNOWN">Octave (5.1.0)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="67" mode="pascal">Pascal (FPC 3.0.4)</option>
+                    <option value="85" mode="perl">Perl (5.28.1)</option>
+                    <option value="68" mode="php">PHP (7.4.1)</option>
+                    <option value="43" mode="plaintext">Plain Text</option>
+                    <option value="69" mode="UNKNOWN">Prolog (GNU Prolog 1.4.5)</option>
+                    <!-- Unknown mode. Help needed. -->
+                    <option value="70" mode="python">Python (2.7.17)</option>
+                    <option value="71" mode="python">Python (3.8.1)</option>
+                    <option value="1010" mode="python">Python for ML (3.7.3)</option>
+                    <option value="80" mode="r">R (4.0.0)</option>
+                    <option value="72" mode="ruby">Ruby (2.7.0)</option>
+                    <option value="73" mode="rust">Rust (1.40.0)</option>
+                    <option value="81" mode="UNKNOWN">Scala (2.13.2)</option> <!-- Unknown mode. Help needed. -->
+                    <option value="82" mode="sql">SQL (SQLite 3.27.2)</option>
+                    <option value="83" mode="swift">Swift (5.2.3)</option>
+                    <option value="74" mode="typescript">TypeScript (3.7.4)</option>
+                    <option value="84" mode="vb">Visual Basic.Net (vbnc 0.0.0.5943)</option> <!-- (vbnc 0.0.0.5943) -->
+                </select>
+            </div>
+
+            <div hidden>
+                <div>
+                    <input id="command-line-arguments" type="text" placeholder="Command line arguments"></input>
+                </div>
+            </div>
+            <div class="item no-left-padding borderless">
+
+                <button id="run-btn" class="ui primary labeled icon button"><i class="play icon"></i>Run (F9)</button>
+                <button id="sbt-btn" class="ui primary labeled icon button" style="width: 200px;margin-left: 10px;"><i
+                        class="play icon"></i>Submit Code</button>
+                <button id="myaBtn" class="ui primary labeled icon button" style="width: 200px;margin-left: 10px;"><i
+                        class="play icon"></i>Analyze Solution</button>
+            </div>
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <div id="site-content" style="visibility: visible;margin-left: 30px;margin-right: 30px;"></div>
+
+    <br><br>
+
+
+
+
+
+
+    <div id="tc" hidden>{% for tc in test_cases %}{{tc}} {% endfor %}</div>
+    <div id="eo" hidden>{% for eo in exp_outs %}{{eo}} {% endfor %}</div>
+
+    <div id="files" hidden>{{ files }}</div>
+
+
+
+
+    <div id="myaModal" class="amodal">
+
+        <!-- Modal content -->
+        <div class="amodal-content">
+            <div class="amodal-header">
+                <span class="aclose">&times;</span>
+                <h2 style="color: white;">Analyze Solution for this Problem</h2>
+            </div>
+            <div class="amodal-body">
+                <iframe class="col-lg-12 banner-center" src="{{ analyse_link }}" width="500" marginheight="0"
+                    marginwidth="0" height="400" frameborder="0" allow="autoplay; fullscreen"
+                    allowfullscreen="">Loading.... </iframe>
+
+            </div>
+
+            <div class="amodal-footer">
+                <h3 style="color: white;">AlgoLadder</h3>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ================ start footer Area ================= -->
+    <div class="new_footer1" style="margin-top:12vh">
+        <div id="dk-new_footer" class="dk-new_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="dk-new_footer-box-info">
+                            <a href="index.html" class="new_footer-logo">
+                                <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo"
+                                    class="img-fluid">
+                            </a>
+                            <p class="footer-info-text">
+                                Coding Through One to One Mentorship By Expert Competitive Programmers..
+                            </p>
+                            <div class="new_footer-social-link">
+                                <h3>Follow us</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/algoladder">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+                                            <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/algoladder/">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/algoladder/?hl=en">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Social link -->
+                        </div>
+                        <!-- End new_footer info -->
+                        <div class="new_footer-awarad">
+                            <img src="images/icon/best.png" alt="">
+                            <p></p>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-12 col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-us">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-map-o" aria-hidden="true"></i>
+                                    </div>
+                                    <!-- End contact Icon -->
+                                    <div class="contact-info">
+                                        <h3>Delhi NCR</h3>
+                                        <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                                    </div>
+                                    <!-- End Contact Info -->
+                                </div>
+                                <!-- End Contact Us -->
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6">
+                                <div class="contact-us contact-us-last">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                    <!-- End contact Icon -->
+                                    <div class="contact-info">
+                                        <p>Mail us at</p>
+                                        <h3>reach@algoladder.com</h3>
+
+                                    </div>
+                                    <!-- End Contact Info -->
+                                </div>
+                                <!-- End Contact Us -->
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Contact Row -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="new_footer-widget new_footer-left-widget">
+                                    <div class="section-heading">
+                                        <h3>Useful Links</h3>
+                                        <span class="animate-border border-black"></span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="/ide">IDE</a>
+                                        </li>
+                                        <li>
+                                            <a href="/problem_list">Practice</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="/contest/all_contest">Contests</a>
+                                        </li>
+                                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End new_footer Widget -->
+                            </div>
+                            <!-- End col -->
+                            <div class="col-md-12 col-lg-6">
+                                <div class="new_footer-widget">
+                                    <div class="section-heading">
+                                        <h3>Subscribe</h3>
+                                        <span class="animate-border border-black"></span>
+                                    </div>
+                                    <p>
+                                        <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                        Subscribe For Coding Tips</p>
+                                    <form action="#">
+                                        <div class="form-row">
+                                            <div class="col dk-new_footer-form">
+                                                <input type="email" class="form-control" placeholder="Email Address">
+                                                <button type="submit">
+                                                    <i class="fa fa-send"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End form -->
+                                </div>
+                                <!-- End new_footer widget -->
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Widget Row -->
+            </div>
+            <!-- End Contact Container -->
+
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span>Copyright © 2021, All Right Algoladder</span>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-md-6">
+                            <div class="copyright-menu">
+                                <ul>
+                                    <li>
+                                        <!-- <a href="#">Home</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Terms</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Privacy Policy</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Contact</a> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- End Copyright Container -->
+            </div>
+            <!-- End Copyright -->
+            <!-- Back to top -->
+            <div id="back-to-top" class="back-to-top">
+                <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                    <i class="fa fa-angle-up"></i>
+                </button>
+            </div>
+            <!-- End Back to top -->
+        </div>
+    </div>
+
+
+
+
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myaModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myaBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("aclose")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if(event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        var cont = document.getElementById("creditsPane")
+        console.log("!!!!!!!!!!!!!!!!!!!!!",cont);
+        cont.style.display = 'none'; //or
+        cont.style.visibility = 'hidden';
+    </script>
+
+    <script>
+        var test_case = document.getElementById("tc").innerHTML;
+        var exp_out = document.getElementById("eo").innerHTML;
+        test_case = test_case.split(" ");
+        exp_out = exp_out.split(" ");
+
+        console.log("test case = " + test_case);
+        console.log("expected output = " + exp_out);
+        console.log(test_case[0]);
+        console.log(exp_out[0]);
+        var points;
+
+        var p_name = '{{ name }}';
+        //<!--console.log("problem name = " + p_name);-->
+        //
+        //<!--var temp = test_case[1];-->
+        //<!--console.log("temp = " + temp);-->
+        //
+        //
+        //<!--var tcl = document.getElementById("l").innerHTML;-->
+
+
+
+
+
+
+
+
+
+
+
+
+        var defaultUrl = localStorageGetItem("api-url") || "https://judge0-ce.p.rapidapi.com";
+        var apiUrl = defaultUrl;
+        var wait = localStorageGetItem("wait") || false;
+        var pbUrl = "https://pb.judge0.com";
+        var check_timeout = 200;
+
+        var blinkStatusLine = ((localStorageGetItem("blink") || "true") === "true");
+        var editorMode = localStorageGetItem("editorMode") || "normal";
+        var editorModeObject = null;
+
+        var fontSize = 14;
+
+        var MonacoVim;
+        var MonacoEmacs;
+
+        var layout;
+
+        var sourceEditor;
+        var stdinEditor;
+        var stdoutEditor;
+        var stderrEditor;
+        var compileOutputEditor;
+        var sandboxMessageEditor;
+
+        var isEditorDirty = false;
+        var currentLanguageId;
+
+        var $selectLanguage;
+        var $compilerOptions;
+        var $commandLineArguments;
+        var $insertTemplateBtn;
+        var $runBtn;
+        var $navigationMessage;
+        var $about;
+        var $statusLine;
+
+        var timeStart;
+        var timeEnd;
+
+        var messagesData;
+
+        var layoutConfig = {
+            settings: {
+                showPopoutIcon: false,
+                reorderEnabled: true
+            },
+            dimensions: {
+                borderWidth: 3,
+                headerHeight: 22
+            },
+            content: [{
+                type: "row",
+                content: [{
+                    type: "component",
+                    componentName: "source",
+                    title: "SOURCE",
+                    isClosable: false,
+                    componentState: {
+                        readOnly: false
+                    }
+                },{
+                    type: "column",
+                    content: [{
+                        type: "stack",
+                        content: [{
+                            type: "component",
+                            componentName: "stdin",
+                            title: "STDIN",
+                            isClosable: false,
+                            componentState: {
+                                readOnly: false
+                            }
+                        }]
+                    },{
+                        type: "stack",
+                        content: [{
+                            type: "component",
+                            componentName: "stdout",
+                            title: "STDOUT",
+                            isClosable: false,
+                            componentState: {
+                                readOnly: true
+                            }
+                        },{
+                            type: "component",
+                            componentName: "stderr",
+                            title: "STDERR",
+                            isClosable: false,
+                            componentState: {
+                                readOnly: true
+                            }
+                        },{
+                            type: "component",
+                            componentName: "compile output",
+                            title: "COMPILE OUTPUT",
+                            isClosable: false,
+                            componentState: {
+                                readOnly: true
+                            }
+                        },{
+                            type: "component",
+                            componentName: "sandbox message",
+                            title: "SANDBOX MESSAGE",
+                            isClosable: false,
+                            componentState: {
+                                readOnly: true
+                            }
+                        }]
+                    }]
+                }]
+            }]
+        };
+
+        function encode(str) {
+            return btoa(unescape(encodeURIComponent(str || "")));
+        }
+
+        function decode(bytes) {
+            var escaped = escape(atob(bytes || ""));
+            try {
+                return decodeURIComponent(escaped);
+            } catch {
+                return unescape(escaped);
+            }
+        }
+
+        function localStorageSetItem(key,value) {
+            try {
+                localStorage.setItem(key,value);
+            } catch(ignorable) {}
+        }
+
+        function localStorageGetItem(key) {
+            try {
+                return localStorage.getItem(key);
+            } catch(ignorable) {
+                return null;
+            }
+        }
+
+        function showMessages() {
+            var width = $about.offset().left - parseFloat($about.css("padding-left")) -
+                $navigationMessage.parent().offset().left - parseFloat($navigationMessage.parent().css("padding-left")) - 5;
+
+            if(width < 200 || messagesData === undefined) {
+                return;
+            }
+
+            var messages = messagesData["messages"];
+
+            $navigationMessage.css("animation-duration",messagesData["duration"]);
+            $navigationMessage.parent().width(width - 5);
+
+            var combinedMessage = "";
+            for(var i = 0; i < messages.length; ++i) {
+                combinedMessage += `${messages[i]}`;
+                if(i != messages.length - 1) {
+                    combinedMessage += "&nbsp".repeat(Math.min(200,messages[i].length));
+                }
+            }
+
+            $navigationMessage.html(combinedMessage);
+        }
+
+        function loadMessages() {
+            $.ajax({
+                url: `https://minio.judge0.com/public/messages.json?${Date.now()}`,
+                type: "GET",
+                headers: {
+                    "Accept": "application/json"
+                },
+                success: function(data,textStatus,jqXHR) {
+                    messagesData = data;
+                    showMessages();
+                }
+            });
+        }
+
+        function showApiUrl() {
+            $("#api-url").attr("href",apiUrl);
+        }
+
+        function showError(title,content) {
+            $("#site-modal #title").html(title);
+            $("#site-modal .content").html(content);
+            $("#site-modal").modal("show");
+        }
+
+        function handleError(jqXHR,textStatus,errorThrown) {
+            showError(`${jqXHR.statusText} (${jqXHR.status})`,`<pre>${JSON.stringify(jqXHR,null,4)}</pre>`);
+        }
+
+        function handleRunError(jqXHR,textStatus,errorThrown) {
+            handleError(jqXHR,textStatus,errorThrown);
+            $runBtn.removeClass("loading");
+        }
+
+        function handleResult(data) {
+            timeEnd = performance.now();
+            console.log("It took " + (timeEnd - timeStart) + " ms to get submission result.");
+
+            var status = data.status;
+            var stdout = decode(data.stdout);
+            var stderr = decode(data.stderr);
+            var compile_output = decode(data.compile_output);
+            var sandbox_message = decode(data.message);
+            var time = (data.time === null ? "-" : data.time + "s");
+            var memory = (data.memory === null ? "-" : data.memory + "KB");
+
+            $statusLine.html(`${status.description}, ${time}, ${memory}`);
+
+            if(blinkStatusLine) {
+                $statusLine.addClass("blink");
+                setTimeout(function() {
+                    blinkStatusLine = false;
+                    localStorageSetItem("blink","false");
+                    $statusLine.removeClass("blink");
+                },3000);
+            }
+
+            stdoutEditor.setValue(stdout);
+            stderrEditor.setValue(stderr);
+            compileOutputEditor.setValue(compile_output);
+            sandboxMessageEditor.setValue(sandbox_message);
+
+            if(stdout !== "") {
+                var dot = document.getElementById("stdout-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(stderr !== "") {
+                var dot = document.getElementById("stderr-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(compile_output !== "") {
+                var dot = document.getElementById("compile-output-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(sandbox_message !== "") {
+                var dot = document.getElementById("sandbox-message-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+
+            $runBtn.removeClass("loading");
+        }
+
+
+
+
+        //mycode
+
+        var out;
+        var ctr;
+
+        function handleResultsubmit(data,t) {
+            timeEnd = performance.now();
+            console.log("It took " + (timeEnd - timeStart) + " ms to get submission result from submit button.");
+
+            var status = data.status;
+            var stdout = decode(data.stdout);
+            var stderr = decode(data.stderr);
+            var compile_output = decode(data.compile_output);
+            var sandbox_message = decode(data.message);
+            var time = (data.time === null ? "-" : data.time + "s");
+            var memory = (data.memory === null ? "-" : data.memory + "KB");
+            console.log(status);
+
+            $statusLine.html(`${status.description}, ${time}, ${memory}`);
+
+            if(blinkStatusLine) {
+                $statusLine.addClass("blink");
+                setTimeout(function() {
+                    blinkStatusLine = false;
+                    localStorageSetItem("blink","false");
+                    $statusLine.removeClass("blink");
+                },3000);
+            }
+
+            stdout = data.status["description"];
+            console.log("stdout = " + stdout)
+            if(stdout == "Accepted") {
+                points = points + 10;
+            }
+            console.log("points = " + points);
+
+            out = out + stdout + "\n"
+            console.log("out = " + out)
+            stdoutEditor.setValue(out);
+            stderrEditor.setValue(stderr);
+            compileOutputEditor.setValue(compile_output);
+            sandboxMessageEditor.setValue(sandbox_message);
+
+            if(stdout !== "") {
+                var dot = document.getElementById("stdout-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(stderr !== "") {
+                var dot = document.getElementById("stderr-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(compile_output !== "") {
+                var dot = document.getElementById("compile-output-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+            if(sandbox_message !== "") {
+                var dot = document.getElementById("sandbox-message-dot");
+                if(!dot.parentElement.classList.contains("lm_active")) {
+                    dot.hidden = false;
+                }
+            }
+
+            $sbtBtn.removeClass("loading");
+
+            ctr = ctr + 1;
+
+
+            if(ctr == t) {
+                if(points == t * 10) {
+
+                    var text = p_name;
+                    console.log(p_name);
+                    var p = points;
+
+                    $.ajax({
+                        type: "POST",
+                        url: "{% url 'problem_submit_success' %}",
+                        data: {
+                            csrfmiddlewaretoken: '{{ csrf_token }}',
+                            text: text,
+                            p: p
+                        },
+                        success: function callback(response) {
+
+                            var modal = document.getElementById("myModal");
+
+                            // Get the button that opens the modal
+
+                            // Get the <span> element that closes the modal
+                            var span = document.getElementsByClassName("close")[0];
+
+                            // When the user clicks the button, open the modal 
+                            document.getElementById("hv").innerHTML = response;
+                            modal.style.display = "block";
+
+                            // When the user clicks on <span> (x), close the modal
+                            span.onclick = function() {
+                                modal.style.display = "none";
+                            }
+
+                            // When the user clicks anywhere outside of the modal, close it
+                            window.onclick = function(event) {
+                                if(event.target == modal) {
+                                    modal.style.display = "none";
+                                }
+                            }
+                            //alert(response);
+                        }
+                    });
+
+
+
+
+
+                    // <!--alert("solution accepted");-->
+                } else {
+                    var modal = document.getElementById("myModal");
+
+                    // Get the button that opens the modal
+
+                    // Get the <span> element that closes the modal
+                    var span = document.getElementsByClassName("close")[0];
+
+                    // When the user clicks the button, open the modal 
+
+                    modal.style.display = "block";
+
+                    // When the user clicks on <span> (x), close the modal
+                    span.onclick = function() {
+                        modal.style.display = "none";
+                    }
+
+                    // When the user clicks anywhere outside of the modal, close it
+                    window.onclick = function(event) {
+                        if(event.target == modal) {
+                            modal.style.display = "none";
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+
+
+        function getIdFromURI() {
+            return location.search.substr(1).trim();
+        }
+
+        function save() {
+            var content = JSON.stringify({
+                source_code: encode(sourceEditor.getValue()),
+                language_id: $selectLanguage.val(),
+                compiler_options: $compilerOptions.val(),
+                command_line_arguments: $commandLineArguments.val(),
+                stdin: encode(stdinEditor.getValue()),
+                stdout: encode(stdoutEditor.getValue()),
+                stderr: encode(stderrEditor.getValue()),
+                compile_output: encode(compileOutputEditor.getValue()),
+                sandbox_message: encode(sandboxMessageEditor.getValue()),
+                status_line: encode($statusLine.html())
+            });
+            var filename = "judge0-ide.json";
+            var data = {
+                content: content,
+                filename: filename
+            };
+
+            $.ajax({
+                url: pbUrl,
+                type: "POST",
+                async: true,
+                headers: {
+                    "Accept": "application/json"
+                },
+                data: data,
+                success: function(data,textStatus,jqXHR) {
+                    if(getIdFromURI() != data["short"]) {
+                        window.history.replaceState(null,null,location.origin + location.pathname + "?" + data["short"]);
+                    }
+                },
+                error: function(jqXHR,textStatus,errorThrown) {
+                    handleError(jqXHR,textStatus,errorThrown);
+                }
+            });
+
+        }
+
+        function run() {
+            if(sourceEditor.getValue().trim() === "") {
+                showError("Error","Source code can't be empty!");
+                return;
+            } else {
+                $runBtn.addClass("loading");
+            }
+
+            document.getElementById("stdout-dot").hidden = true;
+            document.getElementById("stderr-dot").hidden = true;
+            document.getElementById("compile-output-dot").hidden = true;
+            document.getElementById("sandbox-message-dot").hidden = true;
+
+            stdoutEditor.setValue("");
+            stderrEditor.setValue("");
+            compileOutputEditor.setValue("");
+            sandboxMessageEditor.setValue("");
+
+            var sourceValue = encode(sourceEditor.getValue());
+            var stdinValue = encode(stdinEditor.getValue());
+            var languageId = resolveLanguageId($selectLanguage.val());
+            var compilerOptions = $compilerOptions.val();
+            var commandLineArguments = $commandLineArguments.val();
+
+            if(parseInt(languageId) === 44) {
+                sourceValue = sourceEditor.getValue();
+            }
+
+            var data = {
+                source_code: sourceValue,
+                language_id: languageId,
+                stdin: stdinValue,
+                compiler_options: compilerOptions,
+                command_line_arguments: commandLineArguments
+            };
+
+            timeStart = performance.now();
+            $.ajax({
+                url: apiUrl + `/submissions?base64_encoded=true&wait=${wait}`,
+                "method": "POST",
+                async: true,
+                "crossDomain": true,
+                contentType: "application/json",
+                data: JSON.stringify(data),
+                "headers": {
+                    "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                    "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef",
+                    "content-type": "application/json",
+                    "accept": "application/json"
+                },
+                "processData": false,
+                success: function(data,textStatus,jqXHR) {
+                    console.log(`Your submission token is: ${data.token}`);
+                    if(wait == true) {
+                        handleResult(data);
+                    }
+                    else {
+                        setTimeout(fetchSubmission.bind(null,data.token),check_timeout);
+                    }
+                },
+                error: handleRunError
+            });
+        }
+
+
+
+
+        //mycode
+
+
+
+
+
+
+
+        function submitit(t) {
+
+
+            var i;
+            var temp = document.getElementById("files").innerHTML;
+            console.log(typeof (temp));
+            var t = Number(temp);
+            console.log("no of test cases = " + t);
+            console.log(typeof (t));
+            for(i = 0; i < t; i++) {
+                out = "";
+                ctr = 0;
+                points = 0;
+                if(sourceEditor.getValue().trim() === "") {
+                    showError("Error","Source code can't be empty!");
+                    return;
+                } else {
+                    $sbtBtn.addClass("loading");
+                }
+
+                document.getElementById("stdout-dot").hidden = true;
+                document.getElementById("stderr-dot").hidden = true;
+                document.getElementById("compile-output-dot").hidden = true;
+                document.getElementById("sandbox-message-dot").hidden = true;
+
+                stdoutEditor.setValue("");
+                stderrEditor.setValue("");
+                compileOutputEditor.setValue("");
+                sandboxMessageEditor.setValue("");
+
+                var sourceValue = encode(sourceEditor.getValue());
+                var stdinValue = encode(stdinEditor.getValue());
+                var languageId = resolveLanguageId($selectLanguage.val());
+                var compilerOptions = $compilerOptions.val();
+                var commandLineArguments = $commandLineArguments.val();
+
+                if(parseInt(languageId) === 44) {
+                    sourceValue = sourceEditor.getValue();
+                }
+
+                var data = {
+                    source_code: sourceValue,
+                    language_id: languageId,
+                    stdin: stdinValue,
+                    compiler_options: compilerOptions,
+                    command_line_arguments: commandLineArguments
+                };
+
+                timeStart = performance.now();
+                $.ajax({
+                    url: apiUrl + `/submissions?base64_encoded=true&wait=${wait}`,
+                    "method": "POST",
+                    async: true,
+                    "crossDomain": true,
+                    contentType: "application/json",
+                    data: JSON.stringify(data),
+                    "headers": {
+                        "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                        "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef",
+                        "content-type": "application/json",
+                        "accept": "application/json"
+                    },
+                    "processData": false,
+                    success: function(data,textStatus,jqXHR) {
+                        console.log('Your submission token is: ${data.token}');
+                        if(wait == true) {
+                            handleResult(data);
+                        } else {
+                            setTimeout(fetchSubmission.bind(null,data.token),check_timeout);
+                        }
+                    },
+                    error: handleRunError
+                });
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+
+
+
+        function fetchSubmission(submission_token) {
+            $.ajax({
+                url: apiUrl + "/submissions/" + submission_token + "?base64_encoded=true",
+                type: "GET",
+                async: true,
+                "crossDomain": true,
+                "headers": {
+                    "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                    "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef"
+                },
+                success: function(data,textStatus,jqXHR) {
+                    if(data.status.id <= 2) { // In Queue or Processing
+                        setTimeout(fetchSubmission.bind(null,submission_token),check_timeout);
+                        return;
+                    } else {
+                        $sbtBtn.addClass("loading");
+                    }
+                    handleResult(data);
+                },
+                error: handleRunError
+            });
+
+        }
+
+
+
+
+        function fetchSubmissionsubmit(submission_token,t) {
+            $.ajax({
+                url: apiUrl + "/submissions/" + submission_token + "?base64_encoded=true",
+                type: "GET",
+                async: true,
+                "crossDomain": true,
+                "headers": {
+                    "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                    "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef"
+                },
+                success: function(data,textStatus,jqXHR) {
+                    if(data.status.id <= 2) { // In Queue or Processing
+                        console.log("first time fetch")
+                        setTimeout(fetchSubmissionsubmit.bind(null,submission_token,t),check_timeout);
+                        return;
+                    }
+
+                    var data = {
+                        source_code: sourceValue,
+                        language_id: languageId,
+                        stdin: stdinValue,
+                        compiler_options: compilerOptions,
+                        command_line_arguments: commandLineArguments,
+                        expected_output: expectedoutput
+
+                    };
+
+                    timeStart = performance.now();
+                    $.ajax({
+                        url: apiUrl + `/submissions?base64_encoded=true&wait=${wait}`,
+                        "method": "POST",
+                        async: true,
+                        "crossDomain": true,
+                        contentType: "application/json",
+                        data: JSON.stringify(data),
+                        "headers": {
+                            "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                            "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef",
+                            "content-type": "application/json",
+                            "accept": "application/json"
+                        },
+                        "processData": false,
+                        success: function(data,textStatus,jqXHR) {
+                            console.log('Your submission token is: ${data.token}');
+                            if(wait == true) {
+                                console.log("in submit");
+                                handleResultsubmit(data,t);
+                            } else {
+                                setTimeout(fetchSubmissionsubmit.bind(null,data.token,t),check_timeout);
+                            }
+                        },
+                        error: handleRunError
+                    });
+
+                }
+
+
+
+
+
+
+
+
+
+            })
+        }
+
+
+
+        function fetchSubmission(submission_token) {
+            $.ajax({
+                url: apiUrl + "/submissions/" + submission_token + "?base64_encoded=true",
+                type: "GET",
+                async: true,
+                "crossDomain": true,
+                "headers": {
+                    "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                    "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef"
+                },
+                success: function(data,textStatus,jqXHR) {
+                    if(data.status.id <= 2) { // In Queue or Processing
+                        setTimeout(fetchSubmission.bind(null,submission_token),check_timeout);
+                        return;
+                    }
+                    handleResult(data);
+                },
+                error: handleRunError
+            });
+
+        }
+
+
+
+
+        function fetchSubmissionsubmit(submission_token,t) {
+            $.ajax({
+                url: apiUrl + "/submissions/" + submission_token + "?base64_encoded=true",
+                type: "GET",
+                async: true,
+                "crossDomain": true,
+                "headers": {
+                    "x-rapidapi-host": "judge0-ce.p.rapidapi.com",
+                    "x-rapidapi-key": "b95dfdb11emshd79fc37e0d7e728p143890jsnbbf89a7efcef"
+                },
+                success: function(data,textStatus,jqXHR) {
+                    if(data.status.id <= 2) { // In Queue or Processing
+                        console.log("first time fetch")
+                        setTimeout(fetchSubmissionsubmit.bind(null,submission_token,t),check_timeout);
+                        return;
+                    }
+                    console.log("in fetch");
+                    handleResultsubmit(data,t);
+                },
+                error: handleRunError
+            });
+
+        }
+
+
+
+        function changeEditorLanguage() {
+            monaco.editor.setModelLanguage(sourceEditor.getModel(),$selectLanguage.find(":selected").attr("mode"));
+            currentLanguageId = parseInt($selectLanguage.val());
+            $(".lm_title")[0].innerText = fileNames[currentLanguageId];
+            apiUrl = resolveApiUrl($selectLanguage.val());
+            showApiUrl();
+        }
+
+        function insertTemplate() {
+            currentLanguageId = parseInt($selectLanguage.val());
+            sourceEditor.setValue(sources[currentLanguageId]);
+            changeEditorLanguage();
+        }
+
+        function loadRandomLanguage() {
+            var values = [];
+            for(var i = 0; i < $selectLanguage[0].options.length; ++i) {
+                values.push($selectLanguage[0].options[i].value);
+            }
+            $selectLanguage.dropdown("set selected",values[Math.floor(Math.random() * $selectLanguage[0].length)]);
+            apiUrl = resolveApiUrl($selectLanguage.val());
+            showApiUrl();
+            insertTemplate();
+        }
+
+        function resizeEditor(layoutInfo) {
+            if(editorMode != "normal") {
+                var statusLineHeight = $("#editor-status-line").height();
+                layoutInfo.height -= statusLineHeight;
+                layoutInfo.contentHeight -= statusLineHeight;
+            }
+        }
+
+        function disposeEditorModeObject() {
+            try {
+                editorModeObject.dispose();
+                editorModeObject = null;
+            } catch(ignorable) {}
+        }
+
+        function changeEditorMode() {
+            disposeEditorModeObject();
+
+            if(editorMode == "vim") {
+                editorModeObject = MonacoVim.initVimMode(sourceEditor,$("#editor-status-line")[0]);
+            } else if(editorMode == "emacs") {
+                var statusNode = $("#editor-status-line")[0];
+                editorModeObject = new MonacoEmacs.EmacsExtension(sourceEditor);
+                editorModeObject.onDidMarkChange(function(e) {
+                    statusNode.textContent = e ? "Mark Set!" : "Mark Unset";
+                });
+                editorModeObject.onDidChangeKey(function(str) {
+                    statusNode.textContent = str;
+                });
+                editorModeObject.start();
+            }
+        }
+
+        function resolveLanguageId(id) {
+            id = parseInt(id);
+            return languageIdTable[id] || id;
+        }
+
+        function resolveApiUrl(id) {
+            id = parseInt(id);
+            return languageApiUrlTable[id] || defaultUrl;
+        }
+
+        function editorsUpdateFontSize(fontSize) {
+            sourceEditor.updateOptions({
+                fontSize: fontSize
+            });
+            stdinEditor.updateOptions({
+                fontSize: fontSize
+            });
+            stdoutEditor.updateOptions({
+                fontSize: fontSize
+            });
+            stderrEditor.updateOptions({
+                fontSize: fontSize
+            });
+            compileOutputEditor.updateOptions({
+                fontSize: fontSize
+            });
+            sandboxMessageEditor.updateOptions({
+                fontSize: fontSize
+            });
+        }
+
+        $(window).resize(function() {
+            layout.updateSize();
+            showMessages();
+        });
+
+        $(document).ready(function() {
+            console.log("Hey, Judge0 IDE is open-sourced: https://github.com/judge0/ide. Have fun!");
+
+            $selectLanguage = $("#select-language");
+            $selectLanguage.change(function(e) {
+                if(!isEditorDirty) {
+                    insertTemplate();
+                } else {
+                    changeEditorLanguage();
+                }
+            });
+
+            $compilerOptions = $("#compiler-options");
+            $commandLineArguments = $("#command-line-arguments");
+            $commandLineArguments.attr("size",$commandLineArguments.attr("placeholder").length);
+
+            $insertTemplateBtn = $("#insert-template-btn");
+            $insertTemplateBtn.click(function(e) {
+                if(isEditorDirty && confirm("Are you sure? Your current changes will be lost.")) {
+                    insertTemplate();
+                }
+            });
+
+            $runBtn = $("#run-btn");
+            $runBtn.click(function(e) {
+                run();
+            });
+
+
+
+            //mycode
+            $sbtBtn = $("#sbt-btn");
+            $sbtBtn.click(function(e) {
+                submitit();
+
+
+
+            });
+
+            $navigationMessage = $("#navigation-message span");
+            $about = $("#about");
+
+            $(`input[name="editor-mode"][value="${editorMode}"]`).prop("checked",true);
+            $("input[name=\"editor-mode\"]").on("change",function(e) {
+                $('#site-settings').modal('hide');
+
+                editorMode = e.target.value;
+                localStorageSetItem("editorMode",editorMode);
+
+                resizeEditor(sourceEditor.getLayoutInfo());
+                changeEditorMode();
+
+                sourceEditor.focus();
+            });
+
+            $statusLine = $("#status-line");
+
+            $("body").keydown(function(e) {
+                var keyCode = e.keyCode || e.which;
+                if(keyCode == 120) { // F9
+                    e.preventDefault();
+                    run();
+                } else if(keyCode == 119) { // F8
+                    e.preventDefault();
+                    var url = prompt("Enter URL of Judge0 API:",apiUrl);
+                    if(url != null) {
+                        url = url.trim();
+                    }
+                    if(url != null && url != "") {
+                        apiUrl = url;
+                        localStorageSetItem("api-url",apiUrl);
+                        showApiUrl();
+                    }
+                } else if(keyCode == 118) { // F7
+                    e.preventDefault();
+                    wait = !wait;
+                    localStorageSetItem("wait",wait);
+                    alert(`Submission wait is ${wait ? "ON. Enjoy" : "OFF"}.`);
+                } else if(event.ctrlKey && keyCode == 83) { // Ctrl+S
+                    e.preventDefault();
+                    save();
+                } else if(event.ctrlKey && keyCode == 107) { // Ctrl++
+                    e.preventDefault();
+                    fontSize += 1;
+                    editorsUpdateFontSize(fontSize);
+                } else if(event.ctrlKey && keyCode == 109) { // Ctrl+-
+                    e.preventDefault();
+                    fontSize -= 1;
+                    editorsUpdateFontSize(fontSize);
+                }
+            });
+
+            $("select.dropdown").dropdown();
+            $(".ui.dropdown").dropdown();
+            $(".ui.dropdown.site-links").dropdown({
+                action: "hide",
+                on: "hover"
+            });
+            $(".ui.checkbox").checkbox();
+            $(".message .close").on("click",function() {
+                $(this).closest(".message").transition("fade");
+            });
+
+            showApiUrl();
+            loadMessages();
+
+            require(["vs/editor/editor.main","monaco-vim","monaco-emacs"],function(ignorable,MVim,MEmacs) {
+                layout = new GoldenLayout(layoutConfig,$("#site-content"));
+
+                MonacoVim = MVim;
+                MonacoEmacs = MEmacs;
+
+                layout.registerComponent("source",function(container,state) {
+                    sourceEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: true,
+                        readOnly: state.readOnly,
+                        language: "cpp",
+                        minimap: {
+                            enabled: false
+                        },
+                        rulers: [80,120]
+                    });
+
+                    changeEditorMode();
+
+                    sourceEditor.getModel().onDidChangeContent(function(e) {
+                        currentLanguageId = parseInt($selectLanguage.val());
+                        isEditorDirty = sourceEditor.getValue() != sources[currentLanguageId];
+                    });
+
+                    sourceEditor.onDidLayoutChange(resizeEditor);
+                });
+
+                layout.registerComponent("stdin",function(container,state) {
+                    stdinEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: false,
+                        readOnly: state.readOnly,
+                        language: "plaintext",
+                        minimap: {
+                            enabled: false
+                        }
+                    });
+                });
+
+                layout.registerComponent("stdout",function(container,state) {
+                    stdoutEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: false,
+                        readOnly: state.readOnly,
+                        language: "plaintext",
+                        minimap: {
+                            enabled: false
+                        }
+                    });
+
+                    container.on("tab",function(tab) {
+                        tab.element.append("<span id=\"stdout-dot\" class=\"dot\" hidden></span>");
+                        tab.element.on("mousedown",function(e) {
+                            e.target.closest(".lm_tab").children[3].hidden = true;
+                        });
+                    });
+                });
+
+                layout.registerComponent("stderr",function(container,state) {
+                    stderrEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: false,
+                        readOnly: state.readOnly,
+                        language: "plaintext",
+                        minimap: {
+                            enabled: false
+                        }
+                    });
+
+                    container.on("tab",function(tab) {
+                        tab.element.append("<span id=\"stderr-dot\" class=\"dot\" hidden></span>");
+                        tab.element.on("mousedown",function(e) {
+                            e.target.closest(".lm_tab").children[3].hidden = true;
+                        });
+                    });
+                });
+
+                layout.registerComponent("compile output",function(container,state) {
+                    compileOutputEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: false,
+                        readOnly: state.readOnly,
+                        language: "plaintext",
+                        minimap: {
+                            enabled: false
+                        }
+                    });
+
+                    container.on("tab",function(tab) {
+                        tab.element.append("<span id=\"compile-output-dot\" class=\"dot\" hidden></span>");
+                        tab.element.on("mousedown",function(e) {
+                            e.target.closest(".lm_tab").children[3].hidden = true;
+                        });
+                    });
+                });
+
+                layout.registerComponent("sandbox message",function(container,state) {
+                    sandboxMessageEditor = monaco.editor.create(container.getElement()[0],{
+                        automaticLayout: true,
+                        theme: "vs-dark",
+                        scrollBeyondLastLine: false,
+                        readOnly: state.readOnly,
+                        language: "plaintext",
+                        minimap: {
+                            enabled: false
+                        }
+                    });
+
+                    container.on("tab",function(tab) {
+                        tab.element.append("<span id=\"sandbox-message-dot\" class=\"dot\" hidden></span>");
+                        tab.element.on("mousedown",function(e) {
+                            e.target.closest(".lm_tab").children[3].hidden = true;
+                        });
+                    });
+                });
+
+                layout.on("initialised",function() {
+                    $(".monaco-editor")[0].appendChild($("#editor-status-line")[0]);
+                    if(getIdFromURI()) {
+                        loadSavedSource();
+                    } else {
+                        loadRandomLanguage();
+                    }
+                    $("#site-navigation").css("border-bottom","1px solid black");
+                    sourceEditor.focus();
+                });
+
+                layout.init();
+            });
+        });
+
+        // Template Sources
+        var assemblySource = "\
+    section	.text\n\
+        global _start\n\
+    \n\
+    _start:\n\
+    \n\
+        xor	eax, eax\n\
+        lea	edx, [rax+len]\n\
+        mov	al, 1\n\
+        mov	esi, msg\n\
+        mov	edi, eax\n\
+        syscall\n\
+    \n\
+        xor	edi, edi\n\
+        lea	eax, [rdi+60]\n\
+        syscall\n\
+    \n\
+    section	.rodata\n\
+    \n\
+    msg	db 'hello, world', 0xa\n\
+    len	equ	$ - msg\n\
+    ";
+
+        var bashSource = "echo \"hello, world\"";
+
+        var basicSource = "PRINT \"hello, world\"";
+
+        var cSource = "\
+    #include <stdio.h>\n\
+    \n\
+    int main(void) {\n\
+        printf(\"hello, world\\n\");\n\
+        return 0;\n\
+    }\n\
+    ";
+
+        var csharpSource = "\
+    public class Hello {\n\
+        public static void Main() {\n\
+            System.Console.WriteLine(\"hello, world\");\n\
+        }\n\
+    }\n\
+    ";
+
+        var cppSource = "\
+    #include <iostream>\n\
+    \n\
+    int main() {\n\
+        std::cout << \"hello, world\" << std::endl;\n\
+        return 0;\n\
+    }\n\
+    ";
+
+        var lispSource = "(write-line \"hello, world\")";
+
+        var dSource = "\
+    import std.stdio;\n\
+    \n\
+    void main()\n\
+    {\n\
+        writeln(\"hello, world\");\n\
+    }\n\
+    ";
+
+        var elixirSource = "IO.puts \"hello, world\"";
+
+        var erlangSource = "\
+    main(_) ->\n\
+        io:fwrite(\"hello, world\\n\").\n\
+    ";
+
+        var executableSource = "\
+    Judge0 IDE assumes that content of executable is Base64 encoded.\n\
+    \n\
+    This means that you should Base64 encode content of your binary,\n\
+    paste it here and click \"Run\".\n\
+    \n\
+    Here is an example of compiled \"hello, world\" NASM program.\n\
+    Content of compiled binary is Base64 encoded and used as source code.\n\
+    \n\
+    https://ide.judge0.com/?kS_f\n\
+    ";
+
+        var fortranSource = "\
+    program main\n\
+        print *, \"hello, world\"\n\
+    end\n\
+    ";
+
+        var goSource = "\
+    package main\n\
+    \n\
+    import \"fmt\"\n\
+    \n\
+    func main() {\n\
+        fmt.Println(\"hello, world\")\n\
+    }\n\
+    ";
+
+        var haskellSource = "main = putStrLn \"hello, world\"";
+
+        var javaSource = "\
+    public class Main {\n\
+        public static void main(String[] args) {\n\
+            System.out.println(\"hello, world\");\n\
+        }\n\
+    }\n\
+    ";
+
+        var javaScriptSource = "console.log(\"hello, world\");";
+
+        var luaSource = "print(\"hello, world\")";
+
+        var nimSource = "\
+    # On the Judge0 IDE, Nim is automatically\n\
+    # updated every day to the latest stable version.\n\
+    echo \"hello, world\"\n\
+    ";
+
+        var ocamlSource = "print_endline \"hello, world\"";
+
+        var octaveSource = "printf(\"hello, world\\n\");";
+
+        var pascalSource = "\
+    program Hello;\n\
+    begin\n\
+        writeln ('hello, world')\n\
+    end.\n\
+    ";
+
+        var phpSource = "\
+    <?php\n\
+    print(\"hello, world\\n\");\n\
+    ?>\n\
+    ";
+
+        var plainTextSource = "hello, world\n";
+
+        var prologSource = "\
+    :- initialization(main).\n\
+    main :- write('hello, world\\n').\n\
+    ";
+
+        var pythonSource = "print(\"hello, world\")";
+
+        var rubySource = "puts \"hello, world\"";
+
+        var rustSource = "\
+    fn main() {\n\
+        println!(\"hello, world\");\n\
+    }\n\
+    "
+
+        var typescriptSource = "console.log(\"hello, world\");";
+
+        var vSource = "\
+    // On the Judge0 IDE, V is automatically\n\
+    // updated every hour to the latest version.\n\
+    fn main() {\n\
+        println('hello, world')\n\
+    }\n\
+    ";
+
+        var sources = {
+            45: assemblySource,
+            46: bashSource,
+            47: basicSource,
+            48: cSource,
+            49: cSource,
+            50: cSource,
+            51: csharpSource,
+            52: cppSource,
+            53: cppSource,
+            54: cppSource,
+            55: lispSource,
+            56: dSource,
+            57: elixirSource,
+            58: erlangSource,
+            44: executableSource,
+            59: fortranSource,
+            60: goSource,
+            61: haskellSource,
+            62: javaSource,
+            63: javaScriptSource,
+            64: luaSource,
+            1000: nimSource,
+            65: ocamlSource,
+            66: octaveSource,
+            67: pascalSource,
+            68: phpSource,
+            43: plainTextSource,
+            69: prologSource,
+            70: pythonSource,
+            71: pythonSource,
+            72: rubySource,
+            73: rustSource,
+            74: typescriptSource,
+            1001: vSource
+        };
+
+        var fileNames = {
+            45: "main.asm",
+            46: "script.sh",
+            47: "main.bas",
+            48: "main.c",
+            49: "main.c",
+            50: "main.c",
+            51: "Main.cs",
+            52: "main.cpp",
+            53: "main.cpp",
+            54: "main.cpp",
+            55: "script.lisp",
+            56: "main.d",
+            57: "script.exs",
+            58: "main.erl",
+            44: "a.out",
+            59: "main.f90",
+            60: "main.go",
+            61: "main.hs",
+            62: "Main.java",
+            63: "script.js",
+            64: "script.lua",
+            1000: "main.nim",
+            65: "main.ml",
+            66: "script.m",
+            67: "main.pas",
+            68: "script.php",
+            43: "text.txt",
+            69: "main.pro",
+            70: "script.py",
+            71: "script.py",
+            72: "script.rb",
+            73: "main.rs",
+            74: "script.ts",
+            1001: "main.v"
+        };
+
+        var languageIdTable = {
+            1000: 1,
+            1001: 1
+        }
+
+        var languageApiUrlTable = {
+            1000: "https://nim.judge0-ce.p.rapidapi.com",
+            1001: "https://vlang.judge0-ce.p.rapidapi.com"
+        }
+
+
+
+    </script>
+    <script type="text/javascript" src="{% static 'newtheme/js/index.js' %}"></script>
+    <script>
+        function myfuntion() {
+            console.log("aman1");
+            if(document.getElementById("navbar").className == "navbar") {
+                document.getElementById("navbar").classList.remove("navbar");
+                document.getElementById("navbar").classList.add("navbar-mobile");
+            }
+            else {
+                document.getElementById("navbar").classList.remove("navbar-mobile");
+                document.getElementById("navbar").classList.add("navbar");
+            }
+        }
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

@@ -1,0 +1,1052 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder-Single Group</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+        rel="stylesheet" />
+    <!--
+      CSS
+      =============================================
+    -->
+
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+        <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+ <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+ <script type="text/javascript"
+   src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+ <link rel="stylesheet" type="text/css"
+   href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+ <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+   crossorigin="anonymous"></script>
+ 
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<style>
+  .mobile-nav-toggle {
+    color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 1s;
+     
+  }
+  
+  .mobile-nav-toggle.bi-x {
+    color: #fff;
+  }
+  
+  @media (max-width: 600px) {
+    .mobile-nav-toggle {
+      display: block;
+    }
+    .navbar ul {
+      
+      display: none;
+    }
+     
+  }
+  
+  .navbar-mobile {
+    position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(40, 58, 90, 0.9);
+  transition: 0.3s;
+  z-index: 999;
+  }
+  
+  .navbar-mobile .mobile-nav-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+  }
+  
+  .navbar-mobile ul {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    padding: 10px 0;
+    border-radius: 10px;
+    background-color: #fff;
+    overflow-y: auto;
+    transition: 0.3s;
+  }
+  
+  .navbar-mobile a {
+    padding: 10px 20px;
+  font-size: 15px;
+  color: #37517e;
+  }
+  
+  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+    color: #47b2e4;
+  }
+  
+  .navbar-mobile .getstarted {
+    margin: 15px;
+    color: #37517e;
+  }
+  
+  .navbar-mobile .dropdown ul {
+    position: static;
+    display: none;
+    margin: 10px 20px;
+    padding: 10px 0;
+    z-index: 99;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  }
+  
+  .navbar-mobile .dropdown ul li {
+    min-width: 200px;
+  }
+  
+  .navbar-mobile .dropdown ul a {
+    padding: 10px 20px;
+  }
+  
+  .navbar-mobile .dropdown ul a i {
+    font-size: 12px;
+  }
+  
+  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+    color: #47b2e4;
+  }
+  
+  .navbar-mobile .dropdown > .dropdown-active {
+    display: block;
+  }
+  body{
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+</style>
+    <style>
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+ 
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+         
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            margin: auto;
+            text-align: center;
+            font-family: arial;
+        }
+
+        .card .title {
+            color: grey;
+            font-size: 18px;
+        }
+
+        .modale1:before {
+            content: "";
+            display: none;
+            background: rgb(255, 255, 255) position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .opened:before {
+            display: block;
+        }
+
+        .opened .modale-dialog {
+            -webkit-transform: translate(0, 0);
+            -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+            top: 20%;
+        }
+
+        .modale-dialog {
+            background: white;
+            color: white;
+            border: #333333 solid 0px;
+            border-radius: 5px;
+            margin-left: -200px;
+            text-align: center;
+            position: fixed;
+            left: 30%;
+            top: -100%;
+            z-index: 11;
+            width: 70%;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            -webkit-transform: translate(0, -500%);
+            -ms-transform: translate(0, -500%);
+            transform: translate(0, -500%);
+            -webkit-transition: -webkit-transform 0.3s ease-out;
+            -moz-transition: -moz-transform 0.3s ease-out;
+            -o-transition: -o-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+        }
+
+        .modale-body {
+            padding: 20px;
+        }
+
+        .modale-body input {
+            width: 200px;
+            padding: 8px;
+            border: 1px solid #ddd;
+            color: #888;
+            outline: 0;
+            font-size: 14px;
+            font-weight: bold
+        }
+
+        .modale-header,
+        .modale-footer {
+            padding: 10px 20px;
+        }
+
+        .modale-header {
+            border-bottom: #eeeeee solid 1px;
+        }
+
+        .modale-header h2 {
+            font-size: 20px;
+        }
+
+        .close1 {
+            color: black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close1:hover,
+        .close1:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .myButton3 {
+            background-color: orange;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            width: 87%;
+            border-radius: 20px;
+            margin-left: 8%;
+        }
+
+        .myButton3:hover {
+            background-color: rgba(200, 206, 199, 0.849);
+            color: white;
+        }
+
+
+        button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: rgb(114, 35, 129);
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        .card .a {
+            text-decoration: none;
+            font-size: 22px;
+            color: black;
+        }
+
+        button:hover,
+        a:hover {
+            opacity: 0.7;
+        }
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+
+        .blackboard {
+            position: relative;
+            width: 640px;
+            margin: 7% auto;
+            border: tan solid 12px;
+            border-top: #bda27e solid 12px;
+            border-left: #b19876 solid 12px;
+            border-bottom: #c9ad86 solid 12px;
+            box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5);
+            background-image: radial-gradient(circle at left 30%, rgba(34, 34, 34, 0.3), rgba(34, 34, 34, 0.3) 80px, rgba(34, 34, 34, 0.5) 100px, rgba(51, 51, 51, 0.5) 160px, rgba(51, 51, 51, 0.5)), linear-gradient(215deg, transparent, transparent 100px, #222 260px, #222 320px, transparent), radial-gradient(circle at right, #111, rgba(51, 51, 51, 1));
+            background-color: #333;
+        }
+
+        .blackboard:before {
+            box-sizing: border-box;
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(175deg, transparent, transparent 40px, rgba(120, 120, 120, 0.1) 100px, rgba(120, 120, 120, 0.1) 110px, transparent 220px, transparent), linear-gradient(200deg, transparent 80%, rgba(50, 50, 50, 0.3)), radial-gradient(ellipse at right bottom, transparent, transparent 200px, rgba(80, 80, 80, 0.1) 260px, rgba(80, 80, 80, 0.1) 320px, transparent 400px, transparent);
+            border: #2c2c2c solid 2px;
+            content: "Update Info";
+            font-family: 'Arial', cursive;
+            font-size: 2.2em;
+            color: rgba(238, 238, 238, 0.7);
+            text-align: center;
+            padding-top: 20px;
+        }
+
+        .form {
+            padding: 70px 20px 20px;
+        }
+
+        p {
+            position: relative;
+            margin-bottom: 1em;
+        }
+
+        label {
+            vertical-align: middle;
+            font-family: 'Arial', cursive;
+            font-size: 1.6em;
+            color: rgba(238, 238, 238, 0.7);
+        }
+
+        p:nth-of-type(5)>label {
+            vertical-align: top;
+        }
+
+        input,
+        textarea {
+            vertical-align: middle;
+            padding-left: 10px;
+            background: none;
+            border: none;
+            font-family: 'Area', cursive;
+            font-size: 1.6em;
+            color: rgba(238, 238, 238, 0.8);
+            line-height: .6em;
+            outline: none;
+        }
+
+        textarea {
+            height: 120px;
+            font-size: 1.4em;
+            line-height: 1em;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            cursor: pointer;
+            color: rgba(238, 238, 238, 0.7);
+            line-height: 1em;
+            padding: 0;
+        }
+
+        input[type="submit"]:focus {
+            background: rgba(238, 238, 238, 0.2);
+            color: rgba(238, 238, 238, 0.2);
+        }
+    </style>
+</head>
+
+<body onload="scroll()">
+    <!-- ================ Start Header Area ================= -->
+    <header id="new_header" class="fixed-top ">
+        <div class="container d-flex align-items-center">
+          <!-- <div style="background:white;"> -->
+            
+              <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid" style="width: 200px;" alt="">
+              </h1>
+            
+             
+              <!-- </div> -->
+              <nav id="navbar" class="navbar">
+     
+                 <ul>
+                   <li><a class="nav-link scrollto active" href="/">Home</a></li>
+                   <li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         Quick Coding
+                       </a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                         <a class="dropdown-item" href="/ide">IDE</a>
+                         <a class="dropdown-item" href="/blogs">Blog</a>
+                         <a class="dropdown-item"  href="/interview_experiences">Interviews</a>
+                         <a class="dropdown-item"   href="/problem_list">Practice</a>
+                       </div>
+                     </li>
+                   <li><a class="nav-link scrollto"   href="/courses">Courses</a></li>
+                   <li><a class="nav-link scrollto"   href="/contest/all_contest">Contests</a></li>
+                   {% ifequal account_type "ambassador" %}
+                   <li><a href="/ambassdordashboard"
+                           style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+                   </li>
+                   {% endifequal %}
+                   <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+   
+                   <!-- Dropdown -->
+                   {% if user.is_authenticated %}
+                   <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+                   <li class="nav-item dropdown">
+                       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           {{ request.user.username }}
+                       </a>
+                       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           {% ifequal account_type "ambassador" %}
+                           {% else %}
+ 
+                         <a class="dropdown-item"  href="/profile#cop">Profile</a>
+                         <a class="dropdown-item"   href="/myreferral#cop"> Referral</a>
+                         {% endifequal %}
+                         <a class="dropdown-item"    href="{% url 'logout' %}">Logout</a>
+                       </div>
+                     </li>
+                   {% else %}
+                   <li >
+                       <a href="{% url 'signup' %}" class="btn btn-primary" id="buton" style="background-color:purple; color:white">
+                           Sign up</a>
+                   </li>
+                   <li><a href="/accounts/login/" class="btn btn-primary"
+                           id="buton" style="background-color:purple; color:white"
+                            >Login</a>
+                   </li>
+                   {% endif %}
+                 </ul>
+                 <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28" onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+                   <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+                 </svg>
+               </nav>
+        </div>
+      </header>
+      <br><br>
+    <!-- ================ End Header Area ================= -->
+
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right">
+                    <h2 class="text-white">
+
+                    </h2>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                    </p>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="/home">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="/myteaching#cop">Group Members</a>
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+    <div class="modale1" aria-hidden="true">
+        <div class="modale-dialog">
+            <div class="close1 closemodale1" aria-hidden="true">&times;&nbsp;&nbsp;</div>
+            <div class="modale-body">
+
+                <!-- <div class="shade"> -->
+                <div class="blackboard" style="height: 100%;width:100%">
+                    <form action="/groupsave/{{ id }}" method="POST">{% csrf_token %}
+                        <div class="form">
+                            <p>
+                                <label>Class Link: </label>
+                                <input type="text" style=" width:80%;" placeholder="Enter Class Link"
+                                    value="{{linknow}}" name="link" />
+                            </p>
+                            <!-- <p>
+                                        <label>Current Topic: </label>
+                                        <input name="topic" type="text" value="{{ stu.current_topic }}" placeholder="Enter Current Topic" />
+                                    </p> -->
+                            <p>
+                                <label>Alloted Question: </label>
+                                <textarea name="que"
+                                    style="padding:20px;border:solid;width:100%; border-color: white;">{{quesnow}}</textarea>
+                            </p>
+                            <p class="wipeout">
+                                <input type="submit" value="Save" />
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+
+    <!-- Start top-category-widget Area -->
+    <div class="section-top-border">
+        <!-- <h3 class="mb-30">{{ name }}</h3> -->
+        <button class="myButton3 openmodale1" style="margin-left:70%;margin-bottom:3%;width: 20%;">Manage Group</button>
+
+        <div class="row">
+            {% for place in members %}
+            {% for stu in place.group_members.all %}
+            <div class="col-lg-4">
+
+                <div class="card">
+                    <!-- <img src="/files/{{ stu.image }}" alt="{{ stu.image }}" style="width:20%;margin-left:5%; margin-top:20%;border-radius:50%;">
+                            <h style="margin-top:-20%;font-family: Arial; color: black; font-size:20px;text-transform: uppercase;">{{ stu.user.username }}</h>
+                            <p class="title">{{ stu.fullname }}</p>
+                            <p>{{ stu.phone }}</p>
+                             <div style="margin: 24px 0;">
+                          <a href="#"><i class="fa fa-dribbble"></i></a> 
+                          <a href="#"><i class="fa fa-youtube"></i></a>  
+                          <a href="#"><i class="fa fa-linkedin"></i></a>  
+                          <a href="#"><i class="fa fa-facebook"></i></a> 
+                        </div> -->
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <img src="/files/{{ stu.image }}" alt="{{ stu.image }}"
+                                style="width:100%;margin-left:5%; margin-top:20%;border-radius:50%;">
+
+                        </div>
+                        <div class="col-sm-8">
+                            <br>
+
+                            <h
+                                style="margin-top:-20%;font-family: Arial; color: black; font-size:20px;text-transform: uppercase;">
+                                {{ stu.user.username }}</h>
+                            <p class="title">{{ stu.fullname }}</p>
+                            <p>{{ stu.phone }}</p>
+                        </div>
+                    </div>
+
+                    <a href="/student/{{ stu.id }}">
+                        <p><button>Manage</button></p>
+                    </a>
+                </div>
+
+                <br>
+
+
+            </div>
+            {%empty%}
+            <h1>No Members in this Group.</h1>
+            {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+    </section>
+    <!-- End top-category-widget Area -->
+
+
+    <!-- ================ start footer Area ================= -->
+    <div class="new_footer1" style="margin-top:12vh">
+        <div id="dk-new_footer" class="dk-new_footer">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 col-lg-4">
+                <div class="dk-new_footer-box-info">
+                  <a href="index.html" class="new_footer-logo">
+                    <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+                  </a>
+                  <p class="footer-info-text">
+                    Coding Through One to One Mentorship By Expert Competitive Programmers..
+                  </p>
+                  <div class="new_footer-social-link">
+                    <h3>Follow us</h3>
+                    <ul>
+                      <li>
+                        <a href="https://www.facebook.com/algoladder">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+                          <i class="fa fa-youtube"></i>
+                        </a>
+                      </li>
+                      
+                      <li>
+                        <a href="https://www.linkedin.com/company/algoladder/">
+                          <i class="fa fa-linkedin"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://www.instagram.com/algoladder/?hl=en">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <!-- End Social link -->
+                </div>
+                <!-- End new_footer info -->
+                <div class="new_footer-awarad">
+                  <img src="images/icon/best.png" alt="">
+                  <p></p>
+                </div>
+              </div>
+              <!-- End Col -->
+              <div class="col-md-12 col-lg-8">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="contact-us">
+                      <div class="contact-icon">
+                        <i class="fa fa-map-o" aria-hidden="true"></i>
+                      </div>
+                      <!-- End contact Icon -->
+                      <div class="contact-info">
+                        <h3>Delhi NCR</h3>
+                        <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                      </div>
+                      <!-- End Contact Info -->
+                    </div>
+                    <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                  <div class="col-md-6">
+                    <div class="contact-us contact-us-last">
+                      <div class="contact-icon">
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                      </div>
+                      <!-- End contact Icon -->
+                      <div class="contact-info">
+                        <p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+                        
+                      </div>
+                      <!-- End Contact Info -->
+                    </div>
+                    <!-- End Contact Us -->
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Contact Row -->
+                <div class="row">
+                  <div class="col-md-12 col-lg-6">
+                    <div class="new_footer-widget new_footer-left-widget">
+                      <div class="section-heading">
+                        <h3>Useful Links</h3>
+                        <span class="animate-border border-black"></span>
+                      </div>
+                      <ul>
+                        <li>
+                          <a href="/ide">IDE</a>
+                        </li>
+                        <li>
+                          <a href="/problem_list">Practice</a>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <a href="/contest/all_contest">Contests</a>
+                        </li>
+                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                      </ul>
+                    </div>
+                    <!-- End new_footer Widget -->
+                  </div>
+                  <!-- End col -->
+                  <div class="col-md-12 col-lg-6">
+                    <div class="new_footer-widget">
+                      <div class="section-heading">
+                        <h3>Subscribe</h3>
+                        <span class="animate-border border-black"></span>
+                      </div>
+                      <p>
+                        <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                        Subscribe For Coding Tips</p>
+                      <form action="#">
+                        <div class="form-row">
+                          <div class="col dk-new_footer-form">
+                            <input type="email" class="form-control" placeholder="Email Address">
+                            <button type="submit">
+                              <i class="fa fa-send"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                      <!-- End form -->
+                    </div>
+                    <!-- End new_footer widget -->
+                  </div>
+                  <!-- End Col -->
+                </div>
+                <!-- End Row -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Widget Row -->
+          </div>
+          <!-- End Contact Container -->
+  
+  
+          <div class="copyright">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <span>Copyright © 2021, All Right Algoladder</span>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-6">
+                  <div class="copyright-menu">
+                    <ul>
+                      <li>
+                        <!-- <a href="#">Home</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Terms</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Privacy Policy</a> -->
+                      </li>
+                      <li>
+                        <!-- <a href="#">Contact</a> -->
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End col -->
+              </div>
+              <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+          </div>
+          <!-- End Copyright -->
+          <!-- Back to top -->
+          <div id="back-to-top" class="back-to-top">
+            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+              <i class="fa fa-angle-up"></i>
+            </button>
+          </div>
+          <!-- End Back to top -->
+        </div>
+      </div>
+    <!-- ================ End footer Area ================= -->
+    <script src="{% static 'newtheme/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'newtheme/js/vendor/bootstrap.min.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'newtheme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/parallax.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'newtheme/js/hexagons.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script>
+        function myPopup() {
+            var val = document.getElementById("mce-EMAIL").value
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val)) {
+                swal({
+                    title: "Successfully Subscribed",
+                    text: "<small>Great You Will Get Coding Tips From AlgoLadder</small>",
+                    type: "success",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } else {
+                swal({
+                    title: "Failed To Subscribed",
+                    text: "<small>Please Enter Valid Email Address</small>",
+                    type: "error",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            }
+
+
+
+            // Set our logout isClicked2 to true and count2 to 1
+
+        }
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f7051ecf0e7167d00141e08/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+
+        function scroll() {
+            document.getElementById('blog').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script>
+        $('.openmodale1').click(function(e) {
+            e.preventDefault();
+            $('.modale1').addClass('opened');
+        });
+        $('.closemodale1').click(function(e) {
+            e.preventDefault();
+            $('.modale1').removeClass('opened');
+        });
+    </script>
+
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>

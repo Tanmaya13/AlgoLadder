@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="img/fav.png" />
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib" />
+	<!-- Meta Description -->
+	<meta name="description" content="" />
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="" />
+	<!-- meta character set -->
+	<meta charset="UTF-8" />
+	<!-- Site Title -->
+	<title>Contacts</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700" rel="stylesheet" />
+	<!--
+      CSS
+      =============================================
+    -->
+	<link rel="stylesheet" href="css/linearicons.css" />
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/magnific-popup.css" />
+	<link rel="stylesheet" href="css/owl.carousel.css" />
+	<link rel="stylesheet" href="css/nice-select.css">
+	<link rel="stylesheet" href="css/hexagons.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript"
+	  src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+	<link rel="stylesheet" type="text/css"
+	  href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+	  integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+	  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+	  crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<style>
+		.navbar-mobile {
+			position: fixed;
+		  overflow: hidden;
+		  top: 0;
+		  right: 0;
+		  left: 0;
+		  bottom: 0;
+		  background: rgba(40, 58, 90, 0.9);
+		  transition: 0.3s;
+		  z-index: 999;
+		  }
+		  
+		  .navbar-mobile .mobile-nav-toggle {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		  }
+		  
+		  .navbar-mobile ul {
+			display: block;
+			position: absolute;
+			top: 55px;
+			right: 15px;
+			bottom: 15px;
+			left: 15px;
+			padding: 10px 0;
+			border-radius: 10px;
+			background-color: #fff;
+			overflow-y: auto;
+			transition: 0.3s;
+		  }
+		  
+		  .navbar-mobile a {
+			padding: 10px 20px;
+		  font-size: 15px;
+		  color: #37517e;
+		  }
+		  
+		  .navbar-mobile a:hover, .navbar-mobile .active, .navbar-mobile li:hover > a {
+			color: #47b2e4;
+		  }
+		  
+		  .navbar-mobile .getstarted {
+			margin: 15px;
+			color: #37517e;
+		  }
+		  
+		  .navbar-mobile .dropdown ul {
+			position: static;
+			display: none;
+			margin: 10px 20px;
+			padding: 10px 0;
+			z-index: 99;
+			opacity: 1;
+			visibility: visible;
+			background: #fff;
+			box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+		  }
+		  
+		  .navbar-mobile .dropdown ul li {
+			min-width: 200px;
+		  }
+		  
+		  .navbar-mobile .dropdown ul a {
+			padding: 10px 20px;
+		  }
+		  
+		  .navbar-mobile .dropdown ul a i {
+			font-size: 12px;
+		  }
+		  
+		  .navbar-mobile .dropdown ul a:hover, .navbar-mobile .dropdown ul .active:hover, .navbar-mobile .dropdown ul li:hover > a {
+			color: #47b2e4;
+		  }
+		  
+		  .navbar-mobile .dropdown > .dropdown-active {
+			display: block;
+		  }
+		  body{
+			max-width: 100%;
+			overflow-x: hidden;
+		  }
+	</style>
+</head>
+
+<body>
+	<!-- ================ Start Header Area ================= -->
+	<header id="new_header" class="fixed-top ">
+		<div class="container d-flex align-items-center">
+		  <!-- <div style="background:white;"> -->
+	
+		  <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+			  style="width: 200px;" alt="">
+		  </h1>
+	
+	
+		  <!-- </div> -->
+		  <nav id="navbar" class="navbar">
+	
+			<ul>
+			  <li><a class="nav-link scrollto active" href="/">Home</a></li>
+			  <li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+				  aria-haspopup="true" aria-expanded="false">
+				  Quick Coding
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  <a class="dropdown-item" href="/ide">IDE</a>
+				  <a class="dropdown-item" href="/blogs">Blog</a>
+				  <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+				  <a class="dropdown-item" href="/problem_list">Practice</a>
+				</div>
+			  </li>
+			  <li><a class="nav-link scrollto" href="/courses">Courses</a></li>
+			  <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+			  {% if account_type == "ambassador" %}
+			  <li><a href="/ambassdordashboard"
+				  style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+			  </li>
+			  {% endif %}
+			  <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+	
+			  <!-- Dropdown -->
+			  {% if user.is_authenticated %}
+			  <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+			  <li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+				  aria-haspopup="true" aria-expanded="false">
+				  {{ request.user.username }}
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				  {% if account_type == "ambassador" %}
+				  {% else %}
+ 
+				  <a class="dropdown-item" href="/profile#cop">Profile</a>
+				  <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+				  {% endif %}
+				  <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+				</div>
+			  </li>
+			  {% else %}
+			  <li>
+				<a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+				  style="background-color:purple; color:white">
+				  Sign up</a>
+			  </li>
+			  <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+				  style="background-color:purple; color:white">Login</a>
+			  </li>
+			  {% endif %}
+			</ul>
+			<!-- <i class="bi bi-list mobile-nav-toggle" style="background: black;" onclick="myfuntion()"></i> -->
+			<svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28" onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+			  <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
+			</svg>
+		  </nav>
+		</div>
+	  </header>
+	<!-- ================ End Header Area ================= -->
+
+	<!-- ================ start banner Area ================= -->
+	<section class="banner-area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12 banner-right">
+					<h1 class="text-white">
+						Contacts
+					</h1>
+					<p class="mx-auto text-white  mt-20 mb-40">
+						In the history of modern astronomy, there is probably no one greater leap forward than the building.
+					</p>
+					<div class="link-nav">
+						<span class="box">
+							<a href="index.html">Home </a>
+							<i class="lnr lnr-arrow-right"></i>
+							<a href="contacts.html">Contacts</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ End banner Area ================= -->
+
+	<!-- ================ Start contact-page Area  ================= -->
+	<section class="contact-page-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+				<div class="col-lg-4 d-flex flex-column address-wrap">
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-home"></span>
+						</div>
+						<div class="contact-details">
+							<h5>Binghamton, New York</h5>
+							<p>
+								4343 Hinkle Deegan Lake Road
+							</p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-phone-handset"></span>
+						</div>
+						<div class="contact-details">
+							<h5>00 (958) 9865 562</h5>
+							<p>Mon to Fri 9am to 6 pm</p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-envelope"></span>
+						</div>
+						<div class="contact-details">
+							<h5>support@colorlib.com</h5>
+							<p>Send us your query anytime!</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-8">
+					<form class="form-area contact-form text-right" id="myForm" action="mail.php" method="post">
+						<div class="row">
+							<div class="col-lg-6 form-group">
+								<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'"
+								 class="common-input mb-20 form-control" required="" type="text">
+
+								<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$"
+								 onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control"
+								 required="" type="email">
+
+								<input name="subject" placeholder="Enter subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter subject'"
+								 class="common-input mb-20 form-control" required="" type="text">
+							</div>
+							<div class="col-lg-6 form-group">
+								<textarea class="common-textarea form-control" name="message" placeholder="Enter Messege" onfocus="this.placeholder = ''"
+								 onblur="this.placeholder = 'Enter Messege'" required=""></textarea>
+							</div>
+							<div class="col-lg-12">
+								<div class="alert-msg" style="text-align: left;"></div>
+								<button class="btn" style="float: right;">Send Message</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- ================ End contact-page Area ================= -->
+
+	<!-- ================ start footer Area ================= -->
+	<div class="new_footer1" style="margin-top:12vh">
+		<div id="dk-new_footer" class="dk-new_footer">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 col-lg-4">
+				<div class="dk-new_footer-box-info">
+				  <a href="index.html" class="new_footer-logo">
+					<img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+				  </a>
+				  <p class="footer-info-text">
+					Coding Through One to One Mentorship By Expert Competitive Programmers..
+				  </p>
+				  <div class="new_footer-social-link">
+					<h3>Follow us</h3>
+					<ul>
+					  <li>
+						<a href="https://www.facebook.com/algoladder">
+						  <i class="fa fa-facebook"></i>
+						</a>
+					  </li>
+					  <li>
+						<a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+						  <i class="fa fa-youtube"></i>
+						</a>
+					  </li>
+					  
+					  <li>
+						<a href="https://www.linkedin.com/company/algoladder/">
+						  <i class="fa fa-linkedin"></i>
+						</a>
+					  </li>
+					  <li>
+						<a href="https://www.instagram.com/algoladder/?hl=en">
+						  <i class="fa fa-instagram"></i>
+						</a>
+					  </li>
+					</ul>
+				  </div>
+				  <!-- End Social link -->
+				</div>
+				<!-- End new_footer info -->
+				<div class="new_footer-awarad">
+				  <img src="images/icon/best.png" alt="">
+				  <p></p>
+				</div>
+			  </div>
+			  <!-- End Col -->
+			  <div class="col-md-12 col-lg-8">
+				<div class="row">
+				  <div class="col-md-6">
+					<div class="contact-us">
+					  <div class="contact-icon">
+						<i class="fa fa-map-o" aria-hidden="true"></i>
+					  </div>
+					  <!-- End contact Icon -->
+					  <div class="contact-info">
+						<h3>Delhi NCR</h3>
+						<p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+					  </div>
+					  <!-- End Contact Info -->
+					</div>
+					<!-- End Contact Us -->
+				  </div>
+				  <!-- End Col -->
+				  <div class="col-md-6">
+					<div class="contact-us contact-us-last">
+					  <div class="contact-icon">
+						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+					  </div>
+					  <!-- End contact Icon -->
+					  <div class="contact-info">
+						<p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+						
+					  </div>
+					  <!-- End Contact Info -->
+					</div>
+					<!-- End Contact Us -->
+				  </div>
+				  <!-- End Col -->
+				</div>
+				<!-- End Contact Row -->
+				<div class="row">
+				  <div class="col-md-12 col-lg-6">
+					<div class="new_footer-widget new_footer-left-widget">
+					  <div class="section-heading">
+						<h3>Useful Links</h3>
+						<span class="animate-border border-black"></span>
+					  </div>
+					  <ul>
+						<li>
+						  <a href="/ide">IDE</a>
+						</li>
+						<li>
+						  <a href="/problem_list">Practice</a>
+						</li>
+					  </ul>
+					  <ul>
+						<li>
+						  <a href="/contest/all_contest">Contests</a>
+						</li>
+						<li><a href="/ambassador">Programming Ambassador</a></li>
+						<li><a href="/interview_experiences">Interview Experiences</a></li>
+					  </ul>
+					</div>
+					<!-- End new_footer Widget -->
+				  </div>
+				  <!-- End col -->
+				  <div class="col-md-12 col-lg-6">
+					<div class="new_footer-widget">
+					  <div class="section-heading">
+						<h3>Subscribe</h3>
+						<span class="animate-border border-black"></span>
+					  </div>
+					  <p>
+						<!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+						Subscribe For Coding Tips</p>
+					  <form action="#">
+						<div class="form-row">
+						  <div class="col dk-new_footer-form">
+							<input type="email" class="form-control" placeholder="Email Address">
+							<button type="submit">
+							  <i class="fa fa-send"></i>
+							</button>
+						  </div>
+						</div>
+					  </form>
+					  <!-- End form -->
+					</div>
+					<!-- End new_footer widget -->
+				  </div>
+				  <!-- End Col -->
+				</div>
+				<!-- End Row -->
+			  </div>
+			  <!-- End Col -->
+			</div>
+			<!-- End Widget Row -->
+		  </div>
+		  <!-- End Contact Container -->
+  
+  
+		  <div class="copyright">
+			<div class="container">
+			  <div class="row">
+				<div class="col-md-6">
+				  <span>Copyright © 2021, All Right Algoladder</span>
+				</div>
+				<!-- End Col -->
+				<div class="col-md-6">
+				  <div class="copyright-menu">
+					<ul>
+					  <li>
+						<!-- <a href="#">Home</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Terms</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Privacy Policy</a> -->
+					  </li>
+					  <li>
+						<!-- <a href="#">Contact</a> -->
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				<!-- End col -->
+			  </div>
+			  <!-- End Row -->
+			</div>
+			<!-- End Copyright Container -->
+		  </div>
+		  <!-- End Copyright -->
+		  <!-- Back to top -->
+		  <div id="back-to-top" class="back-to-top">
+			<button class="btn btn-dark" title="Back to Top" style="display: block;">
+			  <i class="fa fa-angle-up"></i>
+			</button>
+		  </div>
+		  <!-- End Back to top -->
+		</div>
+	  </div>
+	<!-- ================ End footer Area ================= -->
+
+	<script src="js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+	 crossorigin="anonymous"></script>
+	<script src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/parallax.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/jquery.sticky.js"></script>
+	<script src="js/hexagons.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/waypoints.min.js"></script>
+	<script src="js/jquery.nice-select.min.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="{% static 'newtheme/js/index.js' %}"></script>
+	<script>
+	 function myfuntion()
+	 {
+	   console.log("aman1");
+	   if(document.getElementById("navbar").className == "navbar")
+	   {
+		document.getElementById("navbar").classList.remove("navbar");
+		document.getElementById("navbar").classList.add("navbar-mobile");
+	   }
+	 else
+	 {
+	   document.getElementById("navbar").classList.remove("navbar-mobile");
+	   document.getElementById("navbar").classList.add("navbar");
+	 }
+	 }
+	</script>
+</body>
+
+</html>

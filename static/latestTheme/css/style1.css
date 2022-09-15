@@ -1,0 +1,302 @@
+/*-----------------------------------------------------------------------------------
+
+    Template Name: Kiaalap - Kiaalap Admin Template 
+    Description: Kiaalap Admin Template is a responsive admin template based on the famous Bootstrap framework it's easy to edit and customize by documentation.
+    Author: Colorlib
+    Version: 1.0
+
+-----------------------------------------------------------------------------------
+    
+    CSS INDEX
+    ===================
+	
+    1. Common
+	2. Helper Class
+	3. All Nested Class
+	4. left sidebar
+		4.1 left Sidebar switcher
+	5. Header Top
+	6. Breadcrumb
+	7. Star Rating css
+	8. Analytics
+	9. widgets CSS
+	10. Event
+	11. Professors
+	12. Student
+	13. Courses
+		13.1 Courses Info
+		13.2. Course Payment
+	14. Library
+	15. Inbox
+	16. Google Map
+	17. Images Cropper
+	18. Form Element
+	19. Mini Sidebar
+	20. Custom Scroll
+	21. Wizard CSS
+	22. Notification
+	23. footer
+
+-----------------------------------------------------------------------------------*/
+
+/*----------------------------------------*/
+/*  1. Common
+/*----------------------------------------*/
+html, body {height: 100%; font-family: 'Roboto', sans-serif;font-weight:400;background:#F6F8FA;}
+.floatleft {float:left}
+.floatright {float:right}
+.alignleft {float:left;margin-right:15px;margin-bottom: 15px}
+.alignright {float:right;margin-left:15px;margin-bottom: 15px}
+.aligncenter {display:block;margin:0 auto 15px}
+a:focus {outline:0px solid}
+img {max-width:100%;height:auto}
+.fix {overflow:hidden}
+p {margin:0 0 15px;}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight:700;
+}
+a {transition: all 0.3s ease 0s;text-decoration:none;}
+a:hover{
+  color: #ec4445;
+  text-decoration: none;
+}
+a:visited, a:link, a:active {
+  text-decoration: none;
+}
+a:active, a:hover {
+  outline: 0 none;
+}
+ul{
+list-style: outside none none;
+margin: 0;
+padding: 0
+}
+.clear{clear:both}
+body {}
+@font-face {
+  font-family: 'educate-icon';
+  src:
+    url('fonts/educate-icon.ttf?ka5vvx') format('truetype'),
+    url('fonts/educate-icon.woff?ka5vvx') format('woff'),
+    url('fonts/educate-icon.svg?ka5vvx#educate-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/*----------------------------------------*/
+/*  2. Helper Class
+/*----------------------------------------*/
+.mg-tb-30{
+	margin:30px 0px;
+}
+.mg-b-30{
+	margin-bottom:30px;
+}
+.mg-tb-15{
+	margin:15px 0px;
+}
+.mg-t-30{
+	margin-top:30px;
+}
+.mg-b-10{
+	margin-bottom:23px;
+}
+.mg-ub-10{
+	margin-bottom:17px;
+}
+.mg-t-15{
+	margin-top:15px;
+}
+.mg-t-10{
+	margin-top:10px;
+}
+.mg-b-15{
+	margin-bottom:20px;
+}
+.mt-b-30{
+	margin-bottom:30px;
+}
+.bg-green {
+    background: #006DF0;
+}
+.bg-red {
+    background: #933EC5;
+}
+.bg-blue {
+    background: #65b12d;
+}
+.bg-purple {
+    background: #D80027;
+}
+/*----------------------------------------*/
+/*  3. All Nested Class
+/*----------------------------------------*/
+.product-sales-chart, .analytics-info-cs, .tranffic-als-inner, .analytics-rounded, .single-new-trend, .personal-info-wrap, .author-widgets-single, .calender-inner, .product-status-wrap, .review-tab-pro-inner, .income-dashone-total, .analytics-edu-wrap, .analytics-sparkle-line, .analysis-progrebar, .sparkline8-list, .sparkline9-list, .sparkline7-list, .sparkline10-list, .sparkline12-list, .sparkline13-list, .sparkline14-list, .sparkline13-list, .sparkline11-list, .x-editable-list, .code-editor-single, .blog-details-inner, .charts-single-pro, .about-sparkline, .sparkline-list, .button-ad-wrap, .tab-content-details, .sparkline16-list, .sparkline15-list, .tinymce-single, .single-product-item, .courses-inner, .single-latest-item, .product-payment-inner-st, .profile-info-inner, .contact-panel, .widget-int-shape, .social-media-edu{
+	padding:20px;
+	background:#fff;
+}
+/*----------------------------------------*/
+/*  4. left sidebar
+/*----------------------------------------*/
+.all-content-wrapper {
+    margin-left: 200px;
+    transition: all 0.3s;
+}
+.left-sidebar-pro {
+    z-index: 9999;
+    width: 240px;
+}
+#sidebar {
+    min-width: 200px;
+    background: #fff;
+    color: #fff;
+	position:fixed;
+    transition: all 0.3s;
+	z-index:999;
+	height:100%;
+}
+.mini-navbar .all-content-wrapper {
+    margin-left: 80px;
+    transition: all 0.3s;
+}
+#sidebar.active {
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
+}
+#sidebar.active .sidebar-header h3, #sidebar.active .CTAs {
+    display:none;
+}
+
+#sidebar.active .sidebar-header strong {
+    display: block;
+}
+
+#sidebar.active ul li .sidebar-right-icon {
+    display:none;
+}
+.bar-button-pro {
+    margin: 13px 0px;
+	font-size:16px;
+	color:#fff;
+}
+#sidebar .sidebar-header strong {
+    display: none;
+    font-size: 1.8em;
+}
+.sidebar-header {
+    text-align: center;
+}
+.sidebar-header h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#sidebar.active .sidebar-header .main-logo{
+	display:none;
+}
+#sidebar.active .sidebar-header h3{
+	display:none;
+}
+#sidebar.active .sidebar-header p{
+	display:none;
+}
+#sidebar ul li a .sidebar-right-icon{
+	float: right;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro{
+	width:100%;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li{
+	display:block;
+	float:none;
+	position:relative;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li {
+	left:0px;
+	top:0px;
+	opacity:0;
+	border-radius:0;
+	border:0px solid #fff;
+	box-shadow:none;
+	background:#ebebeb;
+}
+.left-custom-menu-adp-wrap {
+	position: relative;
+	float: none;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li  a:hover{
+	padding:15px 30px;
+	transition:all .4s ease 0s;
+	background:#fff;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open {
+	opacity:1;
+	left: 0px;
+	z-index:9999;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open .chart-left-menu-std{
+	top:0px;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open .form-left-menu-std{
+	top: 0px;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open .apps-left-menu-std{
+	top: 0px;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open .pages-left-menu-std{
+	top: 0px;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li a{
+	display: block;
+    padding: 15px 20px;
+    color: #444;
+    transition: all .4s ease 0s;
+    font-size: 16px;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li a:hover, .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li a:focus, .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li a:active, .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li a:visited{
+	background:#ebebeb;
+	color:#444;
+}
+.left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li .indicator-right-menu{
+	float: right;
+	font-size:12px;
+}
+#sidebar.active .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li.open  {
+    left: 80px;
+}
+#sidebar.active .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li .mini-dn {
+    display:none;
+}
+#sidebar.active .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li .big-icon {
+    font-size:20px;
+}
+#sidebar.active .left-custom-menu-adp-wrap ul.left-sidebar-menu-pro li > a {
+    padding: 20px 20px;
+}
+/*----------------------------------------*/
+/*  4.1 Left Sidebar switcher
+/*----------------------------------------*/
+.menu-switcher-pro {
+	transition:all .4s ease 0s;
+}
+.mini-navbar .menu-switcher-pro {
+    transition: all 0.3s;
+}
+.menu-switcher-pro button{
+	background: none;
+	border:none;
+}
+.menu-switcher-pro button:hover, .menu-switcher-pro button:focus, .menu-switcher-pro button:active, .menu-switcher-pro button:visited{
+	background: none;
+	border:none;
+}
+/*----------------------------------------*/
+/*  5. Header Top
+/*----------------------------------------*/
+  
+/*----------------------------------------*/
+/*  6.  breadcrumb
+/*----------------------------------------*/
+ 

@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    /* box-sizing: border-box; */
+    font-family: Roboto;
+}
+
+
+.header{
+    position: relative;
+    background-color:black;
+    top: 50px;
+    left:3vw;
+    width:90%;
+    height: 60px;
+    /* display: flex; */
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    background: white;
+    padding: 15px 15px 0px 15px;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+@media screen and (max-width: 700px){
+    .header{
+        /* left:7vw; */
+        width:80%;
+    }
+    .header .logo{
+        /* background-color: black; */
+        width:170px;
+        height:35px;
+    }
+}
+
+
+.header .logo{
+    /* background-color: black; */
+    width:200px;
+    padding : 5px 0px 0px 5px;
+    /* height:40px; */
+}
+
+.header ul{
+    position: relative;
+    display: flex;
+    float: right;
+    list-style-type: none;
+  
+}
+
+.header ul li {
+    position: relative;
+    padding : 14px 10px 0px 15px;
+}
+
+.header ul li .normal-button {
+   color: purple;
+   text-decoration: none;
+
+}
+@media screen and (max-width: 1060px){
+    
+    .header ul{
+        display: none;
+        /* background-color: black; */
+    }
+}
+.login-button{
+    background-color: purple;
+    padding: 10px 20px;
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+
+}
+.name-button{
+    background-color: purple;
+    padding: 10px 20px;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+.sign-button{
+    background-color: purple;
+    padding: 10px 20px;
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+
+
+}
+ 
+
+  
+.name-button:hover ~ .dropdown-content {
+    display: block;
+}
+.banner{
+    position: absolute;
+    top:0px;
+    width: 100%;
+    height:200vh;
+    background:url('../../newtheme/img/video-area-bg5.png');
+    background-size:cover;
+}
+
+
+
+

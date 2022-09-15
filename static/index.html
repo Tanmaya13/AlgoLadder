@@ -1,0 +1,2045 @@
+{% load static %}
+
+
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="AlgoLadder" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+        rel="stylesheet" />
+    <!--
+      CSS
+      =============================================
+    -->
+    <!-- <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+
+
+    <style>
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 700px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+        .fa-twitter {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #55ACEE;
+            color: white;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+        .fa-linkedin {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #007bb5;
+            color: white;
+        }
+
+        .fa-youtube {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #bb0000;
+            color: white;
+        }
+
+        .fa-instagram {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: purple;
+            color: white;
+        }
+
+        .fa-facebook {
+            padding: 20px;
+            font-size: 30px;
+            width: 70px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            background: #3B5998;
+            color: white;
+        }
+
+        .wrap {
+            perspective: 800px;
+            perspective-origin: 50% 100px;
+        }
+
+        .cube {
+            text-align: center;
+            position: relative;
+            width: 300px;
+            transform-style: preserve-3d;
+        }
+
+        .cube div {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+        }
+
+        .back {
+            opacity: 0.8;
+            transform: translateZ(-150px) rotateY(180deg);
+        }
+
+        .right {
+            opacity: 0.8;
+            transform: rotateY(-270deg) translateX(150px);
+            transform-origin: top right;
+        }
+
+        .left {
+            opacity: 0.8;
+            transform: rotateY(270deg) translateX(-150px);
+            transform-origin: center left;
+        }
+
+        .top {
+            opacity: 0.8;
+            transform: rotateX(-90deg) translateY(-150px);
+            transform-origin: top center;
+        }
+
+        .bottom {
+            opacity: 0.8;
+            transform: rotateX(90deg) translateY(150px);
+            transform-origin: bottom center;
+        }
+
+        .front {
+            opacity: 0.8;
+            transform: translateZ(150px);
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotateY(0);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        .cube {
+            animation: spin 5s infinite linear;
+        }
+
+        .mya {
+            color: white;
+        }
+
+        .mya:hover {
+            color: purple;
+        }
+
+        .cont {
+            margin-top: 100px;
+        }
+
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .marquee {
+            height: 100px;
+            overflow: hidden;
+            position: relative;
+            color: black;
+        }
+
+        .marquee p {
+            position: relative;
+            line-height: 50px;
+            text-align: center;
+            /* Starting position */
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+            /* Apply animation to this element */
+            -moz-animation: scroll-left 5s linear infinite;
+            -webkit-animation: scroll-left 5s linear infinite;
+            animation: scroll-left 10s linear infinite;
+        }
+
+        /* Move it (define the animation) */
+
+        @-moz-keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-100%);
+            }
+        }
+
+        @-webkit-keyframes scroll-left {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+
+            100% {
+                -webkit-transform: translateX(-100%);
+            }
+        }
+
+        @keyframes scroll-left {
+            0% {
+                -moz-transform: translateX(100%);
+                /* Browser bug fix */
+                -webkit-transform: translateX(100%);
+                /* Browser bug fix */
+                transform: translateX(100%);
+            }
+
+            100% {
+                -moz-transform: translateX(-100%);
+                /* Browser bug fix */
+                -webkit-transform: translateX(-100%);
+                /* Browser bug fix */
+                transform: translateX(-100%);
+            }
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+        .myButton {
+            background-color: rgb(255, 105, 5);
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 250px;
+            border-radius: 50px;
+            border-color: purple;
+        }
+
+        .myButton:hover {
+            color: white;
+        }
+
+        .text1 {
+            color: black;
+            font-size: 16px;
+            padding: 16px 32px;
+        }
+
+        .thumb {
+            position: relative;
+            width: 100%;
+        }
+
+        .f-img {
+            opacity: 1;
+            transition: .5s ease;
+        }
+
+        #overlay1 {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .thumb:hover .f-img {
+            opacity: 0.3;
+        }
+
+        .thumb:hover #overlay1 {
+            opacity: 1;
+        }
+
+        .home-banner-area {
+            background: url('static/newtheme/img/banner-bg.png') no-repeat;
+            background-position: center center;
+            max-height: 900px;
+            background-size: cover;
+            overflow: hidden;
+            width: 99.75%;
+        }
+
+        @media (min-width: 1900px) {
+            .home-banner-area .fullscreen {
+                align-items: start !important;
+                max-height: 900px !important;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .home-banner-area .fullscreen {
+                height: 700px !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-banner-left {
+                text-align: center;
+            }
+        }
+
+        .default-header {
+            width: 99.73% !important;
+        }
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+
+        .video-area {
+            background: url('static/newtheme/img/video-area-bg5.png') no-repeat center;
+        }
+
+        @media (max-width: 992px) {
+            .popular-course-area {
+                margin-left: 5%;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .popular-course-area {
+                margin-left: 5%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .wrap {
+                margin-left: 12%;
+            }
+        }
+
+
+        .card1 {
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            border-radius: 16px;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+            background-color: rgb(243, 231, 243);
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .img1 {
+            vertical-align: middle;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+
+        /* Slideshow container */
+
+        .slideshow-container {
+            max-width: 1000px;
+            max-height: 250px;
+            position: relative;
+            margin: auto;
+            background-color: rgb(187, 207, 167);
+            margin-top: -5%;
+        }
+
+        /* Caption text */
+
+        .text2 {
+            color: black;
+            font-size: 25px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 80%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .text1 {
+            color: black;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 40%;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+
+        .numbertext {
+            color: white;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 3s ease;
+        }
+
+        .active {
+            background-color: transparent;
+        }
+
+        /* Fading animation */
+
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 3s;
+            animation-name: fade;
+            animation-duration: 6s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+
+        @media only screen and (max-width: 300px) {
+            .text2 {
+                font-size: 11px
+            }
+        }
+
+        #video_area {
+            margin-top: 15%;
+        }
+
+        @media only screen and (max-width: 1000px) {
+            #video_area {
+                margin-top: 30%;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+            #video_area {
+                margin-top: 50%;
+            }
+
+            .text2 {
+                color: black;
+                font-size: 20px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 80%;
+                width: 87%;
+                text-align: center;
+            }
+
+            .text1 {
+                color: black;
+                font-size: 10px;
+                padding: 8px 12px;
+                position: absolute;
+                bottom: 40%;
+                width: 87%;
+                text-align: center;
+            }
+
+            .card1 {
+                position: absolute;
+                width: 100%;
+                height: 250px;
+                border-radius: 16px;
+                box-shadow: 0 5px 18px rgba(0, 0, 0, 0.6);
+                background-color: rgb(243, 231, 243);
+            }
+        }
+
+        .razorpay-payment-button {
+            background-color: purple;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: -10%;
+            margin-left: 1%;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .myButton1 {
+            background-color: purple;
+            border: none;
+            color: white !important;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- #3B5998================ Start Header Area ================= -->
+    <header class="default-header"
+        style="background-color:white;box-shadow: 0px 1px 1px grey; width:100%; height: 55px;">
+        <div class="custom-nav">
+            <nav class="navbar navbar-expand-lg  navbar-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt=" "
+                            style="height: 25px;width: 100px; margin-top:-25px;" />
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="lnr lnr-menu"></span>
+          </button> -->
+
+                    <div class="collapse navbar-collapse justify-content-end align-items-center"
+                        id="navbarSupportedContent">
+                        <ul class="navbar-nav" style="margin-top: -3.2ex;">
+                            <li><a href="/"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Home</a>
+                            </li>
+                            <li><a href="/interview_experiences"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Interviews</a>
+                            </li>
+                            <li><a href="/ide"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">IDE</a>
+                            </li>
+                            <li><a href="/blogs"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Blog</a>
+                            </li>
+                            <li><a href="/problem_list"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Practice</a>
+                            </li>
+                            <li><a href="/courses"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Courses</a>
+                            </li>
+                            <li><a href="/contest/all_contest"
+                                    style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">Contests&nbsp;&nbsp;</a>
+                            </li>
+                            <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+                            <!-- Dropdown -->
+                            {% if user.is_authenticated %}
+                            <li class="dropdown" style="padding-right:1px;">
+                                <a class="dropbtn"
+                                    style="text-transform: uppercase;height:30px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;; border-radius:5px ;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"
+                                    href="#" data-toggle="dropdown" style="color: purple">
+                                    {{ request.user.username }}
+                                    <i class="fa fa-angle-down" style="font-size:12px;"></i>
+                                </a>
+                                <div class="dropdown-content" style="padding-right:30px;">
+                                    <a href="/mylearning#cop"
+                                        style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">My
+                                        Learning</a>
+
+                                    <a href="/profile#cop"
+                                        style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Profile</a>
+                                    <a href="/myreferral#cop"
+                                        style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Referral</a>
+                                    <a href="{% url 'logout' %}"
+                                        style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Logout</a>
+                                </div>
+                            </li>
+                            {% else %}
+                            <li style="padding-right:15px;">
+                                <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+                                    style="height:30px;width:75px ;padding:3px;background-color:purple;color:white;border: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ; "></i>
+                                    Sign up</a>
+                            </li>
+                            <li style="padding-right:15px;"><a href="/accounts/login/" class="btn btn-primary"
+                                    id="buton"
+                                    style="height:30px;width:75px ;padding:3px;background-color:purple;color:white;border: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:14px ;">Login</a>
+                            </li>
+                            {% endif %}
+                            <!-- <li><p style="color: purple">(+91-9311403334)</p></li> -->
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="custom-nav2">
+            <div class="container">
+                <span style=" position: absolute;margin-top: -45px;margin-left: 85%;font-size:30px;cursor:pointer"
+                    onclick="openNav()">&#9776; </span> {% if user.is_authenticated %}
+                <li class="dropdown" style="padding-right:15px;position:absolute;margin-left:60%;margin-top:-45px;">
+                    <a class="dropbtn"
+                        style="text-transform: uppercase;height:30px; border-radius:5px ;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"
+                        href="#" data-toggle="dropdown" style="color: purple">
+                        {{ request.user.username }}
+                        <i class="fa fa-angle-down" style="font-size:12px;"></i>
+                    </a>
+                    <div class="dropdown-content" style="padding-right:30px;text-transform: uppercase;">
+                        <a href="/mylearning#cop" style="color: purple">My Learning</a>
+
+                        <a href="/profile#cop" style="color: purple">Profile</a>
+                        <a href="/myreferral#cop" style="color: purple">Referral</a> <a href="{% url 'logout' %}"
+                            style="color: purple">Logout</a>
+                    </div>
+                </li>
+                {% else %}
+                <a href="{% url 'signup' %}" class="btn btn-primary"
+                    style="position:absolute;margin-left:46%;margin-top:-50px; height:30px;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;"></i>
+                    Sign up</a>
+                <a href="{% url 'login' %}" class="btn btn-primary"
+                    style="position:absolute;margin-left:65%;margin-top:-50px; height:30px;padding: 5px;background-color:purple;color: rgb(255, 255, 255);border: purple;">Login</a>
+                {% endif %}
+
+
+                <a href="/">
+                    <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt=" "
+                        style="height: 25px;width: 100px;margin-top:-100px ;" />
+                </a>
+                <div id="myNav" class="overlay1">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="overlay1-content" style="text-transform: uppercase;">
+                        <a href="/">Homes</a>
+                        <a href="/interview_experiences">Interviews</a>
+                        <a href="/ide">IDE</a>
+                        <a href="/blogs">Blog</a>
+                        <a href="/problem_list">Practice</a>
+                        <a href="/courses">Courses</a>
+                        <a href="/contest/all_contest">Contests</a>
+                        <!-- <a href="/about">About-Us</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ================ End Header Area ================= -->
+
+    <!-- ================ start banner Area ================= -->
+    <section class="home-banner-area">
+        <div class="container">
+            <div class="row justify-content-center fullscreen align-items-center">
+                <div class="col-lg-5 col-md-8 home-banner-left" style="margin-top: -250px;">
+                    <h2 class="text-white" style="margin-top: -40px;" id="helo">
+                        Learn Programming with <br>One-to-One Mentorship
+                    </h2>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                        AlgoLadder provides one-to-one mentorship and interactive structured content to help you learn
+                        programming quickly and easily. Mentors are top programmers who have achieved a lot themselves.
+                    </p>
+                    <a href="/free_trial" class="myButton" style="margin-top: -30px;">BOOK FREE CLASS</a>
+                </div>
+                <div class="offset-lg-1 col-lg-5 col-md-12 home-banner-right">
+
+                    <!-- <img class="img-fluid" src="{% static 'newtheme/img/1.png' %}" alt="" style="height:120%;" /> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+    <!-- ================ Start Incubation Area ================= -->
+    <section class="popular-course-area section-gap" style="padding-right:15%; margin-top:-400px; padding-bottom:15%;">
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="section-top-border">
+
+                    <!-- <h3 class="mb-30">Recognition </h3> -->
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Indian_Institute_of_Information_Technology%2C_Allahabad_Logo.png"
+                                alt="IIIT-Allahabad" class="img-fluid">
+                        </div>
+                        <div class="col-md-9">
+                            <br>
+                            <br>
+                            <h3>
+                                <center style="font-size: 22px;">AlgoLadder is Officially Incubated & Recognized By
+                                </center>
+                            </h3><br>
+                            <h1 style="color: purple;">
+                                <center>IIIT-Allahabad</center>
+                            </h1>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ================ End Incubation Area ================= -->
+
+    <!-- ================ Start Feature Area ================= -->
+
+    <section class="feature-area">
+        <div class="container-fluid" style="padding-left:5%;">
+            <div class="feature-inner row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item d-flex">
+                        <i class="ti-book"></i>
+                        <div class="ml-20">
+                            <h4>One-to-One Classes</h4>
+                            <p>
+                                Each student is allotted a personal mentor to guide the student.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item d-flex">
+                        <i class="ti-cup"></i>
+                        <div class="ml-20">
+                            <h4>Coding Practice</h4>
+                            <p>
+                                Weekly Coding Practice Assignments for students to become a top programmer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="feature-item d-flex border-right-0">
+                        <i class="ti-desktop"></i>
+                        <div class="ml-20">
+                            <h4>Structured Study Material</h4>
+                            <p>
+                                You will get complete structured content to delve deep programming.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================ Start Popular Course Area ================= -->
+    <section class="popular-course-area section-gap" style="padding-right:15%;">
+        <div class="container-fluid">
+            <div class="row justify-content-center section-title">
+                <div class="col-lg-12">
+                    <h2>
+                        Live Courses Available Right Now
+                    </h2>
+                    <p>
+                        Choose a course of your interest below. You will be allotted a mentor for entire duration of
+                        course. Get one to one mentorship & live classes by top mentors.
+                    </p>
+                </div>
+            </div>
+
+            <div class="owl-carousel popuar-course-carusel">
+
+                <div class="single-popular-course">
+                    <div class="thumb">
+                        <a href="/courses_promo/1"> <img class="f-img img-fluid mx-auto"
+                                src="{% static 'newtheme/img/popular-course/111.png' %}" alt=" " /></a>
+                        <div id="overlay1">
+                            <div class="text1">Speed Up With DS Algo</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="d-flex justify-content-between mb-20">
+                            <p class="name" style="padding-right:50px ;">Data Structures Algorithms</p>
+                            <div class="value">
+                                <s>Rs.5000</s>
+                                <p>Rs.3999</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="bottom d-flex mt-15">
+                            <!-- <ul class="list">
+                                <li>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                </li>
+                                <li>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                </li>
+                                <li>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                </li>
+                                <li>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                </li>
+                                <li>
+                                <a href="#"><i class="fa fa-star"></i></a>
+                                </li>
+                            </ul>
+                            <p class="ml-20">25 Reviews</p> -->
+                        </div>
+
+
+
+
+                        {% if user.is_authenticated %}
+                        <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                            <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                                data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                                data-amount="{{ gprice_inPaise }}" data-name="CapsuleCourse"
+                                data-buttontext="Enroll Now" data-description="{{ name_trim }}"
+                                data-image="{% static 'newtheme/img/popular-course/111.png' %}" data-netbanking="true"
+                                data-prefill.name="{{ user_name }}" data-prefill.email="{{ email }}"
+                                data-prefill.contact="9999999999" data-notes.shopping_order_id="21">
+                                    document.getElementById("myscript").setAttribute("data-amount",2000);
+                                </script>
+                            <input type="hidden" name="cars" value="{{ join }}">
+                            <input type="hidden" name="shopping_order_id" value="21">
+                            <input type="hidden" name="course_id" value="1">
+                            <input type="hidden" name="finalval" value="{{ gprice_inPaise }}">
+                            <input type="hidden" name="coupon_applied" value="">
+                            <input type="hidden" name="method_type" value="group">
+
+
+
+                        </form>
+                        {% else %}
+                        <div class="myButton1" onclick="location.href='/accounts/login/'">Enroll Now</a></div>
+
+                        {% endif %}
+                    </div>
+                </div>
+
+
+                <div class="single-popular-course">
+                    <div class="thumb">
+                        <a href="/courses_promo/2">
+                            <img class="f-img img-fluid mx-auto"
+                                src="{% static 'newtheme/img/popular-course/222.png' %}" alt=" " /></a>
+                        <div id="overlay1">
+                            <div class="text1">Web-Developement with Python+Django</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="d-flex justify-content-between mb-20">
+                            <p class="name" style="padding-right:50px ;">Web-Developement</p>
+                            <div class="value">
+                                <s>Rs.5000</s>
+                                <p>Rs.3999</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="bottom d-flex mt-15">
+                            <!-- <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p> -->
+                        </div>
+                        {% if user.is_authenticated %}
+                        <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                            <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                                data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                                data-amount="{{ gprice_inPaise1 }}" data-name="CapsuleCourse"
+                                data-buttontext="Enroll Now" data-description="{{ name_trim1 }}" data-image="{% static 'newtheme/img/popular-course/222.png' %}
+                        data-netbanking=" true" data-prefill.name="{{ user_name }}" data-prefill.email="{{ email }}"
+                                data-prefill.contact="9999999999" data-notes.shopping_order_id="21">
+                                    document.getElementById("myscript").setAttribute("data-amount",2000);
+                                </script>
+                            <input type="hidden" name="cars" value="{{ join1 }}">
+                            <input type="hidden" name="shopping_order_id" value="21">
+                            <input type="hidden" name="course_id" value="2">
+                            <input type="hidden" name="finalval" value="{{ gprice_inPaise1 }}">
+                            <input type="hidden" name="coupon_applied" value="">
+                            <input type="hidden" name="method_type" value="group">
+
+
+
+                        </form>
+                        {% else %}
+                        <div class="myButton1" onclick="location.href='/accounts/login/'">Enroll Now</div>
+
+                        {% endif %}
+                    </div>
+                </div>
+
+
+
+                <div class="single-popular-course">
+                    <div class="thumb">
+                        <a href="/courses_promo/4">
+                            <img class="f-img img-fluid mx-auto"
+                                src="{% static 'newtheme/img/popular-course/444.png' %}" alt=" " /></a>
+                        <div id="overlay1">
+                            <div class="text1">Jump Start Programming</div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="d-flex justify-content-between mb-20">
+                            <p class="name" style="padding-right:50px ;">Complete Programming Journey</p>
+                            <div class="value">
+                                <s>Rs.18000</s>
+                                <p>Rs.12000</p>
+                            </div>
+                        </div>
+
+
+
+                        <div class="bottom d-flex mt-15">
+                            <!-- <ul class="list">
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-star"></i></a>
+                </li>
+              </ul>
+              <p class="ml-20">25 Reviews</p> -->
+                        </div>
+                        {% if user.is_authenticated %}
+                        <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                            <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                                data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                                data-amount="{{ gprice_inPaise2 }}" data-name="CapsuleCourse"
+                                data-buttontext="Enroll Now" data-description="{{ name_trim2 }}"
+                                data-image="{% static 'newtheme/img/popular-course/444.png' %}" data-netbanking="true"
+                                data-prefill.name="{{ user_name }}" data-prefill.email="{{ email }}"
+                                data-prefill.contact="9999999999" data-notes.shopping_order_id="21">
+                                    document.getElementById("myscript").setAttribute("data-amount",2000);
+                                </script>
+                            <input type="hidden" name="cars" value="{{ join2 }}">
+                            <input type="hidden" name="shopping_order_id" value="21">
+                            <input type="hidden" name="course_id" value="4">
+                            <input type="hidden" name="finalval" value="{{ gprice_inPaise2 }}">
+                            <input type="hidden" name="coupon_applied" value="">
+                            <input type="hidden" name="method_type" value="group">
+
+
+
+                        </form>
+                        {% else %}
+                        <div class="myButton1" onclick="location.href='/accounts/login/'">Enroll Now</a></div>
+
+                        {% endif %}
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ================ End Popular Course Area ================= -->
+
+    <section class="top-category-widget-area pt-90 pb-90 " style="margin-top:-10%;">
+        <div class="container">
+            <div class="row justify-content-center section-title">
+                <div class="col-lg-12">
+                    <h2>
+                        What Students Say About AlgoLadder
+                    </h2>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="slideshow-container">
+            <div class="card1">
+                <div class="mySlides fade">
+
+                    <img src="{% static 'newtheme/img/testimonial/1.jpeg' %}"
+                        style="width:20%; height:23%; border-radius: 50%; margin-top: 25px; margin-left:10px;">
+                    <div class="text2" style="margin-left:50px;"><i>Anirudh Walia</i></div>
+                    <div class="text1" style="margin-left:50px;">
+                        <ul>
+                            <li>
+                                <i>Classes are awesome, I learned how to solve problems.</i>
+                            </li>
+                            <li>
+                                <i>It was a really session, one on one I was really comfortable asking questions.</i>
+                            </li>
+                            <li>
+                                <i> I was able to clear so many doubts of data structures and the mentors are really
+                                    great.</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+
+                    <img src="{% static 'newtheme/img/testimonial/2.jpeg' %}"
+                        style="width:20%; height:23%;border-radius: 50%; margin-top: 25px; margin-left:10px;">
+                    <div class="text2" style="margin-left:50px;"><i>Aakash Tiwari</i></div>
+                    <div class="text1" style="margin-left:50px;">
+                        <ul>
+                            <li>
+                                <i>Algo Ladder is nice.</i>
+                            </li>
+                            <li>
+                                <i> Nice and knowledgable class and a lots of question given.</i>
+                            </li>
+                            <li>
+                                <i> Nice interactive classes and also if you want questions they give them they discuss
+                                    them.</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+                    <img src="{% static 'newtheme/img/testimonial/3.jfif' %}"
+                        style="width:20%; height:23%; border-radius: 50%; margin-top: 25px; margin-left:10px;">
+                    <div class="text2" style="margin-left:50px;"><i>Ayushi Ruhela</i></div>
+                    <div class="text1" style="margin-left:50px;">
+                        <ul>
+                            <li>
+                                <i>My experience was good, </i>
+                            </li>
+                            <li>
+                                <i>faculty is very cooperating and teaches well.</i>
+                            </li>
+                            <li>
+                                <i>.</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mySlides fade">
+
+                    <img src="{% static 'newtheme/img/testimonial/4.jfif' %}"
+                        style="width:20%; height:10%; border-radius: 50%; margin-top: 12px; margin-left:10px;">
+                    <div class="text2" style="margin-left:50px;"><i>Utkarsh Trivedi</i></div>
+                    <div class="text1" style="margin-left:50px;">
+                        <ul>
+                            <li>
+                                <i>AlgoLadder's DS Algo course made me punctual and made coding my habit. </i>
+                            </li>
+                            <li>
+                                <i>Earlier I was having phobia of participating in online coding competitions,</i>
+                            </li>
+                            <li>
+                                <i>this course helped me in getting rid of that phobia.</i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+        <div style="text-align:center">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+
+
+        </div>
+
+
+    </section>
+
+
+
+
+    <!-- ================ Start Video Area ================= -->
+    <section class="video-area section-gap-bottom" id="video_area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="section-title text-white">
+                        <h2 class="text-white">
+                            Watch Our Mentors <br> in Live Action
+                        </h2>
+                        <p>
+                            Multiple One to one classes & Mentorship sessions take place during entire duration of
+                            course. Top Mentors teach, guide, check progress, and motivate students to learn programming
+                            in structured way.
+                        </p>
+                    </div>
+                </div>
+                <div class="offset-lg-1 col-md-6 video-left">
+                    <div class="owl-carousel video-carousel">
+                        <div class="single-video"><br><br><br><br><br><br><br><br>
+                            <div class="video-part">
+                                <img class="img-fluid" src="{% static 'newtheme/img/thumbnail.png' %}" alt=" ">
+                                <div class="overlay"></div>
+                                <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=_aEJmEVQ6Ug">
+                                    <img class="play-icon" src="{% static 'newtheme/img/play-btn.png' %}" alt=" ">
+                                </a>
+                            </div>
+                            <h4 class="text-white mb-20 mt-30">Mentorship and Class Session During Speed Up with DS Algo
+                                Course</h4>
+                            <!-- <p class="text-white mb-20">
+                In the history of modern astronomy, there is probably no one greater leap forward than the building and
+                launch of the space telescope known as the Hubble.
+              </p> -->
+                        </div>
+
+                        <!-- <div class="single-video">
+              <div class="video-part">
+                <img class="img-fluid" src="{% static 'newtheme/img/video-img.jpg' %}" alt="">
+                <div class="overlay"></div>
+                <a class="popup-youtube play-btn" href="https://www.youtube.com/watch?v=VufDd-QL1c0">
+                  <img class="play-icon" src="{% static 'newtheme/img/play-btn.png' %}" alt="">
+                </a>
+              </div>
+              <h4 class="text-white mb-20 mt-30">Learn Angular js Course for Legendary Persons</h4>
+              <p class="text-white mb-20">
+                In the history of modern astronomy, there is probably no one greater leap forward than the building and
+                launch of the space telescope known as the Hubble.
+              </p>
+            </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End Video Area ================= -->
+
+    <!-- ================ Start Feature Area ================= -->
+    <section class="other-feature-area">
+        <div class="container">
+            <div class="feature-inner row">
+                <div class="col-lg-12">
+                    <div class="section-title text-left">
+                        <h2>
+                            Features For Interactive <br /> Customized Learning
+                        </h2>
+                        <p>
+                            AlgoLadder provides interactive customized learning to match the learning pace according to
+                            individual needs of each and every student.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="other-feature-item">
+                        <i class="ti-crown"></i>
+                        <h4>Mentorship By Experts</h4>
+                        <div>
+                            <p>
+                                Live One to One Mentorship & Classes with top mentors every Saturday and Sunday during
+                                entire duration of course. Each student will be allotted a personal mentor.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--160">
+                    <div class="other-feature-item">
+                        <i class="ti-files"></i>
+                        <h4>Structured Content & Roadmap</h4>
+                        <div>
+                            <p>
+                                You will get complete structured content to delve deep into all the concepts of
+                                programming. The structured content will be available in your portal login.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--260">
+                    <div class="other-feature-item">
+                        <i class="ti-medall-alt"></i>
+                        <h4>Certificate</h4>
+                        <div>
+                            <p>
+                                Course Completion & Training certificate will be provided after the completion of any of
+                                the course of AlgoLadder. The certificate will include your name and duration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="other-feature-item">
+                        <i class="ti-briefcase"></i>
+                        <h4>Practice & Assignments</h4>
+                        <div>
+                            <p>
+                                Weekly coding practice and assignments are provided to each student according to the
+                                pace of student. Discussions take place to enhance problem solving skills.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--160">
+                    <div class="other-feature-item">
+                        <i class="ti-blackboard"></i>
+                        <h4>Mock Interviews</h4>
+                        <div>
+                            <p>
+                                In last week of any of the course, mock interviews are conducted by mentors to help
+                                students get the feel of real interviews and to build confidence in them.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--260">
+                    <div class="other-feature-item">
+                        <i class="ti-headphone-alt"></i>
+                        <h4>Regular Progress Tracking</h4>
+                        <div>
+                            <p>
+                                Progress of each student is regularly tracked by the personal mentor allotted to the
+                                student. Doubt solving and regular mentor connect take place over the text.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End Feature Area ================= -->
+
+    <!-- ================ Start Testimonials Area ================= -->
+    <section class="testimonials-area section-gap">
+        <div class="container">
+            <h2>
+                Guidance in Multiple Programming Languages
+
+            </h2>
+            <br>
+            <br>
+            <br>
+            <!-- <div class="testi-slider owl-carousel" data-slider-id="1">
+        <div class="row align-items-center">
+         
+
+         
+        </div>
+
+      </div> -->
+
+
+            <div class="row">
+                <div class="col-lg-4 mb-3 mb-md-0">
+
+                    <div class="wrap">
+                        <div class="cube">
+                            <div class="front"><img src="{% static 'newtheme/img/py.png' %}"></div>
+                            <div class="back"><img src="{% static 'newtheme/img/c++.png' %}"></div>
+                            <div class="top"><img src=""></div>
+                            <div class="bottom"><img src=""></div>
+                            <div class="left"><img src="{% static 'newtheme/img/js.png' %}"></div>
+                            <div class="right"><img src="{% static 'newtheme/img/java.png' %}"></div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-md-8">
+                    <!--<h2 class="heading-section mb-4">Navigation Tabs</h2>-->
+
+                    <div class="cont">
+                        <div class="tabulation tabulation2">
+                            <div
+                                class="d-flex tabs border border-left-0 border-right-0 border-top-0 justify-content-center">
+                                <div class="d-inline-block">
+                                    <ul class="nav nav-tabs border-0">
+                                        <li class="nav-item">
+                                            <a class="nav-link active" data-toggle="tab" href="#h1">Python</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#h2">C++</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#h3">Java</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#h4">C</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#h5">Javascript</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" data-toggle="tab" href="#h6">C#</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                            <!-- Tab panes -->
+                            <div class="tab-content border-0">
+                                <div class="tab-pane container p-4 active text-center" id="h1">
+                                    <p>Python is a general purpose and high level programming language that can be used
+                                        for making backend logics, developing desktop GUI applications, websites and web
+                                        applications. .</p>
+                                </div>
+                                <div class="tab-pane container p-4 fade text-center" id="h2">
+                                    <p>Old schoolers and competitive programmers prefer C++ because of its fast speed
+                                        and its popularity. Most of online judge sites provide support for C++ and most
+                                        coding interviews take place in C++.</p>
+
+                                </div>
+                                <div class="tab-pane container p-4 fade text-center" id="h3">
+                                    <p>You think you can use Java only for making mobile or web applications? No, you
+                                        are wrong. You can use it for solving many DSA questions and impressing your
+                                        interviewers.</p>
+                                </div>
+
+                                <div class="tab-pane container p-4 fade text-center" id="h4">
+                                    <p>C is a powerful general-purpose programming language. C is actively used in
+                                        server client communication software programming. It can be used to develop
+                                        software like operating systems, databases and compilers. </p>
+                                </div>
+
+                                <div class="tab-pane container p-4 fade text-center" id="h5">
+                                    <p>JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled
+                                        programming language with first-class functions. It is most well-known as the
+                                        scripting language for Web pages.</p>
+                                </div>
+
+                                <div class="tab-pane container p-4 fade text-center" id="h6">
+                                    <p>C# (C-Sharp) is a programming language developed by Microsoft that runs on the .
+                                        NET Framework. C# is used to develop web apps, desktop apps, mobile apps, games
+                                        and much more.</p>
+                                </div>
+
+                            </div>
+                            <!-- Tab panes end -->
+                        </div>
+                        <!-- Tabulation end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </section>
+    <!-- ================ End Testimonials Area ================= -->
+
+    <!-- ================ Start Registration Area ================= -->
+    <!-- <section class="registration-area">
+    <div class="container"> -->
+    <!-- <div class="row align-items-end">
+        <div class="col-lg-5">
+          <div class="section-title text-left text-white">
+            <h2 class="text-white">
+              Watch Our Trainers <br>
+              in Live Action
+            </h2>
+            <p>
+              If you are looking at blank cassettes on the web, you may be
+              very confused at the difference in price. You may see some for
+              as low as $.17 each.
+            </p>
+          </div>
+        </div>
+        <div class="offset-lg-3 col-lg-4 col-md-6">
+          <div class="course-form-section">
+            <h3 class="text-white">Courses for Free</h3>
+            <p class="text-white">It is high time for learning</p>
+            <form class="course-form-area contact-page-form course-form text-right" id="myForm" action="mail.html" method="post">
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Name" onfocus="this.placeholder=''"
+                 onblur="this.placeholder='Name'">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="text" class="form-control" id="subject" name="subject" placeholder="Phone Number" onfocus="this.placeholder=''"
+                 onblur="this.placeholder='Phone Number'">
+              </div>
+              <div class="form-group col-md-12">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" onfocus="this.placeholder=''"
+                 onblur="this.placeholder='Email Address'">
+              </div>
+              <div class="col-lg-12 text-center">
+                <button class="btn text-uppercase">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div> -->
+    <!-- </div>
+  </section> -->
+    <!-- ================ End Registration Area ================= -->
+
+    <!-- ================ Start Blog Post Area ================= -->
+    <section class="blog-post-area section-gap">
+        <div class="container-fluid">
+            <div class="feature-inner row">
+                <div class="col-lg-12">
+                    <div class="section-title text-left">
+                        <h2>
+                            Free Zone
+
+                        </h2>
+                        <p>
+                            Some features of AlgoLadder are free of cost to promote programming culture.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog-post">
+                        <img src="{% static 'newtheme/img/interview.png' %}" class="img-fluid" alt=" " />
+                        <div class="overlay"></div>
+                        <!-- <div class="top-text">
+              <p>29th, oct, 2018</p>
+              <p>121 likes</p>
+              <p>05 comments</p>
+            </div> -->
+                        <div class="text">
+                            <h4 class="text-white">Interview Experiences</h4>
+                            <div>
+                                <p>
+                                    Read interview experiences to understand the types of questions usually asked in
+                                    interviews.
+                                </p>
+                            </div>
+                            <a href="/interview_experiences" class="primary-btn">
+                                Read Experiences
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--160">
+                    <div class="single-blog-post">
+                        <img src="{% static 'newtheme/img/programming.png' %}" class="img-fluid" alt=" " />
+                        <div class="overlay"></div>
+                        <!-- <div class="top-text">
+              <p>29th, oct, 2018</p>
+              <p>121 likes</p>
+              <p>05 comments</p>
+            </div> -->
+                        <div class="text">
+                            <h4 class="text-white">Custom IDE</h4>
+                            <div>
+                                <p>
+                                    Code in multiple languages in our super fast IDE with enhanced debugging features to
+                                    learn programming faster .
+                                </p>
+                            </div>
+                            <a href="/ide" class="primary-btn">
+                                Open IDE
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mt--260">
+                    <div class="single-blog-post">
+                        <img src="{% static 'newtheme/img/blog.png' %}" class="img-fluid" alt=" " />
+                        <div class="overlay"></div>
+                        <!-- <div class="top-text">
+              <p>29th, oct, 2018</p>
+              <p>121 likes</p>
+              <p>05 comments</p>
+            </div> -->
+                        <div class="text">
+                            <h4 class="text-white">Blog</h4>
+                            <div>
+                                <p>
+                                    Read Tips & Tricks to become a proficient top notch programmer in AlgoLadder blog.
+                                </p>
+                            </div>
+                            <a href="/blogs" class="primary-btn">
+                                View Blog
+                                <i class="fa fa-long-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End Blog Post Area ================= -->
+
+    <!-- ================ start footer Area ================= -->
+    <footer class="footer-area section-gap">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Algoladder</h4>
+					<ul>
+						<li><a href="#">Managed Website</a></li>
+						<li><a href="#">Manage Reputation</a></li>
+						<li><a href="#">Power Tools</a></li>
+						<li><a href="#">Marketing Service</a></li>
+					</ul>
+				</div> -->
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>AlgoLadder</h4>
+                    <ul>
+                        <li><a href="/mentor_form">Mentor</a></li>
+                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                        <li><a href="/blogs">Blog</a></li>
+                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                        <!-- <li><a href="#">Terms of Service</a></li> -->
+                    </ul>
+                </div>
+                <!-- <div class="col-lg-2 col-md-6 single-footer-widget">
+					<h4>Features</h4>
+					<ul>
+						<li><a href="#">Jobs</a></li>
+						<li><a href="#">Brand Assets</a></li>
+						<li><a href="#">Investor Relations</a></li>
+						<li><a href="#">Terms of Service</a></li>
+					</ul>
+				</div> -->
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i style="font-size:24px" class="fa">&#xf095;</i> +91-7906334045</li>
+                        <li><i style="font-size:24px" class="fa">&#xf095;</i> +91-9311403334</li>
+                        <li><i style="font-size:24px" class="fa">&#xf0e0;</i> admin@algoladder.com</li>
+                        <!-- <li><a href="#">Agencies</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <h4>Address</h4>
+                    <ul>
+                        <li>
+                            <i class="fa fa-map-marker" style="font-size:24px; color: rgb(136,143,189)"></i><a
+                                href="https://www.google.com/maps/place/AlgoLadder/@28.6468613,77.3707298,15z/data=!4m5!3m4!1s0x0:0x5a6aee324cb0fcd4!8m2!3d28.6468613!4d77.3707298">
+                                50, Lower Ground Floor, D Mall, Shakti Khand-2, Indirapuram Ghaziabad ,UP - 201014</a>
+                        </li>
+
+                        <!-- <li><a href="#">Agencies</a></li> -->
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 single-footer-widget">
+                    <!-- <h4>Newsletter</h4>
+					<p>You can trust us. we only send promo offers,</p> -->
+                    <!-- <div class="form-wrap" id="mc_embed_signup">
+						<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+						 method="get" class="form-inline">
+							<input class="form-control" name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder=''" onblur="this.placeholder='Your Email Address '"
+							 required="" type="email">
+							<button class="click-btn btn btn-default text-uppercase">subscribe</button>
+							<div style="position: absolute; left: -5000px;">
+								<input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
+							</div>
+
+							<div class="info"></div>
+						</form>
+          </div> -->
+                    <!-- <img src="{% static 'newtheme/img/algoladderlogo.png' %}" alt="" style="height: 25px;width: 100px;" /> -->
+                    <h4>Follow Us</h4>
+                    <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw/" class="fa fa-youtube">
+                        <a href="https://www.instagram.com/algoladder/" class="fa fa-instagram"></a>
+                        <a href="https://www.facebook.com/AlgoLadder-102640618093856/" class="fa fa-facebook"
+                            style="margin-left: -1px;"></a>
+                        <!-- Begin Mailchimp Signup Form -->
+                        <link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet"
+                            type="text/css">
+                        <style type="text/css">
+                            #mc_embed_signup {
+                                background: transparent;
+                                clear: left;
+                                font: 14px Helvetica, Arial, sans-serif;
+                                width: 250px;
+                            }
+
+                            /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+                        </style>
+                        <div id="mc_embed_signup" style="height: 5px; ">
+                            <form
+                                action="https://algoladder.us2.list-manage.com/subscribe/post?u=398c1f297c6932eb89d8266ec&amp;id=fa0be269d0"
+                                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                                class="validate" target="_blank" novalidate>
+                                <div id="mc_embed_signup_scroll">
+                                    <label for="mce-EMAIL" style="color: white;">Subscribe For Coding Tips</label>
+                                    <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL"
+                                        placeholder="email address" required>
+                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                            type="text" name="b_398c1f297c6932eb89d8266ec_fa0be269d0" tabindex="-1"
+                                            value=""></div>
+                                    <div class="clear"><input type="submit" onclick="myPopup()" value="Subscribe"
+                                            name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!--End mc_embed_signup-->
+
+                </div>
+            </div>
+            <div class="footer-bottom row align-items-center">
+                <p class="footer-text m-0 col-lg-8 col-md-12">
+
+                    Copyright &copy;
+                    <script>
+                        document.write(new Date().getFullYear());
+                    </script> AlgoLadder | All rights reserved
+
+                    <!-- <div class="col-lg-4 col-md-12 footer-social">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-dribbble"></i></a>
+					<a href="#"><i class="fa fa-behance"></i></a>
+				</div> -->
+            </div>
+        </div>
+    </footer>
+    <!-- ================ End footer Area ================= -->
+
+    <script src="{% static 'newtheme/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'newtheme/js/vendor/bootstrap.min.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'newtheme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/parallax.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'newtheme/js/hexagons.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/waypoints.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+
+
+
+    <script>
+        function myPopup() {
+            var val = document.getElementById("mce-EMAIL").value
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val)) {
+                swal({
+                    title: "Successfully Subscribed",
+                    text: "<small>Great You Will Get Coding Tips From AlgoLadder</small>",
+                    type: "success",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } else {
+                swal({
+                    title: "Failed To Subscribed",
+                    text: "<small>Please Enter Valid Email Address</small>",
+                    type: "error",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } // Set our logout isClicked2 to true and count2 to 1 }
+        }
+    </script>
+
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f7051ecf0e7167d00141e08/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for(i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if(slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for(i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active","");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides,6000); // Change image every 6 seconds
+        }
+    </script>
+
+</body>
+
+</html>

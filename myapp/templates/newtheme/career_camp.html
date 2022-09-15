@@ -1,0 +1,1093 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+  <title>AlgoLadder-AlgoEdge</title>
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link rel="stylesheet" href="{% static 'latestTheme/css/index.css' %}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/admission.css' %}">
+  <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <style>
+    @media (max-width:1200px) {
+      #line {
+        display: none;
+      }
+
+      #footer_new {
+        margin-top: 80vh;
+      }
+    }
+
+    @media (max-width:900px) {
+      #line {
+        display: none;
+      }
+
+      #footer_new {
+        margin-top: 80vh;
+      }
+    }
+
+    @media (max-width:600px) {
+      #card_new {
+        margin-top: 20vh;
+      }
+
+      #footer_new {
+        margin-top: 130vh;
+      }
+    }
+
+    @media (min-width:600px) {
+      #card_new {
+        width: 80%;
+      }
+    }
+
+    .mobile-nav-toggle {
+      color: #fff;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 1s;
+
+    }
+
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+
+    @media (max-width: 1000px) {
+      .mobile-nav-toggle {
+        display: block;
+      }
+
+      .navbar ul {
+
+        display: none;
+      }
+
+    }
+
+    #close {
+      cursor: pointer;
+    }
+
+    .navbar-mobile {
+      position: fixed;
+      overflow: hidden;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background: rgba(40, 58, 90, 0.9);
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    .navbar-mobile .mobile-nav-toggle {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+    }
+
+    .navbar-mobile ul {
+      display: block;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      bottom: 15px;
+      left: 15px;
+      padding: 10px 0;
+      border-radius: 10px;
+      background-color: #fff;
+      overflow-y: auto;
+      transition: 0.3s;
+    }
+
+    .navbar-mobile a {
+      padding: 10px 20px;
+      font-size: 15px;
+      color: #37517e;
+    }
+
+    .navbar-mobile a:hover,
+    .navbar-mobile .active,
+    .navbar-mobile li:hover>a {
+      color: #47b2e4;
+    }
+
+    .navbar-mobile .getstarted {
+      margin: 15px;
+      color: #37517e;
+    }
+
+    .navbar-mobile .dropdown ul {
+      position: static;
+      display: none;
+      margin: 10px 20px;
+      padding: 10px 0;
+      z-index: 99;
+      opacity: 1;
+      visibility: visible;
+      background: #fff;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+
+    .navbar-mobile .dropdown ul li {
+      min-width: 200px;
+    }
+
+    .navbar-mobile .dropdown ul a {
+      padding: 10px 20px;
+    }
+
+    .navbar-mobile .dropdown ul a i {
+      font-size: 12px;
+    }
+
+    .navbar-mobile .dropdown ul a:hover,
+    .navbar-mobile .dropdown ul .active:hover,
+    .navbar-mobile .dropdown ul li:hover>a {
+      color: #47b2e4;
+    }
+
+    .navbar-mobile .dropdown>.dropdown-active {
+      display: block;
+    }
+
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    label {
+      color: #333
+    }
+
+    .btn-send {
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      width: 80%;
+      margin-left: 3px
+    }
+
+    .help-block.with-errors {
+      color: #ff5050;
+      margin-top: 5px
+    }
+
+    .card2 {
+      margin-left: 10px;
+      margin-right: 10px
+    }
+  </style>
+</head>
+
+<body style="overflow:auto; overflow: initial;">
+  <!-- Start Header -->
+  <!--Important link source from https://bootsnipp.com/snippets/ooa9M-->
+  <header id="new_header" class="fixed-top" style="border-bottom: 1px solid black;height: 60px;">
+    <div class="container d-flex align-items-center">
+      <!-- <div style="background:white;"> -->
+
+      <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+          style="width: 200px;" alt="">
+      </h1>
+
+
+      <!-- </div> -->
+      <nav id="navbar" class="navbar">
+
+        <ul>
+          <li><a class="nav-link scrollto " href="/">Home</a></li>
+          <li><a class="nav-link scrollto active" href="/algoedge">AlgoEdge</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Quick Coding
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/ide">IDE</a>
+              <a class="dropdown-item" href="/blogs">Blog</a>
+              <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+              <a class="dropdown-item" href="/problem_list">Practice</a>
+            </div>
+          </li>
+          <li><a class="nav-link scrollto" href="/courses">Courses</a></li>
+          <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+          {% if account_type == "ambassador" %}
+          <li><a href="/ambassdordashboard"
+              style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+          </li>
+          {% endif %}
+          <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+          <!-- Dropdown -->
+          {% if user.is_authenticated %}
+          <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              {{ request.user.username }}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              {% if account_type == "ambassador" %}
+              {% else %}
+              <a class="dropdown-item" href="/profile#cop">Profile</a>
+              <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+              {% endif %}
+              <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+            </div>
+          </li>
+          {% else %}
+          <li>
+            <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+              style="background-color:purple; color:white; height:30px;border-radius: 50px;">
+              Sign up</a>
+          </li>
+          <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+              style="background-color:purple; color:white;height:30px;border-radius: 50px;">Login</a>
+          </li>
+          {% endif %}
+        </ul>
+        <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28" onclick="myfuntion()"
+          fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!-- Start Hero -->
+  <div class="container align-items-center" style="margin-top:10vh;">
+    <div class="row">
+      <div class="col-md-6 col-sm-12" style="text-align:left;">
+        <h1>AlgoEdge Placement Program</h1>
+        <p style="color: black;">6 Month Full Stack Developer Program to help you get an awesome job.</p>
+        <ul>
+          <li> Learn Data Structure Algorithm & Get Expertise in Python, Django Development</li>
+          <li> Placement Roadmap & Team to help you get a matching coding profile job.</li>
+          <li> Selection through interview process. Only pre-final and final year students are eligible </li>
+        </ul>
+        <h3 style="font-family: Arial, Helvetica, sans-serif;">Pay only when you get a job of more than 5 LPA</h3>
+        <br><br>
+        <button type="button" class="btn btn-primary btn-lg" style="width: 150px;height:fit-content; background:purple"
+          onclick="myfuntion1()">Apply</button>
+        <br>
+        Batch Starts from 15th August 2021
+      </div>
+      <div class="col-md-6 col-sm-12">
+        <img src="{% static 'newtheme/img/cover.png' %}" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- End Hero -->
+  <!-- Modal section -->
+  <div class="bg-modal">
+
+    <div class="card2 bg-light" style="width: 55vw;">
+      <div class="card-body bg-light" style="width: 55vw;">
+        <div class="container" style="width: 55vw;">
+
+          <form id="contact-form" role="form" method="POST" action="algoedge" style="width: 50vw;">
+
+            {% csrf_token %}
+
+            <div style="margin-left: 50vw;" id="close">&#x2715</div>
+            <div class="form-group"> <label for="form_name">First Name *</label> <input id="form_name" type="text"
+                name="first_name" class="form-control" placeholder="First Name *" required="required"
+                data-error="Firstname is required."> </div>
+
+
+            <div class="form-group"> <label for="form_lastname">Last Name *</label> <input id="form_lastname"
+                type="text" name="Last_name" class="form-control" placeholder="Last Name *" required="required"
+                data-error="Lastname is required."> </div>
+
+
+
+            <div class="form-group"> <label for="form_email">University *</label> <input id="form_email" type="text"
+                name="College_name" class="form-control" placeholder="University Name *" required="required"
+                data-error="Valid email is required."> </div>
+
+            <div class="form-group"> <label for="form_need">Select Year *</label> <select id="form_need" name="Year"
+                class="form-control" required="required" data-error="Please specify your need.">
+                <option value="" selected disabled>--Year--</option>
+                <option>1st year</option>
+                <option>2nd year</option>
+                <option>3rd Year</option>
+                <option>4th year</option>
+              </select> </div>
+
+
+            <div class="form-group"> <label for="form_message">Upload Resume *</label> <input type="file" id="Resume"
+                name="Resume"> </div>
+
+            <div> <input type="submit" class="btn btn-success btn-send pt-2 btn-block " value="Submit"> </div>
+
+          </form>
+        </div>
+      </div>
+    </div> <!-- /.8 -->
+  </div>
+  <!-- End Model SEction -->
+  <!-- jouney section -->
+  <div>
+    <div style="text-align: center; padding-top:10vh">
+      <h1>AlgoEdge Placement Program Roadmap</h1>
+    </div>
+    <div class="row">
+      <div class="col-2" id="line">
+        <img src="{% static 'newtheme/img/new_line.jpg' %}" class="img-fluid" style="height:39vh; padding-left:12vw"
+          alt="">
+      </div>
+      <div class="col-10" style="padding-top:4vh;">
+        <div class="row nopadding">
+          <div class="col-1 nopadding" style="color:black;">
+            <img src="{% static 'newtheme/img/hierarchical-structure.png' %}" class="img-fluid"
+              style="height:12vh;padding-top:1vh;" alt="">
+          </div>
+          <div class="col-11 nopadding">
+            <div style="display:flex;">
+              <div style="font-size:4rem;top:0px; color:blue;padding-right:2vw;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">Stage 1</div>
+              <div style="font-size:2rem;padding-top:2vh;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;"> &nbsp;&nbsp;2 Months | Data Structures & Algorithms</div>
+            </div>
+            <h3 style="text-align:left;margin-top:0px;">Data Structures & Algorithms Journey
+            </h3>
+            <p style="color:black;text-align:left; ">1) Learn basics of programming, time complexity, OOPS,classes,
+              inheritance, basic theory.</p>
+            <p style="color:black;text-align:left; ">2) Understand Data Structures thoroghly starting from Array, Linked
+              List to Binary Tree, BST and Graph.</p>
+            <p style="color:black;text-align:left; ">3) Delve deep into Algorithms - Searching , Sorting, Greedy
+              Approach, Dynamic Programming, Divide & Conquer, Backtracking. </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2" id="line">
+        <img src="{% static 'newtheme/img/new_line.jpg' %}" class="img-fluid" style="height:39vh; padding-left:12vw"
+          alt="">
+      </div>
+      <div class="col-10" style="padding-top:4vh;">
+        <div class="row nopadding">
+          <div class="col-1 nopadding" style="color:black;">
+            <img src="{% static 'newtheme/img/coding.png' %}" class="img-fluid" style="height:12vh;padding-top:1vh;"
+              alt="">
+          </div>
+          <div class="col-11 nopadding">
+            <div style="display:flex;">
+              <div style="font-size:4rem;top:0px; color:blue;padding-right:2vw;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">Stage 2</div>
+              <div style="font-size:2rem;padding-top:2vh;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">&nbsp;&nbsp;2 Months | Full Stack Development with Python &
+                Django
+              </div>
+            </div>
+            <h3 style="text-align:left;margin-top:0px;">Python + Django + HTML + CSS + JS
+            </h3>
+            <p style="color:black;text-align:left; ">1) Learn Backend Development with Python & Django.</p>
+            <p style="color:black;text-align:left; ">2) Create Frontend with HTML, CSS & JavaScript</p>
+            <p style="color:black;text-align:left; ">3) You will create 3 Projects and deploy them on Cloud. </p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2" id="line">
+        <img src="{% static 'newtheme/img/new_line.jpg' %}" class="img-fluid" style="height:39vh; padding-left:12vw"
+          alt="">
+      </div>
+      <div class="col-10" style="padding-top:4vh;">
+        <div class="row nopadding">
+          <div class="col-1 nopadding" style="color:black;">
+            <img src="{% static 'newtheme/img/machine-learning.png' %}" class="img-fluid"
+              style="height:12vh;padding-top:1vh;" alt="">
+          </div>
+          <div class="col-11 nopadding">
+            <div style="display:flex;">
+              <div style="font-size:4rem;top:0px; color:blue;padding-right:2vw;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">Stage 3</div>
+              <div style="font-size:2rem;padding-top:2vh;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">&nbsp;&nbsp;2 Months | Machine Learning</div>
+            </div>
+            <h3 style="text-align:left;margin-top:0px;">Machine Learning, Artificial Intelligence & Data Science
+            </h3>
+            <p style="color:black;text-align:left;">1) Become proficient in Machine Learning Algorithms & Data Science.
+            </p>
+            <p style="color:black;text-align:left;">2) Delve Deep into Supervised & Unsupervised Algorithms.</p>
+            <p style="color:black;text-align:left;">3) Real Hands on Project using Tensorflow & Keras.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2" id="line">
+        <img src="{% static 'newtheme/img/new_line.jpg' %}" class="img-fluid" style="height:39vh; padding-left:12vw"
+          alt="">
+      </div>
+      <div class="col-10" style="padding-top:4vh;">
+        <div class="row nopadding">
+          <div class="col-1 nopadding" style="color:black;">
+            <img src="{% static 'newtheme/img/meeting.png' %}" class="img-fluid" style="height:12vh;padding-top:1vh;"
+              alt="">
+          </div>
+          <div class="col-11 nopadding">
+            <div style="display:flex;">
+              <div style="font-size:4rem;top:0px; color:blue;padding-right:2vw;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">Stage 4</div>
+              <div style="font-size:2rem;padding-top:2vh;">|</div>
+              <div style="font-size:2rem;padding-top:2vh;">&nbsp;&nbsp;After 6 Months | Placements Begins</div>
+            </div>
+            <h3 style="text-align:left;margin-top:0px;">Placement & Interview Roadmap
+            </h3>
+            <p style="color:black;text-align:left;">1) Complete Support for Placement to help you get a matching coding
+              job.</p>
+            <p style="color:black;text-align:left;">2) Interview Tips & Tricks to get you ready for your dream.</p>
+            <p style="color:black;text-align:left;">3) Placement Guidance & Roadmap to help you succeed.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end jurney Sectoin -->
+  <!-- start Faculty -->
+
+  <!-- <div style="display: flex;"> -->
+  <div class="static-txt" style="display: inline-block;">Our Mentors Are From Top</div>
+  <div class="wrapper" style="display: inline-block;">
+    <ul class="dyna-text" style="margin-top: 10px; transform: translate(-17%, 35%);">
+      <li><span>IITs</span></li>
+      <li><span>NITs</span></li>
+      <li><span>IIITs</span></li>
+      <li><span>MNCs</span></li>
+    </ul>
+  </div>
+
+  <!-- </div> -->
+  <br>
+  <div class="row">
+
+    <!-- <div style="padding: 20px 0px 0px 0px; justify-content:space-around; display:flex;"> -->
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/sanjay.jpeg' %}"
+        style="width: 30vh;height:30vh;border-radius:100%; border:gray ;" alt="Image">
+      <br>
+      <h1>Dr. Sanjay Chatterji</h1>
+      Professor at IIIT- Kalyani
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/faculty_3.jpeg' %}"
+        style="width: 30vh; height:30vh;border-radius:100%; border:gray" ; alt="Image">
+      <br>
+      <h1 style="text-align:center;">Dr. Himani Bansal</h1>
+      Professor at JIIT
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/ashishl.jpeg' %}"
+        style="width: 30vh; height:30vh; border-radius:100%; border:gray" alt="Image">
+      <br>
+      <h1>Ashish Bhawnani</h1>
+      Algo Developer at Future First
+    </div>
+
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- <div style="padding: 20px 0px 0px 0px; justify-content:space-around; display:flex;"> -->
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/faculty_4.jpg' %}"
+        style="width: 30vh; height:30vh; border-radius:100%; border:gray" ; alt="Image">
+      <br>
+      <h1>Akash Rana</h1>
+      Developer at Octro
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/faculty_5.jpeg' %}"
+        style="width: 30vh; height:30vh; border-radius:100%; border:gray" ; alt="Image">
+      <br>
+      <h1>Arjit Khurkhuriya</h1>
+      SDE at Amazon
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12" style="padding-top:3vh;">
+      <img src="{% static 'newtheme/img/faculty_6.jpeg'%}"
+        style="width: 30vh; height:30vh; border-radius:100%; border:gray" ; alt="Image">
+      <br>
+      <h1 style="text-align:center;">Dr. Rahul Kala</h1>
+      Professor at IIIT Allahbad
+    </div>
+
+    <!-- </div> -->
+  </div>
+
+  <!-- End faculty -->
+  <!-- New Section -->
+  <!-- <div class="align-items-center">
+    <div class="row align-items-center" style="padding-top:10vh;">
+      <div class="col-md-6 col-sm-10" style="margin-left:8vw;">
+        <h1 style="text-align:left;font-weight:bolder;">A dedicated placement team to help you land the best career
+          opportunities</h1>
+        <p style="color:black;text-align:left;">Our placement cell works closely with you reach closer to your
+          professional goals</p>
+      </div>
+      <div class="col-md-4 col-sm-10" style="background-color: burlywood;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+      ">
+        <div class="row">
+          <div class="col-2">
+            <img src="{% static 'newtheme/img/blog.png' %}" class="img-fluid"
+              style="height:8vh; padding-top:3vh;padding-left:2vw;" alt="">
+          </div>
+          <div class="col-8" style="text-align:left;">
+            <h3>Curated Openings</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="{% static 'newtheme/img/blog.png' %}" class="img-fluid"
+              style="height:8vh; padding-top:3vh;padding-left:2vw;" alt="">
+          </div>
+          <div class="col-8" style="text-align:left;">
+            <h3>Curated Openings</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <img src="{% static 'newtheme/img/blog.png' %}" class="img-fluid"
+              style="height:8vh; padding-top:3vh;padding-left:2vw;" alt="">
+          </div>
+          <div class="col-8" style="text-align:left;">
+            <h3>Curated Openings</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row " style="padding-top: 3vh; margin-left: auto;">
+      <div class="col-md-2 col-sm-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;padding-left:2vw;margin:auto">
+        <h3>7LPA</h3>
+        <p style="color: black;">Avg CTC for Full-time role</p>
+      </div>
+      <div class="col-md-2 col-sm-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;padding-left:2vw;margin:auto">
+        <h3>7LPA</h3>
+        <p style="color: black;">Avg CTC for Full-time role</p>
+      </div>
+      <div class="col-md-2 col-sm-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+           transition: 0.3s;padding-left:2vw;margin:auto">
+        <h3>7LPA</h3>
+        <p style="color: black;">Avg CTC for Full-time role</p>
+      </div>
+      <div class="col-md-2 col-sm-6" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+           transition: 0.3s;padding-left:2vw;margin:auto">
+        <h3>7LPA</h3>
+        <p style="color: black;">Avg CTC for Full-time role</p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- End New Section -->
+  <!-- Testemonial -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <div style="position:relative;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Testimonials</h2>
+        <span class="section-separator"></span>
+
+      </div>
+    </div>
+    <div class="testimonials-carousel-wrap">
+      <div class="listing-carousel-button listing-carousel-button-next"><i class="fa fa-caret-right"
+          style="color: #fff"></i></div>
+      <div class="listing-carousel-button listing-carousel-button-prev"><i class="fa fa-caret-left"
+          style="color: #fff"></i></div>
+      <div class="testimonials-carousel">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="testi-item">
+                <div class="testi-avatar"><img src="{% static 'newtheme/img/testimonial/1.jpeg' %}"></div>
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                  <div class="listing-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p> Classes are awesome, I learned how to solve problems.It was a really session, one on one I was
+                    really comfortable asking questions.I was able to clear so many doubts of data structures and the
+                    mentors are really
+                    great.</p>
+                  <a href="#" class="text-link"></a>
+                  <div class="testimonials-avatar">
+                    <h3>Anirudh Walia</h3>
+                  </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+              </div>
+            </div>
+
+            <!--second--->
+            <div class="swiper-slide">
+              <div class="testi-item">
+                <div class="testi-avatar"><img src=" {% static 'newtheme/img/testimonial/2.jpeg' %}"></div>
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                  <div class="listing-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p> Algo Ladder is nice.
+                    Nice and knowledgable class and a lots of question given.
+                    Nice interactive classes and also if you want questions they give them they discuss them.</p>
+                  <a href="#" class="text-link"></a>
+                  <div class="testimonials-avatar">
+                    <h3>Akash Tiwari</h3>
+                  </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+              </div>
+            </div>
+            <!--third-->
+
+            <div class="swiper-slide">
+              <div class="testi-item">
+                <div class="testi-avatar"><img src="{% static 'newtheme/img/testimonial/3.jfif' %}"></div>
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                  <div class="listing-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p> My experience was good,
+                    faculty is very cooperating and teaches well.
+                    .</p>
+                  <a href="#" class="text-link"></a>
+                  <div class="testimonials-avatar">
+                    <h3>Ayushi Ruhela</h3>
+
+                  </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+              </div>
+            </div>
+
+            <!--fourth-->
+            <div class="swiper-slide">
+              <div class="testi-item">
+                <div class="testi-avatar"><img src=" {% static 'newtheme/img/testimonial/4.jfif' %}"></div>
+                <div class="testimonials-text-before"><i class="fa fa-quote-right"></i></div>
+                <div class="testimonials-text">
+                  <div class="listing-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                  <p> AlgoLadder's DS Algo course made me punctual and made coding my habit.
+                    Earlier I was having phobia of participating in online coding competitions,
+                    this course helped me in getting rid of that phobia.</p>
+                  <a href="#" class="text-link"></a>
+                  <div class="testimonials-avatar">
+                    <h3>Utkarsh Trivedi</h3>
+
+                  </div>
+                </div>
+                <div class="testimonials-text-after"><i class="fa fa-quote-left"></i></div>
+              </div>
+            </div>
+            <!--testi end-->
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tc-pagination"></div>
+    </div>
+  </div>
+  <br><br>
+  <!-- End testimonials -->
+  <!-- Admission Section-->
+  <!-- <div style="margin: auto;">
+    <div class="tabs">
+
+      <input type="radio" name="tabs" id="tabone" checked="checked">
+      <label for="tabone">REgistrar</label>
+      <div class="tab">
+        <h1>Registration</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+          cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <input type="radio" name="tabs" id="tabtwo">
+      <label for="tabtwo">Second Tab</label>
+      <div class="tab">
+        <h1>Online Test</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+          dolore magna aliqua.</p>
+      </div>
+
+      <input type="radio" name="tabs" id="tabthree">
+      <label for="tabthree">Interview</label>
+      <div class="tab">
+        <h1>Third tab content</h1>
+        <p>hfioezhogehzioghz</p>
+      </div>
+
+
+    </div>
+  </div> -->
+  <!--End Admission Section  -->
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- New Cards Section -->
+  <!-- <div class="row" style="margin: auto; height:500px">
+    <div class="col-md-5 col-sm-10" style="align-items:center">
+      <div id="card_new" style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;height:70vh;margin-left:auto;width:100%;background:rgb(173, 59, 59)
+    ">
+        <h1 style="padding-top:10vh;"> Features</h1>
+        <p style="color: black;display:flex;justify-content:center;align-items:center;"> 21 months access to all course
+          materials<br>
+          Speedy doubt resolution<br>
+          12 Mock interviews<br>
+          15 Domain expert sessions</p>
+        <br>
+        <p style="color: black;display:flex;justify-content:center;align-items:center;">Multiple Live Projects<br>
+          Resume building & soft skill grooming<br>
+          Exclusive Placement Support<br>
+          Premium Hirist account on completion</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-5">
+      <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;height:50vh;margin-left:auto;width:100%;margin-top:10vh;background:sienna;
+    ">
+        <h1 style="padding-top:4vh"> Standard
+        </h1>
+        <p style="color: black;display:flex;justify-content:center;align-items:center;">Rs. 1,25,000<br><br>
+          All Inclusive</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="button" class="btn btn-primary btn-lg"
+          style="width: 150px;height:fit-content; background:purple">Apply</button>
+        <br>
+      </div>
+    </div>
+    <div class="col-md-3 col-sm-5">
+      <div style="box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;height:50vh;margin-left:auto;width:100%;margin-top:10vh;background:rgb(214, 196, 32);
+    ">
+        <h1 style="padding-top:4vh"> Hack</h1>
+        <p style="color: black;display:flex;justify-content:center;align-items:center;"> Rs. 0 Prepaid<br>
+          + 15% Salary for 3 Years(Postpaid)<br>
+          Either pay lump sum or installments upto 3 years<br><br>
+
+          Postpaid payment capped at 3 lakhs</p>
+        <a href="#">How we calculate the price?</a>
+        <button type="button" class="btn btn-primary btn-lg"
+          style="width: 150px;height:fit-content; background:purple">Apply</button>
+        <br>
+      </div>
+    </div>
+  </div> -->
+  <!-- End Cards Section -->
+  <br><br>
+  <br>
+  <br>
+  <br><br>
+  <br>
+  <br>
+
+  <!-- footer -->
+  <div class="new_footer1" id="footer_new">
+    <div id="dk-new_footer" class="dk-new_footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-4">
+            <div class="dk-new_footer-box-info">
+              <a href="index.html" class="new_footer-logo">
+                <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo" class="img-fluid">
+              </a>
+              <p class="footer-info-text">
+                Coding Through One to One Mentorship By Expert Competitive Programmers..
+              </p>
+              <div class="new_footer-social-link">
+                <h3>Follow us</h3>
+                <ul>
+                  <li>
+                    <a href="https://www.facebook.com/algoladder">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://algoladder.com/">
+                      <i class="fa fa-google-plus"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/company/algoladder/">
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/algoladder/?hl=en">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!-- End Social link -->
+            </div>
+            <!-- End new_footer info -->
+            <div class="new_footer-awarad">
+              <img src="images/icon/best.png" alt="">
+              <p></p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <div class="col-md-12 col-lg-8">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="contact-us">
+                  <div class="contact-icon">
+                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                  </div>
+                  <!-- End contact Icon -->
+                  <div class="contact-info">
+                    <h3>Delhi</h3>
+                    <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                  </div>
+                  <!-- End Contact Info -->
+                </div>
+                <!-- End Contact Us -->
+              </div>
+              <!-- End Col -->
+              <div class="col-md-6">
+                <div class="contact-us contact-us-last">
+                  <div class="contact-icon">
+                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                  </div>
+                  <!-- End contact Icon -->
+                  <div class="contact-info">
+                    <p>Mail us at</p>
+                    <p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+                    
+                  </div>
+                  <!-- End Contact Info -->
+                </div>
+                <!-- End Contact Us -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Contact Row -->
+            <div class="row">
+              <div class="col-md-12 col-lg-6">
+                <div class="new_footer-widget new_footer-left-widget">
+                  <div class="section-heading">
+                    <h3>Useful Links</h3>
+                    <span class="animate-border border-black"></span>
+                  </div>
+                  <ul>
+                    <li>
+                      <a href="/about">About us</a>
+                    </li>
+                    <li>
+                      <a href="/about">Our Team</a>
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <a href="/blogs">Blog</a>
+                    </li>
+                    <li><a href="/ambassador">Programming Ambassador</a></li>
+                    <li><a href="/interview_experiences">Interview Experiences</a></li>
+                  </ul>
+                </div>
+                <!-- End new_footer Widget -->
+              </div>
+              <!-- End col -->
+              <div class="col-md-12 col-lg-6">
+                <div class="new_footer-widget">
+                  <div class="section-heading">
+                    <h3>Subscribe</h3>
+                    <span class="animate-border border-black"></span>
+                  </div>
+                  <p>
+                    <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                    Subscribe For Coding Tips
+                  </p>
+                  <form action="#">
+                    <div class="form-row">
+                      <div class="col dk-new_footer-form">
+                        <input type="email" class="form-control" placeholder="Email Address">
+                        <button type="submit">
+                          <i class="fa fa-send"></i>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- End form -->
+                </div>
+                <!-- End new_footer widget -->
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+          <!-- End Col -->
+        </div>
+        <!-- End Widget Row -->
+      </div>
+      <!-- End Contact Container -->
+
+
+      <div class="copyright">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <span>Copyright © 2021, All Right Algoladder</span>
+            </div>
+            <!-- End Col -->
+            <div class="col-md-6">
+              <div class="copyright-menu">
+                <ul>
+                  <li>
+                    <!-- <a href="#">Home</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Terms</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Privacy Policy</a> -->
+                  </li>
+                  <li>
+                    <!-- <a href="#">Contact</a> -->
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- End col -->
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- End Copyright Container -->
+      </div>
+      <!-- End Copyright -->
+      <!-- Back to top -->
+      <div id="back-to-top" class="back-to-top">
+        <button class="btn btn-dark" title="Back to Top" style="display: block;">
+          <i class="fa fa-angle-up"></i>
+        </button>
+      </div>
+      <!-- End Back to top -->
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script type="text/javascript" src="{% static 'latestTheme/js/index.js' %}"></script>
+  <script>
+    function myfuntion() {
+      if(document.getElementById("navbar").className != "navbar") {
+        document.getElementById("navbar").classList.remove("navbar");
+        document.getElementById("navbar").classList.add("navbar-mobile");
+      }
+      else {
+        document.getElementById("navbar").classList.remove("navbar-mobile");
+        document.getElementById("navbar").classList.add("navbar");
+      }
+    }
+  </script>
+  <script>
+    function myfuntion1() {
+      document.querySelector(".bg-modal").style.display = 'flex';
+    }
+  </script>
+  <script>
+    document.querySelector('#close').addEventListener('click',function() {
+      ///console.log("kuch");
+      document.querySelector('.bg-modal').style.display = 'none';
+    });
+  </script>
+  <!-- End footer -->
+</body>
+
+</html>

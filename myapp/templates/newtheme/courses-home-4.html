@@ -1,0 +1,1486 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="zxx" class="no-js">
+
+<head>
+    <!-- Mobile Specific Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'newtheme/img/favicon.png' %}" />
+    <!-- Author Meta -->
+    <meta name="author" content="colorlib" />
+    <!-- Meta Description -->
+    <meta name="description" content="" />
+    <!-- Meta Keyword -->
+    <meta name="keywords" content="" />
+    <!-- meta character set -->
+    <meta charset="UTF-8" />
+    <!-- Site Title -->
+    <title>AlgoLadder-Course</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Roboto:400,400i,500,700"
+        rel="stylesheet" />
+    <!--
+      CSS
+      =============================================
+    -->
+
+
+    <link rel="stylesheet" href="{% static 'newtheme/css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/owl.carousel.css' %}">
+
+    <link rel="stylesheet" href="{% static 'newtheme/css/hexagons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'newtheme/css/main.css' %}">
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/themify-icons/0.1.2/css/themify-icons.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <link rel="stylesheet" href="{% static 'latestTheme/css/nav_footer.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- For jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .box1 {
+            position: relative;
+            margin-top: 12%;
+            left: 51%;
+            width: 100%;
+            background-color: purple;
+            border: solid;
+            border-width: 0.3px;
+            border-color: purple;
+            transform: translate(-50%, -50%);
+        }
+
+        .box1 select {
+            background-color: white;
+            color: black;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            font-size: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+            border: solid;
+            border-width: 0.3px;
+            border-color: purple;
+            outline: none;
+        }
+
+        .box1::before {
+            content: "\f13a";
+            font-family: FontAwesome;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20%;
+            height: 100%;
+            text-align: center;
+            font-size: 28px;
+            line-height: 45px;
+            color: rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+        }
+
+        .box1:hover::before {
+            color: rgba(255, 255, 255, 0.6);
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .box1 select option {
+            padding: 30px;
+        }
+
+        .signnav {
+            margin-left: 85%;
+            margin-top: -43px;
+        }
+
+        .signnav2 {
+            margin-left: 85%;
+            margin-top: -47px;
+        }
+
+        .custom-nav {
+            visibility: visible;
+        }
+
+        .custom-nav2 {
+            visibility: hidden;
+        }
+
+        .overlay1 {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.5s;
+        }
+
+        .overlay1-content {
+            position: relative;
+            top: 25%;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .overlay1 a {
+            padding: 8px;
+            text-decoration: none;
+            font-size: 36px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .overlay1 a:hover,
+        .overlay1 a:focus {
+            color: #f1f1f1;
+        }
+
+        .overlay1 .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 45px;
+            font-size: 60px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .cont {
+                margin-top: 400px;
+                margin-bottom: 0px;
+            }
+
+            .signnav {
+                margin-left: 70%;
+            }
+
+            .signnav2 {
+                position: absolute;
+                margin-left: 60%;
+            }
+
+            .custom-nav {
+                visibility: hidden;
+            }
+
+            .custom-nav2 {
+                visibility: visible;
+            }
+
+            .overlay1 a {
+                font-size: 20px
+            }
+
+            .overlay1 .closebtn {
+                font-size: 40px;
+                top: 15px;
+                right: 35px;
+            }
+        }
+
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+        }
+
+        .active,
+        .accordion:hover {
+            background-color: #ccc;
+        }
+
+        .accordion:after {
+            content: '\002B';
+            color: #777;
+            font-weight: bold;
+            float: right;
+            margin-left: 5px;
+        }
+
+        .active:after {
+            content: "\2212";
+        }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            width: 150px;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: purple;
+        }
+
+        /* .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+} */
+
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid purple;
+            border-radius: 4px;
+        }
+
+        .razorpay-payment-button {
+            background-color: purple;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: -10%;
+            margin-left: 1%;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .myButton {
+            background-color: purple;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td,
+        #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+            color: Black;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: Black;
+            color: white;
+        }
+
+        .dot {
+            height: 7px;
+            width: 7px;
+            background-color: purple;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .navbar-nav li a {
+            text-transform: uppercase;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            padding: 17px;
+            font-family: serif;
+        }
+
+        @media(max-width:992px) {
+            #mc_embed_signup {
+                margin-left: 0;
+                padding-bottom: 30%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            #mc_embed_signup_scroll {
+                width: 80%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .custom-nav {
+                margin-top: -3%;
+            }
+        }
+
+        @media(max-width: 992px) {
+            .home-banner-left {
+                right: 3%;
+                top: 22%;
+            }
+        }
+
+        .method {
+            background-color: transparent;
+            border-color: purple;
+            border-width: 2px;
+        }
+
+        .myButton:hover {
+            text-decoration: none;
+            color: white;
+        }
+
+        .panel p {
+            color: black;
+            font-size: 14px;
+        }
+
+        .mobile-nav-toggle {
+            color: #fff;
+            font-size: 28px;
+            cursor: pointer;
+            display: none;
+            line-height: 0;
+            transition: 1s;
+
+        }
+
+        .mobile-nav-toggle.bi-x {
+            color: #fff;
+        }
+
+        @media (max-width: 1000px) {
+            .mobile-nav-toggle {
+                display: block;
+            }
+
+            .navbar ul {
+
+                display: none;
+            }
+
+        }
+
+        .navbar-mobile {
+            position: fixed;
+            overflow: hidden;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background: rgba(40, 58, 90, 0.9);
+            transition: 0.3s;
+            z-index: 999;
+        }
+
+        .navbar-mobile .mobile-nav-toggle {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+        }
+
+        .navbar-mobile ul {
+            display: block;
+            position: absolute;
+            top: 55px;
+            right: 15px;
+            bottom: 15px;
+            left: 15px;
+            padding: 10px 0;
+            border-radius: 10px;
+            background-color: #fff;
+            overflow-y: auto;
+            transition: 0.3s;
+        }
+
+        .navbar-mobile a {
+            padding: 10px 20px;
+            font-size: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile a:hover,
+        .navbar-mobile .active,
+        .navbar-mobile li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .getstarted {
+            margin: 15px;
+            color: #37517e;
+        }
+
+        .navbar-mobile .dropdown ul {
+            position: static;
+            display: none;
+            margin: 10px 20px;
+            padding: 10px 0;
+            z-index: 99;
+            opacity: 1;
+            visibility: visible;
+            background: #fff;
+            box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+        }
+
+        .navbar-mobile .dropdown ul li {
+            min-width: 200px;
+        }
+
+        .navbar-mobile .dropdown ul a {
+            padding: 10px 20px;
+        }
+
+        .navbar-mobile .dropdown ul a i {
+            font-size: 12px;
+        }
+
+        .navbar-mobile .dropdown ul a:hover,
+        .navbar-mobile .dropdown ul .active:hover,
+        .navbar-mobile .dropdown ul li:hover>a {
+            color: #47b2e4;
+        }
+
+        .navbar-mobile .dropdown>.dropdown-active {
+            display: block;
+        }
+
+        body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+
+<body onload="scroll()">
+    <!-- ================ Start Header Area ================= -->
+    <header id="new_header" class="fixed-top " style="border-bottom: 1px solid black;height: 60px;">
+        <div class="container d-flex align-items-center">
+            <!-- <div style="background:white;"> -->
+
+            <h1 class="logo me-auto"><img src="{% static 'newtheme/img/algoladderlogo.png' %}" class="img-fluid"
+                    style="width: 200px;" alt="">
+            </h1>
+
+
+            <!-- </div> -->
+            <nav id="navbar" class="navbar">
+
+                <ul>
+                    <li><a class="nav-link scrollto " href="/">Home</a></li>
+                    <li><a class="nav-link scrollto" href="/algoedge">AlgoEdge</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Quick Coding
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="/ide">IDE</a>
+                            <a class="dropdown-item" href="/blogs">Blog</a>
+                            <a class="dropdown-item" href="/interview_experiences">Interviews</a>
+                            <a class="dropdown-item" href="/problem_list">Practice</a>
+                        </div>
+                    </li>
+                    <li><a class="nav-link scrollto active" href="/courses">Courses</a></li>
+                    <li><a class="nav-link scrollto" href="/contest/all_contest">Contests</a></li>
+                    {% if account_type == "ambassador" %}
+                    <li><a href="/ambassdordashboard"
+                            style="color: purple;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;font-size:15px ;">DashBoard&nbsp;&nbsp;</a>
+                    </li>
+                    {% endif %}
+                    <!-- <li><a href="/about" style="color: purple">About-Us</a></li> -->
+
+                    <!-- Dropdown -->
+                    {% if user.is_authenticated %}
+                    <li><a class="nav-link scrollto" href="/mylearning#cop">My Learning</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{ request.user.username }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {% if account_type == "ambassador" %}
+                            {% else %}
+
+                            <a class="dropdown-item" href="/profile#cop">Profile</a>
+                            <a class="dropdown-item" href="/myreferral#cop"> Referral</a>
+                            {% endif %}
+                            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </div>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="{% url 'signup' %}" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white; height:30px;border-radius: 50px;">
+                            Sign up</a>
+                    </li>
+                    <li><a href="/accounts/login/" class="btn btn-primary" id="buton"
+                            style="background-color:purple; color:white;height:30px;border-radius: 50px;">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <svg xmlns="http://www.w3.org/2000/svg" class="mobile-nav-toggle" width="28" height="28"
+                    onclick="myfuntion()" fill="black" class="bi bi-list-nested" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z" />
+                </svg>
+            </nav>
+        </div>
+    </header>
+    <!-- ================ End Header Area ================= -->
+
+
+    <!-- ================ start banner Area ================= -->
+    <section class="banner-area" style="position: reletive;margin-top:2%;">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-12 banner-right" style="margin-top:10%;">
+                    <h1 class="text-white">
+                        {{ name }}
+                    </h1>
+                    <p class="mx-auto text-white  mt-20 mb-40">
+                        <font color=white>{{ description | safe }}</font>
+                    </p>
+                    <div class="link-nav">
+                        <span class="box">
+                            <a href="/">Home </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="/courses">Courses </a>
+                            <i class="lnr lnr-arrow-right"></i>
+                            <a href="#">{{ name }}</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================ End banner Area ================= -->
+
+    <!--================ Start Course Details Area =================-->
+    <section class="course-details-area section-gap" id="course">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 course-details-left">
+                    <div class="main-image">
+                        <img height="80%" width="80%" class="img-fluid"
+                            src="{% static 'newtheme/img/popular-course/444.png' %}" alt="">
+                    </div>
+                    <div class="content-wrapper">
+                        <h4 class="title">Course Description</h4>
+                        <div class="content">
+                            Data Science With AI & ML is a course to make you a professional data scientist. </div>
+
+                        <h4 class="title" id="outline">Course Features</h4>
+                        <div class="content">
+                            <ul class="w3-ul w3-card-4">
+
+                                <li>
+                                    <span class="dot"></span> Complete Video Lectures & Written Content by Top Faculties & Programmers in India.
+                                </li>
+
+                                <li>
+                                    <span class="dot"></span> Each student will be allotted a personal mentor to guide
+                                    in programming journey.
+                                </li>
+                                <li>
+                                    <span class="dot"></span> Mentors of this course are top programmers who got placed
+                                    in top companies in India.
+                                </li>
+                                <li>
+                                    <span class="dot"></span> You will get complete structured content to delve deep
+                                    into AI & ML.
+                                </li>
+
+
+                                <li>
+                                    <span class="dot"></span> Course completion certificate will be provided after
+                                    completion of course.
+                                </li>
+
+                                <li>
+                                    <span class="dot"></span> Doubt Solving and Regular Mentor Connect over Telegram,
+                                    Slack and Whatsapp.
+                                </li>
+
+                                <li>
+                                    <span class="dot"></span> Weekly Coding Practice Assignments and Guidance.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <h4 class="title">Course Outline</h4>
+                        <div class="content">
+                            <table id="customers">
+                                <tr>
+                                    <th>Basic</th>
+                                    <th>Supervised Learning</th>
+                                    <th>Unsupervised Learning</th>
+                                </tr>
+                                <tr>
+                                    <td>Introduction</td>
+                                    <td>Decision Tree Learning</td>
+                                    <td>
+                                        K Means Clustering
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Concept Learning</td>
+                                    <td>MultiVariable Reression</td>
+                                    <td>
+                                        Latent Dirichlet Allocation
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Logistic Regression</td>
+                                    <td>
+                                        Reinforcement Learning
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Naive Bayes</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Bayesian Learning</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Expectation Maximization</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>K Nearest Neighbours</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Hidden Markov Model</td>
+                                    <td></td>
+                                </tr>
+
+
+                                </li>
+
+                            </table>
+                        </div>
+                        <br>
+                        <br>
+
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 right-contents">
+                    <ul>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p id="cop" style="color:black">INSTRUCTORS</p>
+                                <span>{{ instructors }}</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="justify-content-between d-flex" href="#">
+                                <p style="color: black;">DURATION </p>
+                                <span>6 MONTHS</span>
+                            </a>
+                        </li>
+                        {% if not showit %}
+                        <li style="display: none;">
+
+
+                            <div class="justify-content-between d-flex">
+                                <label>Learning Methodology</label>
+                                <select class="method" id="select12">
+                                    <!-- <option disabled="disabled" selected="selected" value="default">Select Method
+                                    </option>
+                                    <option id="opt1" value="one">One-To-One</option> -->
+                                    <option id="opt2" selected="selected" value="group">Group</option>
+
+                                </select>
+                            </div>
+                        </li>
+                        {%endif%}
+
+                        {% if showit %}
+                        <li>
+                            <a href="{% url 'single_note' label='ML Basics' note_name='Introduction' course_id=course_id %}"
+                                class="myButton" style="margin-top:0%;  padding-left:35%; color:white;">View Course</a>
+                            <br>
+                            <h4 class="title">Frequently Asked Questions</h4>
+                            <button class="accordion">What is One to One Classes & Mentorship?</button>
+                            <div class="panel">
+                                <p>One to One Classes & Mentorship means each student who enrols gets a personal mentor
+                                    allotted to student. Student will get 24 * 7 doubt service, he/she can ask any doubt
+                                    without any hesitation.
+                                </p>
+                            </div>
+
+                            <button class="accordion">When do classes take place? </button>
+                            <div class="panel">
+                                <p>The classes and mentorship session are conducted every Saturday and Sunday during the
+                                    entire duration of the course. Also the mentor follows up the progress of student
+                                    daily over the text.</p>
+                            </div>
+
+                            <button class="accordion">How this course is different?</button>
+                            <div class="panel">
+                                <p>This course provides One-to-One Classes directly from top mentors. Each student has
+                                    his own learning pace and keeping this in mind, the pace of the course is kept
+                                    according to the student. That’s why One to One classes
+                                    are best.</p>
+                            </div>
+
+                            <button class="accordion">What is the duration of the course?</button>
+                            <div class="panel">
+                                <p>The duration of the course is two months.</p>
+                            </div>
+
+                            <button class="accordion">Will Mentor help me in improving my skills?</button>
+                            <div class="panel">
+                                <p>Yes, Mentors are top programmers themselves who have achieved a lot themselves. They
+                                    will guide you and teach you one to one during the whole duration of course.</p>
+                            </div>
+
+                            <button class="accordion">What will I learn in the course?</button>
+                            <div class="panel">
+                                <p>In this course, you will learn Data Structures & Algorithms. You can see whole course
+                                    outline <a href="#outline">here</a></p>
+                            </div>
+
+                            <button class="accordion">Will I get study material too?</button>
+                            <div class="panel">
+                                <p>Yes, you will get a customized learning dashboard when you login and enrol. You will
+                                    get all of the learning material and topic by topic Data Structures and Algorithms
+                                    Study Material. Also mentor will allot you questions
+                                    and exercises for practice each week which you can see in your customized learning
+                                    dashboard.
+                                </p>
+                            </div>
+
+                            <button class="accordion">How can I get a trial/discussion with Mentor?</button>
+                            <div class="panel">
+                                <p>Mail us at on reach@algoladder.com and we will arrange a discussion with mentor for you
+                                </p>
+                            </div>
+                        </li>{%endif%}
+
+                        <div id="val1" style="display:none;">
+
+                            <li>
+
+                                <a class="justify-content-between d-flex" href="#">
+                                    <p style="color:black;">PRICE</p>
+                                    {% if discount_label == "Invalid Coupon Code" or discount_label == "" %}
+                                    <span><s>Rs. 30000 /-</s>
+                                        <p style="color: black;">Rs. {{price}} /-</p>
+                                    </span> {% else %}
+                                    <span style="color:green">Rs. {{ price }} /-</span> {% endif %}
+                                </a>
+
+
+
+                            </li>
+
+                            <form action='/applyCoupon/{{course_id}}#cop' method=POST>{% csrf_token %}
+                                <input type="text" id="coupon" name="coupon" placeholder="Coupon/Referral Code"
+                                    style="width:57.76%;" />
+                                <input type="hidden" name="method_type" id="method_type">
+                                <input type="submit" class="myButton" style="width:40%;" value="Apply" />
+
+                            </form>
+                            {% if email == "0" %}
+                            <!-- <div class="box1">
+
+                                <select name="cars" id="cars" required>
+                                    <option disabled="disabled" value="">Select start date</option>
+                                    {% for mykey,myvalue in dates.items %}
+                                    {% if myvalue %}
+                                    {% if forloop.first %}
+                                    <option selected="selected" value="{{ mykey }}">
+                                        {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                        left </option>
+                                    {% else %}
+                                    <option value="{{ mykey }}">{{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                        left </option>
+                                    {% endif %}
+                                    {% else %}
+                                    <option disabled="disabled" value="">{{ mykey }}&emsp;&emsp;No&nbsp;Seats Available
+                                    </option>
+
+                                    {% endif %}
+                                    {% endfor %}
+
+
+                                </select>
+                            </div> -->
+                            <a href="/accounts/login/" class="myButton" style="margin-top:0px;">Enroll Now</a>
+                            {% else %}
+                            <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                                <!-- <div class="box1">
+                                    <select name="cars" id="cars" required>
+                                        <option disabled="disabled" value="">Select start date
+                                        </option>
+                                        {% for mykey,myvalue in dates.items %}
+                                        {% if myvalue %}
+                                        {% if forloop.first %}
+                                        <option selected="selected" value="{{ mykey }}">
+                                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                            left </option>
+                                        {% else %}
+                                        <option value="{{ mykey }}">
+                                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                            left </option>
+                                        {% endif %}
+                                        {% else %}
+                                        <option disabled="disabled" value="">{{ mykey }}&emsp;&emsp;No&nbsp;Seats
+                                            Available</option>
+
+                                        {% endif %}
+
+                                        {% endfor %}
+
+                                    </select>
+                                </div> -->
+
+                                <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                                    data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                                    data-amount={{ price_inPaise }} data-name="CapsuleCourse"
+                                    data-buttontext="Enroll Now" data-description={{ name_trim }}
+                                    data-image="{% static 'newtheme/img/popular-course/111.png' %}"
+                                    data-netbanking="true" data-prefill.name={{ user_name }}
+                                    data-prefill.email={{ email }} data-prefill.contact="{{ phone }}"
+                                    data-notes.shopping_order_id="21">
+                                        document.getElementById("myscript").setAttribute("data-amount",2000);
+                                    </script>
+                                <input type="hidden" name="shopping_order_id" value="21">
+                                <input type="hidden" name="course_id" value={{ course_id }}>
+                                <input type="hidden" name="finalval" value={{ price_inPaise }}>
+                                <input type="hidden" name="coupon_applied" value={{ coupon }}>
+                                <input type="hidden" name="method_type" id="method_type">
+
+
+                            </form>
+                            {% endif %}
+                        </div>
+                        <div id="val2" style="display:none;">
+                            <li>
+
+                                <a class="justify-content-between d-flex" href="#">
+                                    <p style="color:black;">PRICE</p>
+                                    {% if discount_label == "Invalid Coupon Code" or discount_label == "" %}
+                                    <span><s>Rs. 14999 /-</s>
+                                        <p style="color: black;">Rs. {{gprice}} /-</p>
+                                    </span> {% else %}
+                                    <span style="color:green">Rs. {{ gprice }} /-</span> {% endif %}
+                                </a>
+
+
+                            </li>
+                            <form action='/applyCoupon/{{course_id}}#cop' method=POST>{% csrf_token %}
+                                <input type="text" id="coupon" name="coupon" placeholder="Coupon/Referral Code"
+                                    style="width:57.76%;" />
+                                <input type="hidden" name="method_type" id="method_type1">
+                                <input type="submit" class="myButton" style="width:40%;" value="Apply" />
+
+                            </form>
+                            {% if email == "0" %}
+                            <!-- <div class="box1">
+
+                                <select name="cars" id="cars" required>
+                                    <option disabled="disabled" value="">Select start date</option>
+                                    {% for mykey,myvalue in gdates.items %}
+                                    {% if myvalue %}
+                                    {% if forloop.first %}
+                                    <option selected="selected" value="{{ mykey }}">
+                                        {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                        left </option>
+                                    {% else %}
+                                    <option value="{{ mykey }}">{{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                        left </option>
+                                    {% endif %}
+                                    {% else %}
+                                    <option disabled="disabled" value="">{{ mykey }}&emsp;&emsp;No&nbsp;Seats Available
+                                    </option>
+
+                                    {% endif %}
+
+                                    {% endfor %}
+
+
+
+                                </select>
+                            </div> -->
+                            <a href="/accounts/login/" class="myButton" style="margin-top:0px;">Enroll Now</a>
+                            {% else %}
+                            <form action="/payment_confirmation" method="POST">{% csrf_token %}
+                                <!-- <div class="box1">
+                                    <select name="cars" id="cars" required>
+                                        <option disabled="disabled" value="">Select start date
+                                        </option>
+                                        {% for mykey,myvalue in gdates.items %}
+                                        {% if myvalue %}
+                                        {% if forloop.first %}
+                                        <option selected="selected" value="{{ mykey }}">
+                                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                            left </option>
+                                        {% else %}
+                                        <option value="{{ mykey }}">
+                                            {{ mykey }}&emsp;&emsp;&emsp;{{ myvalue }}&nbsp;Seats
+                                            left </option>
+                                        {% endif %}
+                                        {% else %}
+                                        <option disabled="disabled" value="">{{ mykey }}&emsp;&emsp;No&nbsp;Seats
+                                            Available</option>
+
+                                        {% endif %}
+
+                                        {% endfor %}
+
+                                    </select>
+                                </div> -->
+                                <br><br>
+                                <script id="myscript" src="https://checkout.razorpay.com/v1/checkout.js"
+                                    data-key="rzp_live_M5Nipb7kgTzycb" data-currency="INR"
+                                    data-amount={{ gprice_inPaise }} data-name="CapsuleCourse"
+                                    data-buttontext="Enroll Now" data-description={{ name_trim }}
+                                    data-image="{% static 'newtheme/img/popular-course/111.png' %}"
+                                    data-netbanking="true" data-prefill.name={{ user_name }}
+                                    data-prefill.email={{ email }} data-prefill.contact="{{ phone }}"
+                                    data-notes.shopping_order_id="21">
+                                        document.getElementById("myscript").setAttribute("data-amount",2000);
+                                    </script>
+                                <input type="hidden" name="shopping_order_id" value="21">
+                                <input type="hidden" name="course_id" value={{ course_id }}>
+                                <input type="hidden" name="finalval" value={{ gprice_inPaise }}>
+                                <input type="hidden" name="coupon_applied" value={{ coupon }}>
+                                <input type="hidden" name="method_type" id="method_type1">
+
+
+                            </form>
+                            {% endif %}
+                            <br>
+                            <a href="{% url 'single_note' label='ML Basics' note_name='Introduction' course_id=course_id %}"
+                                class="myButton" style="margin-top:0px;">Join Class for Free</a>
+
+                        </div>
+                        {% if discount_label == "Invalid Coupon Code" %}
+                        <font id="discount" style="color:red">{{ discount_label }}</font>
+                        {% else %}
+                        <font id="discount" style="color:green">{{ discount_label }}</font>
+                        {% endif %} {% if not showit%}
+                        <a id="enrol" class="myButton" style="margin-top:0px; color:white" onclick="myFunction()">Enroll
+                            Now</a>
+
+
+                        <br>
+                        <h4 class="title">Frequently Asked Questions</h4>
+                        <button class="accordion">What is One to One Classes & Mentorship?</button>
+                        <div class="panel">
+                            <p>One to One Classes & Mentorship means each student who enrols gets a personal mentor
+                                allotted to student. Student will get 24 * 7 doubt service, he/she can ask any doubt
+                                without any hesitation. </p>
+                        </div>
+
+                        <button class="accordion">When do classes take place? </button>
+                        <div class="panel">
+                            <p>The classes and mentorship session are conducted every Saturday and Sunday during the
+                                entire duration of the course. Also the mentor follows up the progress of student daily
+                                over the text.</p>
+                        </div>
+
+                        <button class="accordion">How this course is different?</button>
+                        <div class="panel">
+                            <p>This course provides One-to-One Classes directly from top mentors. Each student has his
+                                own learning pace and keeping this in mind, the pace of the course is kept according to
+                                the student. That’s why One to One classes are
+                                best.
+                            </p>
+                        </div>
+
+                        <button class="accordion">What is the duration of the course?</button>
+                        <div class="panel">
+                            <p>The duration of the course is one year.</p>
+                        </div>
+
+                        <button class="accordion">Will Mentor help me in improving my skills?</button>
+                        <div class="panel">
+                            <p>Yes, Mentors are top programmers themselves who have achieved a lot themselves. They will
+                                guide you and teach you one to one during the whole duration of course.</p>
+                        </div>
+
+                        <button class="accordion">What will I learn in the course?</button>
+                        <div class="panel">
+                            <p>In this course, you will learn Data Structures & Algorithms, Web Development with Python
+                                & Django, Machine Learning. You can see whole course outline <a href="#outline">here</a>
+                            </p>
+                        </div>
+
+                        <button class="accordion">Will I get study material too?</button>
+                        <div class="panel">
+                            <p>Yes, you will get a customized learning dashboard when you login and enrol. You will get
+                                all of the learning material and topic by topic Data Structures and Algorithms Study
+                                Material. Also mentor will allot you questions and
+                                exercises for practice each week which you can see in your customized learning
+                                dashboard.
+                            </p>
+                        </div>
+
+                        <button class="accordion">How can I get a trial/discussion with Mentor?</button>
+                        <div class="panel">
+                            <p>Mail us at on reach@algoladder.com and we will arrange a discussion with mentor for you </p>
+                        </div>
+                        {%endif%}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--================ End Course Details Area =================-->
+
+    <!-- ================ start footer Area ================= -->
+    <div class="new_footer1" style="margin-top:12vh">
+        <div id="dk-new_footer" class="dk-new_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-lg-4">
+                        <div class="dk-new_footer-box-info">
+                            <a href="index.html" class="new_footer-logo">
+                                <img src=" {% static 'newtheme/img/algoladderlogo.png' %}" alt="new_footer_logo"
+                                    class="img-fluid">
+                            </a>
+                            <p class="footer-info-text">
+                                Coding Through One to One Mentorship By Expert Competitive Programmers..
+                            </p>
+                            <div class="new_footer-social-link">
+                                <h3>Follow us</h3>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/algoladder">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/channel/UCNjb63C_Bc9HNBR8OiEU0qw">
+                                            <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="https://www.linkedin.com/company/algoladder/">
+                                            <i class="fa fa-linkedin"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/algoladder/?hl=en">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Social link -->
+                        </div>
+                        <!-- End new_footer info -->
+                        <div class="new_footer-awarad">
+                            <img src="images/icon/best.png" alt="">
+                            <p></p>
+                        </div>
+                    </div>
+                    <!-- End Col -->
+                    <div class="col-md-12 col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="contact-us">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-map-o" aria-hidden="true"></i>
+                                    </div>
+                                    <!-- End contact Icon -->
+                                    <div class="contact-info">
+                                        <h3>Delhi NCR</h3>
+                                        <p>LGF-50, D-Mall, Indirapuram, Ghaziabad, Uttar Pradesh - 201014</p>
+                                    </div>
+                                    <!-- End Contact Info -->
+                                </div>
+                                <!-- End Contact Us -->
+                            </div>
+                            <!-- End Col -->
+                            <div class="col-md-6">
+                                <div class="contact-us contact-us-last">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    </div>
+                                    <!-- End contact Icon -->
+                                    <div class="contact-info">
+                                        <p>Mail us at</p>
+                    <h3>reach@algoladder.com</h3>
+                                        
+                                    </div>
+                                    <!-- End Contact Info -->
+                                </div>
+                                <!-- End Contact Us -->
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Contact Row -->
+                        <div class="row">
+                            <div class="col-md-12 col-lg-6">
+                                <div class="new_footer-widget new_footer-left-widget">
+                                    <div class="section-heading">
+                                        <h3>Useful Links</h3>
+                                        <span class="animate-border border-black"></span>
+                                    </div>
+                                    <ul>
+                                        <li>
+                                            <a href="/ide">IDE</a>
+                                        </li>
+                                        <li>
+                                            <a href="/problem_list">Practice</a>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <a href="/contest/all_contest">Contests</a>
+                                        </li>
+                                        <li><a href="/ambassador">Programming Ambassador</a></li>
+                                        <li><a href="/interview_experiences">Interview Experiences</a></li>
+                                    </ul>
+                                </div>
+                                <!-- End new_footer Widget -->
+                            </div>
+                            <!-- End col -->
+                            <div class="col-md-12 col-lg-6">
+                                <div class="new_footer-widget">
+                                    <div class="section-heading">
+                                        <h3>Subscribe</h3>
+                                        <span class="animate-border border-black"></span>
+                                    </div>
+                                    <p>
+                                        <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                        Subscribe For Coding Tips</p>
+                                    <form action="#">
+                                        <div class="form-row">
+                                            <div class="col dk-new_footer-form">
+                                                <input type="email" class="form-control" placeholder="Email Address">
+                                                <button type="submit">
+                                                    <i class="fa fa-send"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <!-- End form -->
+                                </div>
+                                <!-- End new_footer widget -->
+                            </div>
+                            <!-- End Col -->
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Col -->
+                </div>
+                <!-- End Widget Row -->
+            </div>
+            <!-- End Contact Container -->
+
+
+            <div class="copyright">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <span>Copyright © 2021, All Right Algoladder</span>
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-md-6">
+                            <div class="copyright-menu">
+                                <ul>
+                                    <li>
+                                        <!-- <a href="#">Home</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Terms</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Privacy Policy</a> -->
+                                    </li>
+                                    <li>
+                                        <!-- <a href="#">Contact</a> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End col -->
+                    </div>
+                    <!-- End Row -->
+                </div>
+                <!-- End Copyright Container -->
+            </div>
+            <!-- End Copyright -->
+            <!-- Back to top -->
+            <div id="back-to-top" class="back-to-top">
+                <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                    <i class="fa fa-angle-up"></i>
+                </button>
+            </div>
+            <!-- End Back to top -->
+        </div>
+    </div>
+    <!-- ================ End footer Area ================= -->
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for(i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click",function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if(panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+    <script>
+        function myFunction() {
+            swal("Select Methodology First!");
+        }
+        /*
+        $(document).ready(function() {
+            $('#val1').hide();
+            $('#val2').hide();
+
+        });*/
+        $(document).ready(function() {
+            var a = "group";
+            // if(a == "one") {
+            //     document.getElementById("select12").value = a;
+            //     document.getElementById("method_type").value = a;
+            //     $("#val1").show();
+            //     $("#val2").hide();
+            //     $('#enrol').hide();
+            // } else if(a == "group") 
+            {
+                document.getElementById("select12").value = a;
+                document.getElementById("method_type1").value = a;
+                $("#val1").hide();
+                $("#val2").show();
+                $('#enrol').hide();
+            }
+        })
+        // $(document).ready(function() {
+        //     $("#select12").change(() => {
+        //         // var $select = $( this ),
+        //         // selected = $select.val();
+        //         var selected = document.getElementById("select12").value;
+        //         if(selected == 'one')
+        //             document.getElementById("method_type").value = selected;
+        //         else
+        //             document.getElementById("method_type1").value = selected;
+
+        //         console.log("###########3",selected)
+        //         var a = "{{method_type}}";
+
+        //         if(selected == "one") {
+        //             //  document.getElementById("method_type").value = selected;
+        //             $("#val1").show();
+        //             $("#val2").hide();
+        //             $('#enrol').hide();
+        //         } else if(selected == "group") {
+        //             // document.getElementById("method_type").value = selected;
+        //             $("#val1").hide();
+        //             $("#val2").show();
+        //             $('#enrol').hide();
+        //         }
+
+        //     })
+
+
+        // });
+    </script>
+
+    <script src="{% static 'newtheme/js/vendor/jquery-2.2.4.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'newtheme/js/vendor/bootstrap.min.js' %}"></script>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    <script src="{% static 'newtheme/js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/parallax.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'newtheme/js/hexagons.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'newtheme/js/waypoints.min.js' %}"></script>
+
+    <script src="{% static 'newtheme/js/main.js' %}"></script>
+    <script type="text/javascript" src="{% static 'newtheme/js/index.js' %}"></script>
+    <script>
+        function myfuntion() {
+            console.log("aman1");
+            if(document.getElementById("navbar").className == "navbar") {
+                document.getElementById("navbar").classList.remove("navbar");
+                document.getElementById("navbar").classList.add("navbar-mobile");
+            }
+            else {
+                document.getElementById("navbar").classList.remove("navbar-mobile");
+                document.getElementById("navbar").classList.add("navbar");
+            }
+        }
+    </script>
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.width = "100%";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.width = "0%";
+        }
+    </script>
+    <script>
+        function myPopup() {
+            var val = document.getElementById("mce-EMAIL").value
+            if(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(val)) {
+                swal({
+                    title: "Successfully Subscribed",
+                    text: "<small>Great You Will Get Coding Tips From AlgoLadder</small>",
+                    type: "success",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            } else {
+                swal({
+                    title: "Failed To Subscribed",
+                    text: "<small>Please Enter Valid Email Address</small>",
+                    type: "error",
+                    html: true,
+                    closeOnClickOutside: false
+                });
+            }
+
+
+
+            // Set our logout isClicked2 to true and count2 to 1
+
+        }
+    </script>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {},
+            Tawk_LoadStart = new Date();
+        (function() {
+            var s1 = document.createElement("script"),
+                s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5f7051ecf0e7167d00141e08/default';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+
+        function scroll() {
+            document.getElementById('course').scrollIntoView({
+                block: 'start',
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <!--End of Tawk.to Script-->
+</body>
+
+</html>
